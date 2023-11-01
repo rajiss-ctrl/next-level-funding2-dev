@@ -66,7 +66,7 @@ const Hero = () => {
         </Grid>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-     <div className="w-full absolute bottom-[0] left-[0] " style={{display:"flex", flexDirection:"row", overflow:"hidden"}}>
+     <div className="w-full absolute bottom-[0] left-[0]  flex flex-row overflow-hidden">
         <TradingViewWidget/>
      </div>
      </div>

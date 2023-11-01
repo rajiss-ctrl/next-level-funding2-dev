@@ -65,13 +65,13 @@ const Footer = () => {
         recommendation, investment opportunity analysis or similar general
         recommendation regarding the trading of investment instruments.
       </p>
-      <div className="h-[0.5px] opacity-80 bg-white mt-8 mb-6 lg:mb-0  lg:mt-8 lg:mx-4" />
+      <div className="h-[0.5px] opacity-80 bg-white mt-8 mb-6 lg:mb-0  lg:mt-8 " />
       <div className="lg:flex lg:justify-between lg:items-center text-center h-[50px]">
         <div>
           <nav className="flex items-center justify-center lexend text-[10px] lg:text-[12px] ">
             <Link
               href="/about-us"
-              className="link link-hover  border-r border-slate-200 pr-4 lg:px-4"
+              className="link link-hover  border-r border-slate-200 pr-4 "
             >
               Terms of Service
             </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
             </Link>
           </nav>
         </div>
-        <p className="mx-4 mt-2 lg:mt-0 text-white text-center lexend text-[10px] lg:text-sm">
+        <p className="mt-2 lg:mt-0 text-white text-center lexend text-[10px] lg:text-sm">
           2023 © - Next Level Funding - Powered by OTB Solutions{" "}
         </p>
       </div>

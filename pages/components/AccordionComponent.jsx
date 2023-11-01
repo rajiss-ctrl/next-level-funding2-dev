@@ -15,7 +15,7 @@ const AccordionComponent = (props) => {
   };
 
   return (
-    <div className="p-0 w-full flex justify-center items-center flex-col"  >
+  <div className={`w-full flex justify-center items-center flex-col ${expanded === true ? "pt-6" : "pt-0" }`}  >
       <Accordion
         sx={{
           marginTop: 3,

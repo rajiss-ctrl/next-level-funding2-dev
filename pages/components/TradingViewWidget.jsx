@@ -39,8 +39,8 @@ const TradingViewWidget = () => {
   }, []);
 
   return (
-    <div className="tradingview-widget-container bg-white" id="tradingview-widget-container" >
-      {/* <div className="tradingview-widget-container__widget"></div> */}
+    <div className="tradingview-widget-container bg-white flex flex-row" id="tradingview-widget-container" >
+      
     </div>
   );
 };
