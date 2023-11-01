@@ -80,7 +80,7 @@ body {
 .bullet-point::before {
   content: "";
   position: relative;
-  right: 15px;
+  right: 10px;
   top: 8px;
   width: 30px;
   height: 30px;

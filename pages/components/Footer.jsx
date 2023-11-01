@@ -38,28 +38,23 @@ const Footer = () => {
           <nav className="flex lexend text-[10px] lg:text-[15px] text-white ">
             <Link
               href="/cookie-policy"
-              className="link link-hover  border-r border-slate-200 px-4"
+              className="link link-hover  border-r border-slate-200 pr-4 lg:px-4"
             >
               About Us
-              {/* Cookie Policy */}
             </Link>
             <Link
               href="/privacy-policy"
               className="link link-hover  border-r border-slate-200 px-4"
             >
               Help Centre
-              {/* Privacy Policy */}
             </Link>
             <Link
               href="/refund-policy"
-              className="link link-hover   px-4"
+              className="link link-hover pl-4 lg:px-4"
             >
               Get In Touch
-              {/* Refund Policy */}
             </Link>
-            {/* <Link href="/terms-of-service" className="link link-hover px-1">
-              Terms of Service
-            </Link> */}
+        
           </nav>
         </div>
       </footer>
@@ -70,16 +65,15 @@ const Footer = () => {
         recommendation, investment opportunity analysis or similar general
         recommendation regarding the trading of investment instruments.
       </p>
-      <div className="h-[0.5px] opacity-80 bg-white mt-8 mx-4" />
+      <div className="h-[0.5px] opacity-80 bg-white mt-8 mb-6 lg:mb-0  lg:mt-8 lg:mx-4" />
       <div className="lg:flex lg:justify-between lg:items-center text-center h-[50px]">
         <div>
           <nav className="flex items-center justify-center lexend text-[10px] lg:text-[12px] ">
             <Link
               href="/about-us"
-              className="link link-hover  border-r border-slate-200 px-4"
+              className="link link-hover  border-r border-slate-200 pr-4 lg:px-4"
             >
               Terms of Service
-              {/* About us */}
             </Link>
             <Link
               href="/trading-funds"
@@ -97,13 +91,13 @@ const Footer = () => {
               Cookie Policy
               {/* FAQ */}
             </Link>
-            <Link href="/contact-us" className="link link-hover px-4">
+            <Link href="/contact-us" className="link link-hover pl-4 lg:px-4">
             Refund Policy
               {/* Help Center */}
             </Link>
           </nav>
         </div>
-        <p className="mx-4 text-white text-center lexend text-[12px] lg:text-sm">
+        <p className="mx-4 mt-2 lg:mt-0 text-white text-center lexend text-[10px] lg:text-sm">
           2023 © - Next Level Funding - Powered by OTB Solutions{" "}
         </p>
       </div>
@@ -112,13 +106,13 @@ const Footer = () => {
       <a href="https://www.instagram.com/nextlevelfundingfx/" target="_blank" rel="noopener noreferrer">
           <img
             src="/assets/ig.png"
-            className="w-[50px] h-auto bg-slate-700 p-2 rounded-full"
+            className="  w-[35px] lg:w-[50px] h-auto bg-slate-700 p-2 rounded-full"
           />
         </a>
         <a href="mailto:Nextlevelfundingfx@gmail.com">
           <img
             src="/assets/email.png"
-            className="w-[50px] h-auto bg-slate-700 p-2 rounded-full"
+            className="w-[35px] lg:w-[50px] h-auto bg-slate-700 p-2 rounded-full"
           />
         </a>
       </div>

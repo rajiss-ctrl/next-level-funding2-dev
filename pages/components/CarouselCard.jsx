@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 const CarouselCard = (props) => {
   return (
-    <div className=" backdrop backdrop-blur-lg bg-opacity-5 text-white border border-slate-800 shadow-lg rounded-xl py-24 2xl:px-5 px-3 w-full h-full">
+    <div className=" backdrop backdrop-blur-lg bg-opacity-5 text-white border border-slate-800 shadow-lg rounded-xl py-24 2xl:px-5 px-6  w-full h-full">
       {props.img && (
         <img src={props.img} className="w-10 h-auto"/>
       )}

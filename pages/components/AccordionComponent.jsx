@@ -15,7 +15,7 @@ const AccordionComponent = (props) => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col"  >
+    <div className="p-0 w-full flex justify-center items-center flex-col"  >
       <Accordion
         sx={{
           marginTop: 3,
@@ -23,7 +23,7 @@ const AccordionComponent = (props) => {
           paddingBottom: 2,
           backgroundColor: "transparent",
         }}
-        className="w-[80%] border border-slate-600 rounded-xl bg-white bg-opacity-5"
+        className=" w-full lg:w-[80%] border border-slate-600 rounded-xl bg-white bg-opacity-5"
         onClick={toggleAccordion}
       >
         <AccordionSummary

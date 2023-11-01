@@ -7,7 +7,7 @@ const PriceCard = (props) => {
   const router = useRouter();
   return (
     <div
-      className={`price-card-morph text-center overflow-hidden w-full h-[530px] py-4 px-3 ${props.className} ${
+      className={`price-card-morph text-center overflow-hidden w-full lg:h-[530px] py-4 px-3 ${props.className} ${
         props.value === "€600" || props.value === "€575" ? "bg-blue-500" : " bg-white bg-opacity-5"
       }`}
     >
