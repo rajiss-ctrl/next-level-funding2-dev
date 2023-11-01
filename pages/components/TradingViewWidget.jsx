@@ -9,30 +9,50 @@ const TradingViewWidget = () => {
     script.innerHTML = JSON.stringify({
       symbols: [
         {
-          proName: "FOREXCOM:SPXUSD",
-          title: "S&P 500"
+          "proName": "FX_IDC:EURUSD",
+          "title": "EUR/USD"
         },
         {
-          proName: "FOREXCOM:NSXUSD",
-          title: "US 100"
+          "description": "",
+          "proName": "FX:GBPJPY"
         },
         {
-          proName: "FX_IDC:EURUSD",
-          title: "EUR to USD"
+          "description": "",
+          "proName": "BITSTAMP:ETHUSD"
         },
         {
-          proName: "BITSTAMP:BTCUSD",
-          title: "Bitcoin"
+          "description": "",
+          "proName": "BINANCE:XRPUSD"
         },
         {
-          proName: "BITSTAMP:ETHUSD",
-          title: "Ethereum"
+          "description": "",
+          "proName": "CRYPTOCAP:XRP"
+        },
+        {
+          "description": "",
+          "proName": "OANDA:GBPUSD"
+        },
+        {
+          "description": "",
+          "proName": "OANDA:EURNZD"
+        },
+        {
+          "description": "",
+          "proName": "BIST:XAUUSD1!"
+        },
+        {
+          "description": "",
+          "proName": "TVC:USOIL"
+        },
+        {
+          "description": "",
+          "proName": "OANDA:USDJPY"
         }
       ],
       showSymbolLogo: true,
       colorTheme: "light",
       isTransparent: true,
-      displayMode: "adaptive",
+      displayMode: "regular",
       locale: "en"
     });
     document.getElementById('tradingview-widget-container').appendChild(script);
