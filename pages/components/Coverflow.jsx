@@ -47,7 +47,7 @@ const Coverflow = () => {
         </SwiperSlide>
         <SwiperSlide>
           <CarouselCard
-            img="/assets/crown-pink.svg"
+            img="/assets/Asset 3.png"
             title="No Risk"
             text="We take all the risk on live accounts so you can comfortably trade without worrying about losses."
           />

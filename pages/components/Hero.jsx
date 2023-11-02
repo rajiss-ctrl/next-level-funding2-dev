@@ -5,11 +5,17 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 import TradingViewWidget from "./TradingViewWidget";
+import IndexPage from "./IndexPage";
 
 const Hero = () => {
+
   return (
     
     <div className="relative lg:h-[670px] body-bg w-full px-4 lg:px-[12rem] pt-8 ">
+      <IndexPage>
+      NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.
+
+      </IndexPage>
       <Box sx={{ paddingTop: 15, flexGrow: 1 }}>
         <Grid container spacing={5}>
           {/* <Grid item xs={12} sm={6} md={4} lg={3}> */}
