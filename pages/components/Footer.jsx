@@ -37,19 +37,19 @@ const Footer = () => {
         <div className="flex items-end w-full justify-center lg:justify-end gap-1">
           <nav className="flex lexend text-[10px] lg:text-[15px] text-white ">
             <Link
-              href="/cookie-policy"
+              href="/about-us"
               className="link link-hover  border-r border-slate-200 pr-4 lg:px-4"
             >
               About Us
             </Link>
             <Link
-              href="/privacy-policy"
+              href="/contact-us"
               className="link link-hover  border-r border-slate-200 px-4"
             >
               Help Centre
             </Link>
             <Link
-              href="/refund-policy"
+              href="/contact-us"
               className="link link-hover pl-4 lg:px-4"
             >
               Get In Touch
@@ -70,34 +70,34 @@ const Footer = () => {
         <div>
           <nav className="flex items-center justify-center lexend text-[10px] lg:text-[12px] ">
             <Link
-              href="/about-us"
+              href="/terms-of-service"
               className="link link-hover  border-r border-slate-200 pr-4 "
             >
               Terms of Service
             </Link>
             <Link
-              href="/trading-funds"
+              href="/privacy-policy"
               className="link link-hover  border-r border-slate-200 px-4"
             >
               
               Privacy Policy
-              {/* Trading Funds */}
+      
             </Link>
             <Link
-              href="/#faq"
+              href="/cookie-policy"
               className="link link-hover border-r border-slate-200 px-4"
             >
               
               Cookie Policy
-              {/* FAQ */}
+          
             </Link>
-            <Link href="/contact-us" className="link link-hover pl-4 lg:px-4">
+            <Link href="/refund-policy" className="link link-hover pl-4 lg:px-4">
             Refund Policy
-              {/* Help Center */}
+              
             </Link>
           </nav>
         </div>
-        <p className="mt-2 lg:mt-0 text-white text-center lexend text-[10px] lg:text-sm">
+        <p className="mt-2 lg:mt-0 text-white text-center lexend text-[10px] lg:text-[12px]">
           2023 © - Next Level Funding - Powered by OTB Solutions{" "}
         </p>
       </div>

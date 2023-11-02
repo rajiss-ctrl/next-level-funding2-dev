@@ -6,7 +6,7 @@ const TermsOfService = () => {
   return (
     <div>
       <main className="w-full body-bg pt-[4rem] text-white 2xl:h-[40vh] h-full">
-        <div className="grid items-center justify-center py-[5rem]">
+        <div className="grid items-center justify-center pb-0 pt-[5rem]">
           <p className="space-grotesk font-bold text-[3rem] text-center">
             Terms of Service
           </p>
