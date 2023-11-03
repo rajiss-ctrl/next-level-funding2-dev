@@ -14,12 +14,9 @@ const Hero = () => {
     <div className="relative lg:h-[670px] body-bg w-full px-4 lg:px-[12rem] pt-8 ">
       <IndexPage>
       NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.
-
       </IndexPage>
       <Box sx={{ paddingTop: 15, flexGrow: 1 }}>
-        <Grid container spacing={5}>
-          {/* <Grid item xs={12} sm={6} md={4} lg={3}> */}
-        
+        <Grid container spacing={5}>  
           <Grid item xs={12} md={12} lg={6}>
             <p className="uppercase text-blue-500 font-bold lexend text-lg text-center lg:text-left md:px-10 lg:px-0 my-2">
               Next level funding

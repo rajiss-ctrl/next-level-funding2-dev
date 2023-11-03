@@ -11,7 +11,7 @@ const TableFlow = () => {
                 <table className="min-w-full text-center text-sm font-light">
                   <thead className="font-medium">
                     <tr className="lexend text-lg glass-morph-header">
-                      <th scope="col" className="px-6 py-2 lg:py-4 text-left">
+                      {/* <th scope="col" className="px-6 py-2 lg:py-4 text-left">
                         Variables
                       </th>
                       <th scope="col" className="px-6 py-4">
@@ -22,7 +22,7 @@ const TableFlow = () => {
                       </th>
                       <th scope="col" className="px-6 py-4">
                         Trader4T
-                      </th>
+                      </th> */}
                     </tr>
                   </thead>
                   <tbody>

@@ -7,19 +7,19 @@ const ContactForm = () => {
     return <p>Thanks for submiting</p>;
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="pt-8 lg:pt-0">
       <input
         type="text"
         placeholder="Name"
-        className="input input-bordered rounded-xl p-3 2xl:w-[30rem] w-full my-10"
+        className="border border-[1px solid white]  p-3 2xl:w-[30rem] w-full mb-10"
       />
       <ValidationError prefix="Name" field="name" errors={state.errors} />
       <input
         id="email"
         type="email"
         name="email"
-        placeholder="email"
-        className="input input-bordered rounded-xl p-3 2xl:w-[30rem] w-full"
+        placeholder="Email"
+        className="border border-[1px solid white] p-3 2xl:w-[30rem] w-full"
       />
 
       <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -28,7 +28,7 @@ const ContactForm = () => {
         type="text"
         name="subject"
         placeholder="Subject"
-        className="input input-bordered rounded-xl p-3 2xl:w-[30rem] w-full my-10"
+        className="border border-[1px solid white]  p-3 2xl:w-[30rem] w-full my-10"
       />
 
       <ValidationError prefix="Subject" field="subject" errors={state.errors} />
@@ -36,7 +36,7 @@ const ContactForm = () => {
         id="message"
         name="message"
         placeholder="message"
-        className="textarea textarea-bordered rounded-xl p-3 2xl:w-[30rem] w-full h-[10rem]"
+        className="border border-[1px solid white]  p-3 2xl:w-[30rem] w-full h-[10rem]"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <div className="flex flex-col w-full md:w-[40%] xl:w-[20%] mt-10">

@@ -8,7 +8,7 @@ import "swiper/css";
 import GlassMorphCard from "./GlassMorphCard";
 const TestimonialComponent = () => {
   return (
-    <div>
+    <div className="w-full">
       <Swiper
         // effect={"coverflow"}
         grabCursor={true}
