@@ -15,24 +15,24 @@ const AboutUs = () => {
           <p className="space-grotesk font-bold text-[3rem] text-center">
             About Us
           </p>
-          <p className="2xl:w-5/12 w-3/4 lexend text-center px-[17rem] m-auto font-extralight">
+          <p className="lg::w-5/12 w-3/4 lexend text-center lg:px-[17rem] m-auto font-extralight">
             We are a company that seeks profitable traders to trade our funds.
             Prove to us you are profitable by completing our evaluation phase
             and recieving immediate funding of up to $500k
           </p>
         </div>
         <div className="home-bg">
-          <div className="flex flex-col justify-center items-center xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">
-            <section className=" 2xl:px-[10rem]">
+          <div className="flex flex-col justify-center items-center px-[1.3rem] xl:px-[9rem] 2xl:px-[12rem]">
+            <section className="lg:pt-10 lg:px-0 2xl:px-[10rem]">
               <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between py-20 gap-7 px-[2rem] 2xl:px-0">
-                <div className="w-full w-[50%]">
+                <div className="">
                   <img
                     src="/assets/about.png"
                     className=" h-auto m-auto"
                     alt=""
                   />
                 </div>
-                <div className="lg:text-left lexend text-center w-fill lg:w-[50%]">
+                <div className="lg:text-left lexend text-center w-fill lg:w-[55%]">
                   <p className="space-grotesk lg:text-[3.5rem] font-bold text-3xl mt-10 lg:mt-0 lg:pb-4">
                     Our Mission
                   </p>
@@ -66,30 +66,35 @@ const AboutUs = () => {
             </section> */}
 
             {/* TESTIMONIALS */}
-            <section className="2xl:px-[10rem] px-[2rem] py-[10rem]">
-              <p className="lexend uppercase text-slate-400 text-left text-sm">
+            <section className="lg:px-[1rem]  w-full overflow-hidden px-[0] py-[10rem]">
+              <p className="lexend w-full overflow-hidden uppercase text-slate-400 text-left text-sm">
                 what our traders are saying about us
               </p>
               <p className="font-bold space-grotesk 2xl:text-6xl text-3xl text-left ">
                 Testimonials
               </p>
-              <div className="w-full mt-[5rem]">
+              <div className="w-full flex justify-center items-center flex-col mt-[5rem]">
                 <TestimonialComponent />
               </div>
+                
+              <Link href="https://www.trustpilot.com/review/nextlevelfunding.co.uk" className="p-2 lg:p-4 ackdrop-filter text-[0.6rem] lg:text-sm bg-[#991275]" >
+                View More Reviews
+              </Link>
             </section>
             <section>
-              <section className="my-[10rem] relative ">
-                <img src="/assets/rec.svg" className="w-full h-auto " alt="" />
-                <div className="absolute top-[10%] z-10 left-[4rem]">
-                  <p className=" pt-10 lexend uppercase text-slate-400  text-sm px-3 ">
+
+            <section className=" my-[-5rem] lg:my-[10rem] relative ">
+                <img src="/assets/rec.svg" className="w-full h-[210px] lg:h-auto " alt="" />
+                <div className="absolute top-[6%] lg:top-[10%] z-10 left-[1rem] lg:left-[4rem]">
+                  <p className=" pt-10 lexend uppercase text-slate-100 lg:text-slate-400  text-[0.4rem] lg:text-sm lg:px-3 ">
                     be a part of the winning team
                   </p>
-                  <p className="space-grotesk font-bold text-[3rem] ">
+                  <p className="space-grotesk pb-4 lg:pb-0  font-bold text-[0.8rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
                   </p>
                   <Link href="//#evaluation-package" className="mt-[2rem]">
                     <Button
-                      className="backdrop-filter bg-[#991275] border-none "
+                      className="backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none "
                       text="get started"
                       showArrow={true}
                     />
@@ -105,7 +110,7 @@ const AboutUs = () => {
               </section>
             </section>
           </div>
-          <section className="xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">
+          <section className="pt-[8rem] lg:pt-0 xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">
             <Footer />
           </section>
         </div>
