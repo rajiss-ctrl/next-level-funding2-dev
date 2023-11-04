@@ -11,7 +11,7 @@ const GlassMorphCard = (props) => {
       <p className={`lexend font-bold py-4  ${props.className}`}>
         {props.title}
       </p>
-      <p>{props.stars}</p>
+      <p >{props.stars}</p>
       <p className="lexend text-sm font-thin">{props.text}</p>
       <p className="lexend text-sm font-bold pt-6">{props.name}</p>
     </div>

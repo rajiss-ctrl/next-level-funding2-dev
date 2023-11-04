@@ -27,11 +27,11 @@ const getStars = ()=>{
   return (
     <>
     <p className="flex">  
-        <span className="h-4 flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
-        <span className="h-4 flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
-        <span className="h-4 flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
-        <span className="h-4 flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
-        <span className="h-4 flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
+        <span className="flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
+        <span className="flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
+        <span className="flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
+        <span className="flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
+        <span className="flex justify-center items-center bg-green-500 mr-1"><StarIcon className="w-[15px] h-[15px]" /></span>
       </p>
     </>
   )

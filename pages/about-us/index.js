@@ -91,8 +91,8 @@ const AboutUs = () => {
             <section>
 
             <section className="pt-8 lg:pt-0  lg:my-[10rem] relative ">
-                <img src="/assets/rec.svg" className="w-full h-auto " alt="" />
-                <div className="lg:absolute pt-10 lg:pt-0 2xl:pt-0 lg:top-[10%] z-10 lg:left-[3rem]">
+                <img src="/assets/rec.svg" className="w-full h-[500px] lg:h-auto 2xl:h-auto " alt="" />
+                <div className="absolute pt-10  lg:pt-0 2xl:pt-0 top-[10rem] lg:top-[10%] z-10 lg:left-[3rem]">
                   <p className=" pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
                     be a part of the winning team
                   </p>
@@ -107,7 +107,7 @@ const AboutUs = () => {
                     />
                   </Link>
                 </div>
-                <div className="absolute top-8 left-[0] lg:top-0 lg:left-[58%]">
+                <div className="absolute top-6 left-[0] lg:top-0 lg:left-[58%]">
                   <img
                     src="/assets/trader.png"
                     className="bouncing-image w-[65%] lg:w-[60%] 2xl:w-3/4 h-auto"

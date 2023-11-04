@@ -11,10 +11,10 @@ const ContactUs = () => {
         <p className=" lexend uppercase text-slate-400  text-sm px-3 mt-[6rem] text-center">
           we would love to hear from you
         </p>
-        <p className="space-grotesk font-bold text-[2rem] lg:text-[3rem] text-center">
+        <p className="space-grotesk px-4 font-bold text-[2rem] lg:text-[3rem] text-center">
           Online Assistant Portal
         </p>
-        <p className=" w-full lexend text-center m-auto font-extralight">
+        <p className=" w-full lexend text-center px-8 lgpx-0 :m-auto font-extralight">
           Passionate about solving problems through creative communications.
           Offering straight forward solutions
         </p>
@@ -59,7 +59,7 @@ const ContactUs = () => {
 
       </div>
 
-      <div className="xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">
+      <div className="xl:px-[9rem] pt-8 lg:pt-0 2xl:px-[12rem] px-[2rem]">
         <Footer />
       </div>
     </main>

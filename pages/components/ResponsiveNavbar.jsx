@@ -11,6 +11,7 @@ const NavBar = () => {
   const toggleNavbar = () => {
     setNavbar(!navbar);
   };
+  const logoClickHandler = !navbar ? null : toggleNavbar;
 
   const handleNavigation = () => {
     if (navbar) {
@@ -47,8 +48,8 @@ const NavBar = () => {
       >
         <div>
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
-            <Link href="/">
-              <img src="/assets/logo.png" alt="" />
+            <Link href="/" >
+              <img src="/assets/logo.png" alt="" onClick={logoClickHandler}/>
             </Link>
             <div className="lg:hidden">
               <button

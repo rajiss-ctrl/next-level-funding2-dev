@@ -171,6 +171,11 @@ textarea {
   animation: bounce 5s infinite; 
   transform-origin: center;
 }
+@media only screen and (max-width:730px){
+  .bouncing-image{
+    animation: none; 
+  }
+}
 
 @keyframes bounce {
   0%, 100% {
