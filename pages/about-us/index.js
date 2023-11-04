@@ -83,13 +83,13 @@ const AboutUs = () => {
             </section>
             <section>
 
-            <section className=" my-[-5rem] lg:my-[10rem] relative ">
-                <img src="/assets/rec.svg" className="w-full h-[210px] lg:h-auto " alt="" />
-                <div className="absolute top-[6%] lg:top-[10%] z-10 left-[1rem] lg:left-[4rem]">
-                  <p className=" pt-10 lexend uppercase text-slate-100 lg:text-slate-400  text-[0.4rem] lg:text-sm lg:px-3 ">
+            <section className="  lg:my-[10rem] lg:relative ">
+                <img src="/assets/rec.svg" className="hidden lg:block w-full h-auto " alt="" />
+                <div className="lg:absolute  lg:top-[10%] z-10 lg:left-[4rem]">
+                  <p className=" pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
                     be a part of the winning team
                   </p>
-                  <p className="space-grotesk pb-4 lg:pb-0  font-bold text-[0.8rem] lg:text-[3rem] ">
+                  <p className="space-grotesk  font-bold text-[2rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
                   </p>
                   <Link href="//#evaluation-package" className="mt-[2rem]">
@@ -100,7 +100,7 @@ const AboutUs = () => {
                     />
                   </Link>
                 </div>
-                <div className="absolute bottom-[30%] left-[60%]">
+                <div className="flex justify-center items-center  lg:absolute lg:bottom-[30%] lg:left-[60%]">
                   <img
                     src="/assets/trader.png"
                     className="w-3/4 h-auto"
