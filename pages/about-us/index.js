@@ -24,7 +24,7 @@ const AboutUs = () => {
         <div className="home-bg">
           <div className="flex flex-col justify-center items-center px-[1.3rem] xl:px-[9rem] 2xl:px-[12rem]">
             <section className="lg:pt-10 lg:px-0 2xl:px-[10rem]">
-              <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between py-20 gap-7 px-[2rem] 2xl:px-0">
+              <div className="flex flex-col lg:flex-row  2xl:flex-row justify-center items-center lg:justify-between 2xl:justify-between py-20 gap-7 px-[2rem] 2xl:px-0">
                 <div className="">
                   <img
                     src="/assets/about.png"
@@ -73,7 +73,7 @@ const AboutUs = () => {
               <p className="font-bold space-grotesk 2xl:text-6xl text-3xl text-left ">
                 Testimonials
               </p>
-              <div className="w-full flex justify-center items-center flex-col mt-[5rem]">
+              <div className="w-full overflow-hidden flex justify-center items-center flex-col mt-[5rem]">
                 <TestimonialComponent />
               </div>
                 
