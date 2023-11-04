@@ -38,18 +38,16 @@ const getStars = ()=>{
 }
 
   return (
-    <div className="overflow-hidden w-full flex justify-center items-center">
+    <div className="overflow-hidden mt-0  px-0  w-full ">
       <Swiper
         // effect={"coverflow"}
         grabCursor={true}
-        spaceBetween={isMobile ? 4 : 8}
+        spaceBetween={isMobile ? 5 : 8}
         centeredSlides={true}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
-        // slidesPerView={3}
-        // slidesPerView={isMobile ? "auto" : 3}
         slidesPerView= "auto"
         pagination={true}
         modules={[ Pagination, Autoplay]}

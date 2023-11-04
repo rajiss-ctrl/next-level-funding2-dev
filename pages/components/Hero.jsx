@@ -52,10 +52,10 @@ const Hero = () => {
           
           <Grid item xs={12} md={12} lg={6}>
             <div className="flex xl:justify-end justify-center relative">
-              <div className="bg-white rounded-full h-20 w-20 px-2 backdrop-filter bg-[transparent] backdrop-blur-lg bg-opacity-5">
-                <img src="/assets/eth.png" className="" alt="eth" />
+              <div className="bg-white bouncing-image rounded-full h-20 w-20 px-2 backdrop-filter bg-[transparent] backdrop-blur-lg bg-opacity-5">
+                <img src="/assets/eth.png"  alt="eth" className="bouncing-image" />
               </div>
-              <div className="backdrop-filter bg-[transparent] backdrop-blur-lg bg-opacity-5 w-30 h-30 rounded-full absolute p-[5rem] left-[40%] bottom-[30%] border border-slate-800 bg-white hidden lg:block"></div>
+              <div className="backdrop-filter bg-[transparent]  backdrop-blur-lg bg-opacity-5 w-30 h-30 rounded-full absolute p-[5rem] left-[40%] bottom-[30%] border border-slate-800 bg-white hidden lg:block"></div>
               <div className="relative z-30">
                 <img
                   src="/assets/laptop.gif"

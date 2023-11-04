@@ -66,7 +66,7 @@ const AboutUs = () => {
             </section> */}
 
             {/* TESTIMONIALS */}
-            <section className="lg:px-[1rem]  w-full overflow-hidden px-[0] py-[10rem]">
+            <section className="lg:px-[1rem]  w-full overflow-hidden px-0 py-[3rem] lg:py-[10rem] 2xl:py-[10rem]">
               <p className="lexend w-full overflow-hidden uppercase text-slate-400 text-left text-sm">
                 what our traders are saying about us
               </p>
@@ -77,22 +77,29 @@ const AboutUs = () => {
                 <TestimonialComponent />
               </div>
                 
-              <Link href="https://www.trustpilot.com/review/nextlevelfunding.co.uk" className="p-2 lg:p-4 ackdrop-filter text-[0.6rem] lg:text-sm bg-[#991275]" >
-                View More Reviews
+              <div className=" flex justify-center items-center">
+              <Link href="https://www.trustpilot.com/review/nextlevelfunding.co.uk" className="">
+                    <Button
+                      className="backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none "
+                      text="View More Reviews"
+                      showArrow={false}
+                    />
               </Link>
+              </div>
+
             </section>
             <section>
 
-            <section className="  lg:my-[10rem] lg:relative ">
-                <img src="/assets/rec.svg" className="hidden lg:block w-full h-auto " alt="" />
-                <div className="lg:absolute  lg:top-[10%] z-10 lg:left-[4rem]">
+            <section className="pt-8 lg:pt-0  lg:my-[10rem] relative ">
+                <img src="/assets/rec.svg" className="w-full h-auto " alt="" />
+                <div className="lg:absolute pt-10 lg:pt-0 2xl:pt-0 lg:top-[10%] z-10 lg:left-[3rem]">
                   <p className=" pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
                     be a part of the winning team
                   </p>
-                  <p className="space-grotesk  font-bold text-[2rem] lg:text-[3rem] ">
+                  <p className="space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
                   </p>
-                  <Link href="//#evaluation-package" className="mt-[2rem]">
+                  <Link href="//#evaluation-package" className=" mt-[2rem]">
                     <Button
                       className="backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none "
                       text="get started"
@@ -100,10 +107,10 @@ const AboutUs = () => {
                     />
                   </Link>
                 </div>
-                <div className="flex justify-center items-center  lg:absolute lg:bottom-[30%] lg:left-[60%]">
+                <div className="absolute top-8 left-[0] lg:top-0 lg:left-[58%]">
                   <img
                     src="/assets/trader.png"
-                    className="w-3/4 h-auto"
+                    className="bouncing-image w-[65%] lg:w-[60%] 2xl:w-3/4 h-auto"
                     alt=""
                   />
                 </div>

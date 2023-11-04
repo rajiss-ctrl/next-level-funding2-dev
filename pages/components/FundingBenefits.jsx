@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const FundingBenefits = () => {
   return (
-    <div className="py-[4rem]">
+    <div className="pt-[8rem] lg:pb-[4rem]">
       <p className="lexend uppercase text-slate-400 text-sm text-center 2xl:text-left">
         TURNING TRADERS INTO CHAMPIONS – LET US INVEST IN YOUR SUCCESS.
       </p>
