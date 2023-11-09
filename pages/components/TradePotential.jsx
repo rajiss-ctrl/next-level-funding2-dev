@@ -15,12 +15,12 @@ const TradePotential = () => {
           <GlassMorph
             prefix="$"
             start={100}
-            end={200}
-            suffix="M+"
+            end={420}
+            suffix="k"
             desc="Total Payout"
           />
           <GlassMorph start={0} end={5} suffix="hrs" desc="Avg. Payout Time" />
-          <GlassMorph start={0} end={100} suffix="K+" desc="Traders Funded" />
+          <GlassMorph start={0} end={1} suffix="K+" desc="Traders Funded" />
         </div>
       </section>
     </div>

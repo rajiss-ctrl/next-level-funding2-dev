@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
 // import { Grid, Box } from "@mui/material";
+import { Link } from 'next/link';
 
 const ContactUs = () => {
   return (
@@ -25,7 +26,7 @@ const ContactUs = () => {
        
        <div className="w-full flex justify-between flex-col lg:flex-row ">
              <div className="px-6 lg:pr-4">
-               <div className="flex items-center">
+               <a href="" className="flex items-center">
                  <img
                    src="/assets/call.svg"
                    className="2xl:w-[3.5rem] w-8 h-auto border-none border bg-slate-700 rounded-full p-2"
@@ -34,9 +35,9 @@ const ContactUs = () => {
                  <span className="lexend  lg:text-[1.2rem] text-[.8rem] ml-3">
                    +35385857806345
                  </span>
-               </div>
+               </a>
                <div className=" ">
-                 <div className="flex items-center">
+                 <a href="mailto:Nextlevelfundingfx@gmail.com" className="flex items-center">
                    <img
                      src="/assets/mail.svg"
                      className="2xl:w-14 w-8 h-auto border-none border bg-slate-700 rounded-full p-2"
@@ -45,12 +46,12 @@ const ContactUs = () => {
                    <span className="lexend leading-[5] lg:leading-[7] lg:text-[1rem] text-[.8rem] ml-3">
                      Nextlevelfundingfx@gmail.com
                    </span>
-                 </div>
+                 </a>
                </div>
              </div>
            
       
-             <div className="px-[2rem] lg:px-[5rem]">
+             <div className="w-full px-[2rem] lg:px-[5rem]">
                <ContactForm />
              </div>
  
