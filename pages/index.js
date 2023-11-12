@@ -62,22 +62,3 @@ export default function Home() {
 
 
 
-
-
-// components/YourComponent.js
-// import { useTheme } from 'next-themes';
-
-// function YourComponent() {
-//   const { theme, setTheme } = useTheme();
-
-//   return (
-//     <div>
-//       <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-//         Toggle Mode
-//       </button>
-//       {/* Your component content goes here */}
-//     </div>
-//   );
-// }
-
-// export default YourComponent;
