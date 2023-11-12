@@ -6,8 +6,11 @@ import Typography from "@mui/material/Typography";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { useThemeContext } from "../context/ThemeContext";
 
 const AccordionComponent = (props) => {
+  const { theme, toggleTheme } = useThemeContext();
+
   const [expanded, setExpanded] = useState(false);
 
   const toggleAccordion = () => {
@@ -23,26 +26,26 @@ const AccordionComponent = (props) => {
           paddingBottom: 2,
           backgroundColor: "transparent",
         }}
-        className=" w-full lg:w-[80%] border border-slate-600 rounded-xl bg-white bg-opacity-5"
+        className={`${theme === 'light' ? "bg-white border-slate-600 text-white" : "bg-white border-none text-black"} w-full lg:w-[80%] border  rounded-xl  bg-opacity-5`}
         onClick={toggleAccordion}
       >
         <AccordionSummary
           expandIcon={
             expanded ? (
-              <RemoveIcon sx={{ color: "white" }} />
+              <RemoveIcon sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} />
             ) : (
-              <AddIcon sx={{ color: "white" }} />
+              <AddIcon sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} />
             )
           }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography sx={{ color: "white", fontSize: '18px' }} className="lexend">
+          <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} `, fontSize: '18px' }} className="lexend">
             {props.header}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography sx={{ color: "white" }} className="lexend text-sm font-extralight">
+          <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} className="lexend text-sm font-extralight">
             {props.text}
           </Typography>
         </AccordionDetails>

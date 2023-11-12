@@ -3,15 +3,17 @@ import PriceCard from "./PriceCard";
 import { PriceLists, bluePriceList } from "@/lib/data";
 import Button from "./Button";
 import Link from "next/link";
+import { useThemeContext } from "../context/ThemeContext";
 
 const PriceComponent = () => {
+  const { theme, toggleTheme } = useThemeContext();
   return (
     <div id="evaluation-package">
       <section className="grid flex-col justify-center items-center pt-[7rem]">
-        <p className="lexend uppercase text-slate-400 text-center text-sm px-3">
+        <p className={`lexend uppercase text-slate-400 text-center text-sm px-3`}>
           Tailored Solutions to Amplify Your Trading Success
         </p>
-        <p className="font-bold space-grotesk 2xl:text-6xl text-3xl text-center mt-3 px-3">
+        <p className={`${theme === 'light' ? "text-white" : "text-black"} font-bold space-grotesk 2xl:text-6xl text-3xl text-center mt-3 px-3`}>
           Our Evaluation Packages
         </p>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-8">
@@ -49,7 +51,7 @@ const PriceComponent = () => {
         <div className="2xl:flex block justify-center my-8">
           <Link href="/trading-rules">
             <Button
-              className="backdrop-filter bg-[transparent] backdrop-blur-lg bg-opacity-30 border border-slate-500 mx-auto"
+            className={`${theme === 'light' ? "border border-slate-500" : "text-black border border-[1pxl solid black] font-bpld"} backdrop-filter  bg-[transparent] backdrop-blur-lg bg-opacity-30  mx-auto`}
               text="read trading rules"
             />
           </Link>

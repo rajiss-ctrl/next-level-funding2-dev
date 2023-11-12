@@ -1,9 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Button from "./Button";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 import { Container } from "@mui/material";
+import { useThemeContext } from '../context/ThemeContext';
+
 
 const NavBar = () => {
+  const { theme, toggleTheme } = useThemeContext();
   const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
@@ -41,12 +46,22 @@ const NavBar = () => {
 
   return (
     <nav>
-      <div
-        className={` justify-between px-4 mx-auto 2xl:px-[12rem] xl:px-[9rem] lg:items-center lg:flex fixed right-0 left-0 z-50 ${
-          isScrolled ? "bg-black" : ""
-        }`}
-      >
-        <div>
+    <div
+  className={`${theme === "light" ? 'text-white home-bg' : 'text-black font-bold'}  justify-between px-4 mx-auto lg:px-[12rem] 2xl:px-[12rem] xl:px-[9rem] lg:items-center lg:flex fixed right-0 left-0 z-50 ${
+    isScrolled && theme === 'light' ? "bg-black" : ""
+  }${
+    isScrolled && theme === 'dark' ? "bg-white" : ""
+  }`}
+>
+<button 
+          className=" absolute z-30 top-[30px] lg:top-[40px] border-none outline-none right-[20%] lg:right-20"
+          onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+          {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
+          <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
+      </button>
+
+    <div >
+      
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link href="/" >
               <img src="/assets/logo.png" alt="" onClick={logoClickHandler}/>
@@ -93,7 +108,7 @@ const NavBar = () => {
           <div
             className={`flex-1 hidden justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0`}
           >
-            <div className=" text-center flex space-x-7 text-white backdrop-filter bg-black backdrop-blur-lg bg-opacity-30 border rounded-full py-2 px-10 border-slate-500 bg-blend-overlay lexend">
+            <div className={`${theme === 'light' ? "bg-black border-slate-500 text-white" : "bg-white text-black"} text-center flex space-x-7 backdrop-filter  backdrop-blur-lg bg-opacity-30 border rounded-full py-2 px-10  bg-blend-overlay lexend`}>
               <Link href="/about-us">About Us</Link>
               <Link href="/trading-rules">Trading Rules</Link>
               <Link href="/#faq">FAQ</Link>
@@ -106,7 +121,7 @@ const NavBar = () => {
                 className="h-screen w-full absolute left-0 top-0"
                 onClick={toggleNavbar}
               ></div>
-              <div className="navbar-slide-out z-30 flex flex-col justify-center items-center px-10 py-5 gap-6 bg-black text-white relative lexend ">
+              <div className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"} navbar-slide-out z-30 flex flex-col justify-center items-center px-10 py-5 gap-6  relative lexend `}>
                 <Link href="/about-us" onClick={toggleNavbar}>
                   About Us
                 </Link>

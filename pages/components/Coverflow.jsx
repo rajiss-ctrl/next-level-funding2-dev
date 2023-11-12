@@ -6,7 +6,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination,  Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useThemeContext } from "../context/ThemeContext";
 const Coverflow = () => {
+  
   return (
     <div>
       <Swiper

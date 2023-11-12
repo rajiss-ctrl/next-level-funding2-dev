@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "./Button";
 import Link from "next/link";
+import { useThemeContext } from "../context/ThemeContext";
 
 const GetInTouch = () => {
+  const { theme } = useThemeContext();
   return (
     <div>
       <section className="pt-[10rem] pb-[5rem] ">
@@ -12,7 +14,7 @@ const GetInTouch = () => {
             <p className=" lexend uppercase text-slate-400  text-sm px-3 ">
               we would love to hear from you
             </p>
-            <p className="space-grotesk font-bold text-[1.9rem] xl:text-[2.7rem]">
+            <p className={` ${theme === 'light' ? "text-white" : "text-black"} space-grotesk font-bold text-[1.9rem] xl:text-[2.7rem]`}>
               Get in touch with us
             </p>
             <div className="flex gap-5 mt-6">
@@ -29,13 +31,13 @@ const GetInTouch = () => {
                 />
               </Link>
             </div>
-            <p className="lg:w-1/2 mt-5 lexend font-thin">
+            <p className={`${theme === 'light' ? "text-white" : "text-black font-bold"} lg:w-1/2 mt-5 lexend font-thin`}>
               Have a question that wasn’t answered in our FAQs page ? Reach out
               to us and we will be happy to answer your questions
             </p>
             <div className="mt-[1rem]">
               <Button
-                className="backdrop-filter bg-[transparent] xl:hover:bg-blue-300 backdrop-blur-lg bg-opacity-30 border border-slate-500 w-1/5"
+                className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-slate-950 font-bold"} backdrop-filter bg-[transparent] xl:hover:bg-blue-300 backdrop-blur-lg bg-opacity-30 border  w-1/5`}
                 text="learn more"
               />
             </div>

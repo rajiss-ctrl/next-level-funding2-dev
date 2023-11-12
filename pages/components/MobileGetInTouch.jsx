@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Button from "./Button";
+import { useThemeContext } from './../context/ThemeContext';
 const MobileGetInTouch = () => {
+  const {theme} =useThemeContext()
   return (
-    <div className="glassmorph bg-white body-bg mb-[10rem] mt-[15rem]">
+    <div className={`${theme === 'light' ? "bg-white body-bg" : "bg-white text-black font-bold"} glassmorph  mb-[10rem] mt-[15rem]`}>
       <div className="">
         <img
           src="/assets/woman-sitting.svg"

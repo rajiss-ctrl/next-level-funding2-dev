@@ -2,17 +2,45 @@ import { Container } from "@mui/material";
 import React from "react";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import { useThemeContext } from "../context/ThemeContext";
+import IndexPage from "../components/IndexPage";
 const CookiePolicy = () => {
+  const { theme, toggleTheme } = useThemeContext();
   return (
     <div>
-      <main className="w-full body-bg pt-[5rem] text-white">
+        <IndexPage>
+      <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
+        <meta
+          name="NextLevelFunding"
+          content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+        />
+        <meta property="og:title" content='' />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9HBH2F8Z5"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C9HBH2F8Z5');
+            `,
+          }}
+        />
+      </IndexPage>
+    <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full  pt-[5rem]`}>
         <div className="grid items-center justify-center py-[5rem]">
           <p className="space-grotesk font-bold text-[3rem] text-center">
             Cookie Policy
           </p>
         </div>
       </main>
-      <div className="home-bg text-white text-lg">
+      <div className={`${theme === 'light' ? "home-bg text-white" : "bg-white text-black"}  text-lg`}>
         <div className="xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">
           <section className="lexend py-9">
             When displaying content, advertisements and other functionalities on

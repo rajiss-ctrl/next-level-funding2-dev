@@ -2,14 +2,17 @@ import React from "react";
 import GlassMorphCard from "./GlassMorphCard";
 import Button from "./Button";
 import Link from "next/link";
+import { useThemeContext } from "../context/ThemeContext";
 
 const FundingBenefits = () => {
+  const { theme, toggleTheme } = useThemeContext();
+
   return (
     <div className="pt-[8rem] lg:pb-[4rem]">
       <p className="lexend uppercase text-slate-400 text-sm text-center 2xl:text-left">
         TURNING TRADERS INTO CHAMPIONS – LET US INVEST IN YOUR SUCCESS.
       </p>
-      <p className="font-bold space-grotesk 2xl:text-6xl text-3xl mt-3 text-center 2xl:text-left">
+      <p className={`${theme === "light" ? "text-white" : "text-black"} font-bold space-grotesk 2xl:text-6xl text-3xl mt-3 text-center 2xl:text-left`}>
         Next Level Funding Benefits
       </p>
       <div className="grid lg:grid-cols-3 my-10 gap-10 lg:px-0">
@@ -35,8 +38,7 @@ const FundingBenefits = () => {
       <div className="w-full">
         <Link href="/about-us">
           <Button
-            className="backdrop-filter bg-[transparent] hover:bg-blue-300 backdrop-blur-lg bg-opacity-30 border border-slate-500 m-auto
-                "
+            className={`${theme === 'light' ? "text-white border border-slate-500" : "text-black border border-slate-800"} backdrop-filter bg-[transparent] hover:bg-blue-300 backdrop-blur-lg bg-opacity-30  m-auto`}
             text="learn more"
           />
         </Link>

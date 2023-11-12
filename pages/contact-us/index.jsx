@@ -2,12 +2,39 @@ import React from "react";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
-// import { Grid, Box } from "@mui/material";
-import { Link } from 'next/link';
+import { useThemeContext } from "../context/ThemeContext";
+import IndexPage from "../components/IndexPage";
 
 const ContactUs = () => {
+  const { theme} = useThemeContext();
+
   return (
-    <main className="w-full flex justify-center items-center flex-col body-bg pt-[5rem] text-white  h-full">
+    <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full flex justify-center items-center flex-col pt-[5rem]  h-full`}>
+        <IndexPage>
+      <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
+        <meta
+          name="NextLevelFunding"
+          content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+        />
+        <meta property="og:title" content='' />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9HBH2F8Z5"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C9HBH2F8Z5');
+            `,
+          }}
+        />
+      </IndexPage>
       <div className="grid items-center justify-center py-[5rem]">
         <p className=" lexend uppercase text-slate-400  text-sm px-3 mt-[6rem] text-center">
           we would love to hear from you
@@ -21,7 +48,7 @@ const ContactUs = () => {
         </p>
       </div>
       
-      <div className="home-bg w-full flex justify-center items-center flex-col">
+      <div className={`${theme === 'light' ? "home-bg text-white" : "bg-white text-black"}  w-full flex justify-center items-center flex-col`}>
       <div className="py-[6rem] lg:py-[10rem] 2xl:py-[10rem] flex justify-center flex-col w-full lg:w-[70%]">
        
        <div className="w-full flex justify-between flex-col lg:flex-row ">
@@ -49,8 +76,6 @@ const ContactUs = () => {
                  </a>
                </div>
              </div>
-           
-      
              <div className="w-full px-[2rem] lg:px-[5rem]">
                <ContactForm />
              </div>
@@ -58,11 +83,11 @@ const ContactUs = () => {
      </div>          
    </div>
 
-      </div>
+</div>
 
-      <div className="xl:px-[9rem] pt-8 lg:pt-0 2xl:px-[12rem] px-[2rem]">
-        <Footer />
-      </div>
+    <div className="xl:px-[9rem] pt-8 lg:pt-0 2xl:px-[12rem] px-[2rem]">
+      <Footer />
+    </div>
     </main>
   );
 };

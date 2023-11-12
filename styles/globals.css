@@ -17,9 +17,50 @@
   }
 }
 
-body {
+/* body {
   background-color: black;
-}
+} */
+  body {
+    transition: background-color 0.5s ease;
+  } 
+
+  .light-mode {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+  }  
+  .dark-mode {
+    --bg-color: black;
+    --text-color: #ffffff;
+  }
+ body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}  
+
+
+
+/* styles/globals.css */
+/* body {
+  transition: background-color 0.5s ease;
+} */
+
+/* Light Mode */
+/* .light-mode {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+} */
+
+/* Dark Mode */
+/* .dark-mode {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+} */
+
+/* body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} */
+
 
 
 .body-bg {
@@ -27,7 +68,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% 5%;
-}
+} 
 
 .home-bg {
   background-image: url("/assets/Homepage.png");
@@ -72,10 +113,10 @@ body {
   @apply  bg-opacity-5 backdrop-blur-sm text-white border shadow-lg rounded-full border-slate-500;
 }
 .price-card-morph {
-  @apply backdrop-blur-sm text-white border shadow-lg rounded-2xl border-slate-500 bg-blend-overlay;
+  @apply backdrop-blur-sm  border shadow-lg rounded-2xl  bg-blend-overlay;
 }
 .glassmorph {
-  @apply backdrop-blur-sm w-full  bg-opacity-5 text-white border border-slate-800 shadow-lg rounded-xl py-5 2xl:px-5 cursor-pointer;
+  @apply backdrop-blur-sm w-full  bg-opacity-5  shadow-lg rounded-xl py-5 2xl:px-5 cursor-pointer;
 }
 .bullet-point::before {
   content: "";

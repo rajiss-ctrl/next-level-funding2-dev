@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { useForm, Controller} from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-
-
-
+import { useForm as useFormspree } from '@formspree/react';
+import { useThemeContext } from "../context/ThemeContext";
 
 const ContactForm = () => {
-
- 
-  const schema = yup.object().shape({
+  const { theme, toggleTheme } = useThemeContext();
+  const [isFormSubmitting, setIsFormSubmitting] = useState(false); // Rename the state variable
+  
+  const schema = yup.object().shape({    
     name: yup
     .string()
     .required("Please enter your name")
@@ -22,28 +22,58 @@ const ContactForm = () => {
     message: yup.string().required("Please enter your message."),
   });
 
-  const { handleSubmit, formState: { errors }, control, reset, trigger } = useForm({
+  const {
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    control,
+    trigger,
+    reset,
+  } = useForm({
     resolver: yupResolver(schema),
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
   });
 
-  const onSubmit = (data) => {
-    alert(`Thanks ${data.name}  `);
-    reset();
-    
-  }
+  // Set up Formspree
+  const [state, submitForm] = useFormspree('xbjvbnwl');
+ 
+  const onSubmit = async (data) => {
+    try {
+      const isValid = await trigger();
+
+      if (isValid) {        
+        await submitForm(data);
+      } else {
+        console.error('Validation errors occurred.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      reset();
+    }
+  };      
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full pt-8 lg:pt-0">
+    <form onSubmit={handleSubmit(onSubmit)} 
+          action="https://formspree.io/f/xbjvbnwl" 
+          method="POST" 
+          className="w-full pt-8 lg:pt-0">
+          { state.succeeded && <p className="text-green-400 pb-4">Thanks, your message has been received!</p>}
       <div className="mb-10">
         <Controller
           name="name"
           control={control}
+          defaultValue="" 
           render={({ field }) => (
             <input
               type="text"
               placeholder="Name"
               {...field}
-              onBlur={() => trigger("name")} // Trigger validation on blur
+              onBlur={() => trigger("name")} 
               className="border border-[1px solid white] p-3 2xl:w-[30rem] w-full"
             />
           )}
@@ -54,6 +84,7 @@ const ContactForm = () => {
         <Controller
           name="email"
           control={control}
+          defaultValue="" 
           render={({ field }) => (
             <input
               type="email"
@@ -72,6 +103,7 @@ const ContactForm = () => {
         <Controller
           name="subject"
           control={control}
+          defaultValue="" 
           render={({ field }) => (
             <input
               type="text"
@@ -89,6 +121,7 @@ const ContactForm = () => {
         <Controller
           name="message"
           control={control}
+          defaultValue="" 
           render={({ field }) => (
             <textarea
               placeholder="Message"
@@ -102,17 +135,16 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col w-full md:w-[40%] xl:w-[20%] mt-10">
-        <button
-          type="submit"
-          disabled={false} // The disabled attribute is handled by React Hook Form
-          className="border border-slate-600 rounded-full px-4 py-2"
-        >
-          Submit
-        </button>
+      <button
+        type="submit"
+        className="border border-slate-600 rounded-full px-4 py-2"
+        disabled={isSubmitting || state.submitting}
+      >
+        {state.submitting ? 'Submitting...' : 'Submit'}
+      </button>
       </div>
     </form>
   );
 };
 
 export default ContactForm;
-// api key=re_JDuPqtyj_JPGtuzpgETwQjLg9abfkzXB4

@@ -1,10 +1,13 @@
 import React from "react";
+import { useThemeContext } from "../context/ThemeContext";
 
 
 
 const GlassMorphCard = (props) => {
+  const { theme, toggleTheme } = useThemeContext();
   return (
-    <div className="min-h-[330px] w-[285px] lg:w-full 2xl:w-full  mb-10 bg-white backdrop backdrop-blur-lg bg-opacity-5 text-white border border-slate-700 shadow-lg rounded-xl py-8 2xl:px-5 px-3">
+    <div className={`${theme === 'light' ? "text-white bg-white border border-slate-700" :
+     "text-black bg-white border border-white"} min-h-[330px] w-[285px] lg:w-full 2xl:w-full  mb-10  backdrop backdrop-blur-lg bg-opacity-5   shadow-lg rounded-xl py-8 2xl:px-5 px-3`}>
       {props.img && (
         <img src={props.img} className="w-32 h-auto " alt="illus-time" />
       )}

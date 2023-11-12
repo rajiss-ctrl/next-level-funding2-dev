@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { useThemeContext } from "../context/ThemeContext";
 
 const Footer = () => {
+  const { theme, toggleTheme } = useThemeContext();
   return (
-    <div className=" bg-[transparent]  text-white">
+    <div className= {`${theme === "light" ? 'text-white' : 'text-black font-bold'} bg-[transparent]`}>
       <div className="flex justify-center">
         <div className=" lg:hidden">
           <img src="/assets/logo.png" alt="" className="w-32 h-auto" />
-          <div className="flex gap-5 mt-6 hidden lg:block">
+          <div className="flex gap-5 mt-6  lg:block">
             <div className="border-none border bg-slate-700 rounded-full p-3">
               <img src="/assets/bulb.svg" className="w-5 h-auto" alt="" />
             </div>
@@ -35,16 +37,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex items-end w-full justify-center lg:justify-end gap-1">
-          <nav className="flex lexend text-[10px] lg:text-[15px] text-white ">
+          <nav className={`${theme === "light" ? 'text-white' : 'text-black'} flex lexend text-[10px] lg:text-[15px] `}>
             <Link
               href="/about-us"
-              className="link link-hover  border-r border-slate-200 pr-4 lg:px-4"
+              className={`${theme === "light" ? 'border-slate-200' : 'border-slate-800'} link link-hover  border-r  pr-4 lg:px-4`}
             >
               About Us
             </Link>
             <Link
               href="/contact-us"
-              className="link link-hover  border-r border-slate-200 px-4"
+              className={`${theme === "light" ? 'border-slate-200' : 'border-slate-800'} link link-hover  border-r  px-4`}
             >
               Help Centre
             </Link>
@@ -58,26 +60,26 @@ const Footer = () => {
           </nav>
         </div>
       </footer>
-      <p className=" xl:text-justify text-white opacity-70 lexend text-[10px] lg:text-sm px-4 text-center lg:text-left lg:px-0">
+      <p className={`${theme === "light" ? 'text-white' : 'text-black'}   xl:text-justif opacity-70 lexend text-[10px] lg:text-sm px-4 text-center lg:text-left lg:px-0`}>
         All information provided on this site is intended solely for the study
         purposes related to trading on financial markets and does not serve in
         any way as a specific investment recommendation, business
         recommendation, investment opportunity analysis or similar general
         recommendation regarding the trading of investment instruments.
       </p>
-      <div className="h-[0.5px] opacity-80 bg-white mt-8 mb-6 lg:mb-0  lg:mt-8 " />
-      <div className="lg:flex lg:justify-between lg:items-center text-center h-[50px]">
+      <div className={`${theme === "light" ? 'bg-white' : 'bg-black'} h-[0.5px] opacity-80 mt-8 mb-6 lg:mb-0  lg:mt-8 `} />
+      <div className={`lg:flex lg:justify-between lg:items-center text-center h-[50px]`}>
         <div>
           <nav className="flex items-center justify-center lexend text-[10px] lg:text-[12px] ">
             <Link
               href="/terms-of-service"
-              className="link link-hover  border-r border-slate-200 pr-4 "
+              className={`${theme === 'light' ? "border-slate-200" : "border-slate-900"} link link-hover  border-r  pr-4 `}
             >
               Terms of Service
             </Link>
             <Link
               href="/privacy-policy"
-              className="link link-hover  border-r border-slate-200 px-4"
+              className={`${theme === 'light' ? "border-slate-200" : "border-slate-900"} link link-hover  border-r px-4`}
             >
               
               Privacy Policy
@@ -85,7 +87,7 @@ const Footer = () => {
             </Link>
             <Link
               href="/cookie-policy"
-              className="link link-hover border-r border-slate-200 px-4"
+              className={`${theme === 'light' ? "border-slate-200" : "border-slate-900"} link link-hover border-r  px-4`}
             >
               
               Cookie Policy
@@ -97,7 +99,7 @@ const Footer = () => {
             </Link>
           </nav>
         </div>
-        <p className="mt-2 lg:mt-0 text-white text-center lexend text-[10px] lg:text-[12px]">
+        <p className={`${theme === 'light' ? "text-white" : "text-black"} mt-2 lg:mt- text-center lexend text-[10px] lg:text-[12px]`}>
           2023 © - Next Level Funding - Powered by OTB Solutions{" "}
         </p>
       </div>

@@ -4,10 +4,41 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import TableFlow from "../components/TableFlow";
 import TestimonialComponent from "../components/TestimonialComponent";
+import { useThemeContext } from "../context/ThemeContext";
+import IndexPage from "../components/IndexPage";
 
 const AboutUs = () => {
+  const { theme, toggleTheme } = useThemeContext();
+
+  
   return (
-    <main className="w-full body-bg pt-[5rem] text-white h-full">
+    <>
+    <IndexPage>
+      <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
+        <meta
+          name="NextLevelFunding"
+          content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+        />
+        <meta property="og:title" content='' />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9HBH2F8Z5"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C9HBH2F8Z5');
+            `,
+          }}
+        />
+      </IndexPage>
+    <main className={`${theme === "light" ? 'dark  body-bg text-white' : 'light bg-white text-black font-bold'} w-full  pt-[5rem] h-full`}>
         <div className="grid items-center justify-center py-[5rem]">
           <p className=" lexend uppercase text-slate-400  text-sm px-3 mt-[6rem] text-center">
             who we are
@@ -21,7 +52,7 @@ const AboutUs = () => {
             and recieving immediate funding of up to $500k
           </p>
         </div>
-        <div className="home-bg">
+        <div className={`${theme === "light" ? 'text-white home-bg' : 'text-black font-bold'} lg:px-20 mt-32`}>
           <div className="flex flex-col justify-center items-center px-[1.3rem] xl:px-[9rem] 2xl:px-[12rem]">
             <section className="lg:pt-10 lg:px-0 2xl:px-[10rem]">
               <div className="flex flex-col lg:flex-row  2xl:flex-row justify-center items-center lg:justify-between 2xl:justify-between py-20 gap-7 px-[2rem] 2xl:px-0">
@@ -47,25 +78,6 @@ const AboutUs = () => {
               </div>
             </section>
 
-            {/* CAROUSEL */}
-            {/* <section className="mt-[10rem]">
-              <p className="lexend uppercase text-slate-400 text-center text-sm">
-                Perks of joining us
-              </p>
-              <p className="font-bold space-grotesk 2xl:text-6xl text-3xl text-center ">
-                Why Choose Us
-              </p>
-              <div className="mt-10">
-                <AboutCoverflow />
-              </div>
-            </section> */}
-
-            {/* tABLE */}
-            {/* <section className="flex justify-center px-[1.5rem] mt-[5rem]">
-              <TableFlow />
-            </section> */}
-
-            {/* TESTIMONIALS */}
             <section className="lg:px-[1rem]  w-full overflow-hidden px-0 py-[3rem] lg:py-[10rem] 2xl:py-[10rem]">
               <p className="lexend w-full overflow-hidden uppercase text-slate-400 text-left text-sm">
                 what our traders are saying about us
@@ -90,18 +102,18 @@ const AboutUs = () => {
             </section>
             <section>
 
-            <section className="pt-8 lg:pt-0  lg:my-[10rem] relative ">
-                <img src="/assets/rec.svg" className="w-full h-[500px] lg:h-auto 2xl:h-auto " alt="" />
-                <div className="absolute pt-10  lg:pt-0 2xl:pt-0 top-[10rem] lg:top-[10%] z-10 lg:left-[3rem]">
-                  <p className=" pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
+            <section className=" hidden lg:block pt-8  lg:pt-0  lg:my-[10rem]  relative glassmorph">
+                <img src="/assets/rec.svg" className=" lg:h-auto 2xl:h-auto " alt="" />
+                <div className="absolute pt-10  lg:pt-0 2xl:pt-0 top-[10rem] lg:top-[10%] z-10 left-0 lg:left-[3rem]">
+                  <p className="pr-5 pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
                     be a part of the winning team
                   </p>
-                  <p className="space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
+                  <p className="pr-5 space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
                   </p>
                   <Link href="//#evaluation-package" className=" mt-[2rem]">
                     <Button
-                      className="backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none "
+                      className={`${theme === "light" ? "text-white" : "text-white"} backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none`}
                       text="get started"
                       showArrow={true}
                     />
@@ -115,6 +127,33 @@ const AboutUs = () => {
                   />
                 </div>
               </section>
+              {/* mobile */}
+              <section className=" px-4 lg:hidden  pt-8  lg:pt-0  lg:my-[10rem] glassmorph">
+              <div className=" ">
+                  <img
+                    src="/assets/trader.png"
+                    className="bouncing-image w-[65%] lg:w-[60%] 2xl:w-3/4 h-auto"
+                    alt=""
+                  />
+                </div>
+                <div className="  z-10">
+                  <p className=" pt-10 lexend uppercase text-slate-400 text-sm lg:px-3 font-bold ">
+                    be a part of the winning team
+                  </p>
+                  <p className=" space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
+                    Join our team of <br /> experienced traders
+                  </p>
+                  <Link href="//#evaluation-package" className=" mt-[2rem]">
+                    <Button
+                      className={`${theme === "light" ? "text-white" : "text-white font-bold"} backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none`}
+                      text="get started"
+                      showArrow={true}
+                    />
+                  </Link>
+                </div>
+              
+              </section>
+
             </section>
           </div>
           <section className="pt-[8rem] lg:pt-0 xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">
@@ -122,12 +161,8 @@ const AboutUs = () => {
           </section>
         </div>
     </main>
+    </>
   );
 };
 
 export default AboutUs;
-// API Key=528e2599baca6e13087816944b142541
-// Secret Key=4e1277a056a119f64d9aa3c54e14bebc
-          // subaccount
-// API Key=450d92b567baa8067048c7388601cee2
-// Secret Key=a20dd9ccfa5313d3ed49ef43ab97391b
