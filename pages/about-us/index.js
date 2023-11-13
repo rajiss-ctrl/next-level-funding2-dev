@@ -45,7 +45,7 @@ const AboutUs = () => {
             and recieving immediate funding of up to $500k
           </p>
         </div>
-        <div className={`${theme === "light" ? 'text-white home-bg' : 'text-black font-bold'} lg:px-20 mt-32`}>
+        <div className={`${theme === "light" ? 'text-white home-bg' : 'text-black font-bold'}  mt-32`}>
           <div className="flex flex-col justify-center items-center px-[1.3rem] xl:px-[9rem] 2xl:px-[12rem]">
             <section className="lg:pt-10 lg:px-0 2xl:px-[10rem]">
               <div className="flex flex-col lg:flex-row  2xl:flex-row justify-center items-center lg:justify-between 2xl:justify-between py-20 gap-7 px-[2rem] 2xl:px-0">
