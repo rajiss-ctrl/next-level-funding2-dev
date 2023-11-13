@@ -3,7 +3,7 @@ import PriceCard from "./PriceCard";
 import { PriceLists, bluePriceList } from "@/lib/data";
 import Button from "./Button";
 import Link from "next/link";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const PriceComponent = () => {
   const { theme, toggleTheme } = useThemeContext();

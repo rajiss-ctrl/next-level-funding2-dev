@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "@mui/material";
 import Footer from "../components/Footer";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 
 const TermsOfService = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme } = useThemeContext();
   return (
     <div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const PriceCard = (props) => {
   const { theme, toggleTheme } = useThemeContext();

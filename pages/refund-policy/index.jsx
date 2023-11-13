@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@mui/material";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 
 const RefundPolicy = () => {

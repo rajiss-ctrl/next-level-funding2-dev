@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import React from "react";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 const CookiePolicy = () => {
   const { theme, toggleTheme } = useThemeContext();

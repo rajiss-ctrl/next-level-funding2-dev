@@ -4,7 +4,7 @@ import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import { Container } from "@mui/material";
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../../context/ThemeContext';
 import Image from "next/image";
 
 

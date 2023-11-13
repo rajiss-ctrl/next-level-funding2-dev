@@ -1,7 +1,7 @@
 import React from "react";
 import AccordionComponent from "./AccordionComponent";
 import { accordionContents } from "@/lib/data";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const FaqComponent = () => {
   const { theme, toggleTheme } = useThemeContext();

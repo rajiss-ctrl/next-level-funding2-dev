@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import Image from "next/image"; // Import the Image component
 
 const CarouselCard = (props) => {

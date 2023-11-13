@@ -7,7 +7,7 @@ import FundingBenefits from "./components/FundingBenefits";
 import TradePotential from "./components/TradePotential";
 import Coverflow from "./components/Coverflow";
 import MobileGetInTouch from "./components/MobileGetInTouch";
-import { useThemeContext } from './context/ThemeContext';
+import { useThemeContext } from '../context/ThemeContext';
 import IndexPage from "./components/IndexPage";
 import Script from 'next/script';
 import Head from 'next/head';

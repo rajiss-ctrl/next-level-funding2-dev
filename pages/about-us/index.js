@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import TableFlow from "../components/TableFlow";
 import TestimonialComponent from "../components/TestimonialComponent";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 

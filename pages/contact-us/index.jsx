@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 

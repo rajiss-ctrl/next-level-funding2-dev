@@ -1,7 +1,7 @@
 import React from "react";
 import AccordionComponent from "../components/AccordionComponent";
 import Footer from "../components/Footer";
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../../context/ThemeContext';
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 

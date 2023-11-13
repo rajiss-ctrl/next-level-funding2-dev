@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 import TradingViewWidget from "./TradingViewWidget";
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../../context/ThemeContext';
 
 const Hero = () => {
   const { theme } = useThemeContext();
