@@ -1,5 +1,5 @@
     
-require('dotenv').config();
+
 		
 import { ThemeProvider } from './context/ThemeContext';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';  
@@ -26,16 +26,3 @@ export default function App({ Component, pageProps }) {
 
 
 
-// pages/_app.js
-// import { ThemeProvider } from 'next-themes';
-// import '../styles/globals.css';
-
-// function MyApp({ Component, pageProps }) {
-//   return (
-//     <ThemeProvider attribute="class">
-//       <Component {...pageProps} />
-//     </ThemeProvider>
-//   );
-// }
-
-// export default MyApp;

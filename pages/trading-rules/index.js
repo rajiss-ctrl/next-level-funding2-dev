@@ -3,6 +3,7 @@ import AccordionComponent from "../components/AccordionComponent";
 import Footer from "../components/Footer";
 import { useThemeContext } from '../context/ThemeContext';
 import IndexPage from "../components/IndexPage";
+import Image from "next/image";
 
 const TradingRules = () => {
   const { theme, toggleTheme } = useThemeContext();
@@ -100,7 +101,9 @@ const TradingRules = () => {
           <section className="flex items-center justify-center mt-[4rem]">
             <div className="disclaimer">
               <div className="flex justify-center">
-                <img
+                <Image
+                width={30}
+                height={30}
                   src="/assets/alert-circle.svg"
                   className="w-5 h-auto"
                   alt=""

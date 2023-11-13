@@ -6,14 +6,13 @@ import TableFlow from "../components/TableFlow";
 import TestimonialComponent from "../components/TestimonialComponent";
 import { useThemeContext } from "../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
+import Image from "next/image";
 
 const AboutUs = () => {
-  const { theme, toggleTheme } = useThemeContext();
-
-  
+  const { theme } = useThemeContext();
   return (
     <>
-<IndexPage>
+      <IndexPage>
         
         <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
         <meta
@@ -50,11 +49,16 @@ const AboutUs = () => {
             <section className="lg:pt-10 lg:px-0 2xl:px-[10rem]">
               <div className="flex flex-col lg:flex-row  2xl:flex-row justify-center items-center lg:justify-between 2xl:justify-between py-20 gap-7 px-[2rem] 2xl:px-0">
                 <div className="">
-                  <img
-                    src="/assets/about.png"
-                    className=" h-auto m-auto"
-                    alt=""
-                  />
+                <div className="">
+                <Image
+                  src="/assets/about.png"
+                  alt=""
+                  width={400}
+                  height={400}
+                  className="w-full h-auto  m-auto"
+                  // lg:w-[50%] 2xl:w-[40%]
+                />
+              </div>
                 </div>
                 <div className="lg:text-left lexend text-center w-fill lg:w-[55%]">
                   <p className="space-grotesk lg:text-[3.5rem] font-bold text-3xl mt-10 lg:mt-0 lg:pb-4">
@@ -95,15 +99,15 @@ const AboutUs = () => {
             </section>
             <section>
 
-            <section className=" hidden lg:block pt-8  lg:pt-0  lg:my-[10rem]  relative glassmorph">
-                <img src="/assets/rec.svg" className=" lg:h-auto 2xl:h-auto " alt="" />
+            <section className=" hidden lg:block pt-8  lg:pt-0  lg:my-[10rem]  relative ">
+                <Image width={400} height={400} layout="responsive" src="/assets/rec.svg" className=" lg:h-auto 2xl:h-auto " alt="" />
                 <div className="absolute pt-10  lg:pt-0 2xl:pt-0 top-[10rem] lg:top-[10%] z-10 left-0 lg:left-[3rem]">
-                  <p className="pr-5 pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
+                  <div className="pr-5 pt-10 lexend uppercase  lg:text-slate-400 text-sm lg:px-3 ">
                     be a part of the winning team
-                  </p>
-                  <p className="pr-5 space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
+                  </div>
+                  <div className="pr-5 space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
-                  </p>
+                  </div>
                   <Link href="//#evaluation-package" className=" mt-[2rem]">
                     <Button
                       className={`${theme === "light" ? "text-white" : "text-white"} backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none`}
@@ -113,29 +117,33 @@ const AboutUs = () => {
                   </Link>
                 </div>
                 <div className="absolute top-6 left-[0] lg:top-0 lg:left-[58%]">
-                  <img
-                    src="/assets/trader.png"
-                    className="bouncing-image w-[65%] lg:w-[60%] 2xl:w-3/4 h-auto"
-                    alt=""
-                  />
+                <Image
+                  src="/assets/trader.png"
+                  alt=""
+                  width={350}
+                  height={350} // Set to null for automatic height adjustment
+                  className="bouncing-image w-full lg:w-[60%] 2xl:w-3/4 h-auto"
+                />
                 </div>
               </section>
               {/* mobile */}
               <section className=" px-4 lg:hidden  pt-8  lg:pt-0  lg:my-[10rem] glassmorph">
               <div className=" ">
-                  <img
-                    src="/assets/trader.png"
-                    className="bouncing-image w-[65%] lg:w-[60%] 2xl:w-3/4 h-auto"
-                    alt=""
-                  />
+              <Image
+                  src="/assets/trader.png"
+                  alt=""
+                  width={65}
+                  height={65} // Set to null for automatic height adjustment
+                  className="bouncing-image w-full  2xl:w-3/4 h-auto"
+                />
                 </div>
                 <div className="  z-10">
-                  <p className=" pt-10 lexend uppercase text-slate-400 text-sm lg:px-3 font-bold ">
+                  <div className=" pt-10 lexend uppercase text-slate-400 text-sm lg:px-3 font-bold ">
                     be a part of the winning team
-                  </p>
-                  <p className=" space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
+                  </div>
+                  <div className=" space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
-                  </p>
+                  </div>
                   <Link href="//#evaluation-package" className=" mt-[2rem]">
                     <Button
                       className={`${theme === "light" ? "text-white" : "text-white font-bold"} backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none`}
@@ -158,4 +166,5 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+
+export default AboutUs

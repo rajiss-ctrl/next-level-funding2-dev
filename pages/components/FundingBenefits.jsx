@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useThemeContext } from "../context/ThemeContext";
 
 const FundingBenefits = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme} = useThemeContext();
 
   return (
     <div className="pt-[8rem] lg:pb-[4rem]">
@@ -23,13 +23,13 @@ const FundingBenefits = () => {
           className="text-3xl"
         />
         <GlassMorphCard
-          img="\assets\Computer-illustration.png"
+          img="/assets/Computer-illustration.png"
           title="Lowest targets"
           text={`With our one step evaluation being only a 12% profit target we have one of the most competitive targets across all funding companies.`}
           className="text-3xl"
         />{" "}
         <GlassMorphCard
-          img="\assets\iphone-illustration.png"
+          img="/assets/iphone-illustration.png"
           title="Money back"
           text={`Get your money you paid for your evaluation account back once you reach your first profit split on your live account providing you did not pass with a HFT algorithm.`}
           className="text-3xl"

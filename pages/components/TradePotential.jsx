@@ -3,7 +3,7 @@ import GlassMorph from "./GlassMorph";
 import { useThemeContext } from "../context/ThemeContext";
 
 const TradePotential = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme } = useThemeContext();
 
   return (
     <div className="px-[2rem]">

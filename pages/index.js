@@ -31,11 +31,8 @@ export default function Home() {
           <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
         
-
-        {/* Your page content goes here */}
-
-              </IndexPage>
-      <Hero theme={theme} />
+      </IndexPage>
+      <Hero/>
       <div className={`${theme === "light" ? 'dark  home-bg text-white' : 'light'}   xl:px-[9rem] 2xl:px-[12rem] px-[2rem]`}>
         <TradePotential />
         <Coverflow />

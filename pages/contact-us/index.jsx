@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
 import { useThemeContext } from "../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
+import Image from "next/image";
 
 const ContactUs = () => {
   const { theme} = useThemeContext();
@@ -47,7 +48,9 @@ const ContactUs = () => {
        <div className="w-full flex justify-between flex-col lg:flex-row ">
              <div className="px-6 lg:pr-4">
                <a href="" className="flex items-center">
-                 <img
+                 <Image
+                 width={40}
+                 height={40}
                    src="/assets/call.svg"
                    className="2xl:w-[3.5rem] w-8 h-auto border-none border bg-slate-700 rounded-full p-2"
                    alt=""
@@ -58,7 +61,9 @@ const ContactUs = () => {
                </a>
                <div className=" ">
                  <a href="mailto:Nextlevelfundingfx@gmail.com" className="flex items-center">
-                   <img
+                   <Image
+                   width={40}
+                   height={40}
                      src="/assets/mail.svg"
                      className="2xl:w-14 w-8 h-auto border-none border bg-slate-700 rounded-full p-2"
                      alt=""

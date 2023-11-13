@@ -1,15 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import Button from "./Button";
-import { useThemeContext } from './../context/ThemeContext';
+import Image from "next/image"; // Import the Image component
+import { useThemeContext } from "../context/ThemeContext";
+
 const MobileGetInTouch = () => {
-  const {theme} =useThemeContext()
+  const { theme } = useThemeContext();
+
   return (
-    <div className={`${theme === 'light' ? "bg-white body-bg" : "bg-white text-black font-bold"} glassmorph  mb-[10rem] mt-[15rem]`}>
+    <div className={`${theme === 'light' ? "bg-white body-bg" : "bg-white text-black font-bold"} glassmorph mb-[10rem] mt-[15rem]`}>
       <div className="">
-        <img
+        {/* Replace <img> with <Image> */}
+        <Image
           src="/assets/woman-sitting.svg"
+          width={1}
+          height={1}
           className="w-[15rem] h-auto -mt-[60%] mx-auto"
+          alt=""
         />
       </div>
       <div className="">
@@ -21,22 +28,30 @@ const MobileGetInTouch = () => {
         </p>
         <div className="flex gap-5 mt-6 px-3">
           <Link href="">
-            <img
+            {/* Replace <img> with <Image> */}
+            <Image
               src="/assets/ig.png"
-              className="w-[40px] xl:w-[60px] h-auto bg-slate-700 p-2 rounded-full"
+              width={60}
+              height={60}
+              className="bg-slate-700 p-2 rounded-full"
+              alt=""
             />
           </Link>
           <Link href="">
-            <img
+            {/* Replace <img> with <Image> */}
+            <Image
               src="/assets/email.png"
-              className="w-[40px] xl:w-[60px] h-auto bg-slate-700 p-2 rounded-full"
+              width={60}
+              height={60}
+              className="bg-slate-700 p-2 rounded-full"
+              alt=""
             />
           </Link>
         </div>
         <div className="mt-6">
           <p className="lexend px-4">
-            Have a question that wasn’t answered in our FAQs page ? Reach out to
-            us and we will be happy to answer your questions
+            Have a question that wasn’t answered in our FAQs page? Reach out to
+            us, and we will be happy to answer your questions
           </p>
         </div>
         <div className="mt-[2rem] px-3">
