@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import GlassMorphCard from "./GlassMorphCard";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import Image from "next/image";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 const Coverflow = () => {

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback  } from "react";
 import Link from "next/link";
 import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -19,22 +19,27 @@ const NavBar = () => {
   };
   const logoClickHandler = !navbar ? null : toggleNavbar;
 
-  const handleNavigation = () => {
+  const handleNavigation = useCallback(() => {
     if (navbar) {
       setNavbar(false);
     }
-  };
-
-  useEffect(() => {
-    window.addEventListener("popstate", handleNavigation);
-
-    return () => {
-      window.removeEventListener("popstate", handleNavigation);
-    };
   }, [navbar]);
 
+  const handleNavigationRef = useRef(handleNavigation);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    handleNavigationRef.current = handleNavigation;
+  }, [handleNavigation]);
+
+  useEffect(() => {
+    window.addEventListener("popstate", handleNavigationRef.current);
+
+    return () => {
+      window.removeEventListener("popstate", handleNavigationRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
       const scrollY = window.scrollY;
 
       if (scrollY > 100) {
@@ -42,8 +47,14 @@ const NavBar = () => {
       } else {
         setIsScrolled(false);
       }
-    });
-  }, [handleNavigation]);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // No dependencies are needed for handleScroll
 
   return (
     <nav>
