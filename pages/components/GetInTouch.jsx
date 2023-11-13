@@ -27,6 +27,7 @@ const GetInTouch = () => {
                   width={60}
                   height={60}
                   className="bg-slate-700 p-2 rounded-full"
+                  alt=""
                 />
               </Link>
               <Link href="mailto:Nextlevelfundingfx@gmail.com">
@@ -35,6 +36,7 @@ const GetInTouch = () => {
                   width={60}
                   height={60}
                   className="bg-slate-700 p-2 rounded-full"
+                  alt=""
                 />
               </Link>
             </div>

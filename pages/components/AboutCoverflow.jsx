@@ -31,13 +31,13 @@ const Coverflow = () => {
         initialSlide={1}
       >
         <SwiperSlide>
-          <img src="/assets/pexels-lara-jameson-9324359.jpg" className="w-full h-auto" alt="" />
+          <Image width={100} height={100} src="/assets/pexels-lara-jameson-9324359.jpg" className="w-full h-auto" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/assets/pexels-mizuno-k-12912157.jpg" className="" alt="" />
+          <Image width={100} height={100} src="/assets/pexels-mizuno-k-12912157.jpg" className="" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/assets/pexels-sora-shimazaki-5668839.jpg" className="" alt="" />
+          <Image width={100} height={100} src="/assets/pexels-sora-shimazaki-5668839.jpg" className="" alt="" />
         </SwiperSlide>
       </Swiper>
     </div>

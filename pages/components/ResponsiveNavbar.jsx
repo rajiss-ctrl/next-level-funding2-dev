@@ -5,6 +5,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import { Container } from "@mui/material";
 import { useThemeContext } from '../context/ThemeContext';
+import Image from "next/image";
 
 
 const NavBar = () => {
@@ -42,7 +43,7 @@ const NavBar = () => {
         setIsScrolled(false);
       }
     });
-  }, []);
+  }, [handleNavigation]);
 
   return (
     <nav>
@@ -64,7 +65,7 @@ const NavBar = () => {
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link href="/" >
-              <img src="/assets/logo.png" alt="" onClick={logoClickHandler}/>
+              <Image width={150} height={150} src="/assets/logo.png" alt="" onClick={logoClickHandler}/>
             </Link>
             <div className="lg:hidden">
               <button

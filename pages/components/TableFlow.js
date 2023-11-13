@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const TableFlow = () => {
@@ -53,21 +54,21 @@ const TableFlow = () => {
                         Drawback
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 flex justify-center">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/good.svg"
                           className="w-5 h-auto"
                           alt=""
                         />
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 ">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/bad.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
                         />
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 flex justify-center">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/bad.svg"
                           className="w-5 h-auto"
                           alt=""
@@ -79,21 +80,21 @@ const TableFlow = () => {
                         Balance Based
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/good.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
                         />
                       </td>{" "}
                       <td className="whitespace-nowrap px-6 py-4 ">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/bad.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
                         />
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 ">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/good.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
@@ -105,21 +106,21 @@ const TableFlow = () => {
                         Balance Based
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/good.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
                         />
                       </td>{" "}
                       <td className="whitespace-nowrap px-6 py-4">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/bad.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
                         />
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
-                        <img
+                        <Image width={300} height={300}
                           src="/assets/bad.svg"
                           className="w-5 h-auto m-auto"
                           alt=""
