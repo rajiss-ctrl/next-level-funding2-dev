@@ -39,7 +39,7 @@ const Hero = () => {
               </Link>
               <Link href="/#evaluation-package">
                 <Button
-                  className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} backdrop-filter bg-[#991275] border-none lg:flex-1`}
+                  className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} backdrop-filter bg-[#991275] border-none lg:flex-1`}
                   text="get started"
                   showArrow={true}
                 />

@@ -39,30 +39,6 @@
 
 
 
-/* styles/globals.css */
-/* body {
-  transition: background-color 0.5s ease;
-} */
-
-/* Light Mode */
-/* .light-mode {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-} */
-
-/* Dark Mode */
-/* .dark-mode {
-  --bg-color: #333333;
-  --text-color: #ffffff;
-} */
-
-/* body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-} */
-
-
-
 .body-bg {
   background-image: url("/assets/main-bg.png");
   background-repeat: no-repeat;
