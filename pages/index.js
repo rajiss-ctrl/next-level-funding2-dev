@@ -32,7 +32,7 @@ export default function Home() {
         
       </IndexPage>
       <Hero/>
-      <div className={`${theme === "light" ? 'dark  home-bg text-white' : 'light'}   xl:px-[9rem] 2xl:px-[12rem] px-[2rem]`}>
+      <div className={`${theme === "light" ? 'home-bg text-white' : 'bg-white text-black'}   xl:px-[9rem] 2xl:px-[12rem] px-[2rem]`}>
         <TradePotential />
         <Coverflow />
         <FundingBenefits />
