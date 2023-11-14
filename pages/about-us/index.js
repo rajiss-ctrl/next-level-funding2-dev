@@ -12,6 +12,20 @@ const AboutUs = () => {
   const { theme } = useThemeContext();
   return (
     <>
+    <IndexPage>
+          <title>About us -- NextLevelFunding</title>
+          <meta
+            name="description"
+            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+          />
+          <meta property="og:title" content="NextLevelFunding" />
+          {/* Add other meta tags as needed for og:description, og:image, etc. */}
+          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
+          <link rel="manifest" href="/site.webmanifest" />
+        
+      </IndexPage>
     <main className={`${theme === "light" ? 'dark  body-bg text-white' : 'light bg-white text-black font-bold'} w-full  pt-[5rem] h-full`}>
         <div className="grid items-center justify-center py-[5rem]">
           <p className=" lexend uppercase text-slate-400  text-sm px-3 mt-[6rem] text-center">

@@ -88,7 +88,7 @@ const NavBar = () => {
             </Link>
             <div className="lg:hidden">
               <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white"
+                className={`p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white`}
                 onClick={toggleNavbar}
               >
                 {navbar ? (
