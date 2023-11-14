@@ -9,6 +9,20 @@ const TradingRules = () => {
   const { theme, toggleTheme } = useThemeContext();
   return (
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full  pt-[5rem] h-full`}>
+      <IndexPage>
+          <title>Trading Rules -- NextLevelFunding</title>
+          <meta
+            name="description"
+            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+          />
+          <meta property="og:title" content="NextLevelFunding" />
+          {/* Add other meta tags as needed for og:description, og:image, etc. */}
+          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
+          <link rel="manifest" href="/site.webmanifest" />
+        
+      </IndexPage>
       <div className=" grid items-center justify-center py-[5rem]">
         <p className=" lexend uppercase text-slate-400 text-xs lg:text-sm px-3 mt-[6rem] text-center">
           next level funding

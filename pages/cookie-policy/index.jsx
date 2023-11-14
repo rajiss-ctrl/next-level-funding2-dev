@@ -8,7 +8,20 @@ const CookiePolicy = () => {
   const { theme, toggleTheme } = useThemeContext();
   return (
     <div>
-
+      <IndexPage>
+          <title>Cookie Policy -- NextLevelFunding</title>
+          <meta
+            name="description"
+            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+          />
+          <meta property="og:title" content="NextLevelFunding" />
+          {/* Add other meta tags as needed for og:description, og:image, etc. */}
+          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
+          <link rel="manifest" href="/site.webmanifest" />
+        
+      </IndexPage>
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full  pt-[5rem]`}>
         <div className="grid items-center justify-center py-[5rem]">
           <p className="space-grotesk font-bold text-[3rem] text-center">
