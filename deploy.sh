@@ -1,4 +1,3 @@
-cd next-level-funding2-dev
 git pull
 yarn install
 yarn run build
