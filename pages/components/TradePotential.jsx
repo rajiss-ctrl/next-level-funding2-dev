@@ -1,6 +1,6 @@
 import React from "react";
 import GlassMorph from "./GlassMorph";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const TradePotential = () => {
   const { theme } = useThemeContext();

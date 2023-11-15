@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@mui/material";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 
 const RefundPolicy = () => {
@@ -10,24 +10,20 @@ const RefundPolicy = () => {
 
   return (
     <div>
-       <IndexPage>
+        <IndexPage>
+          <title>Refund Policy -- NextLevelFunding</title>
+          <meta
+            name="description"
+            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+          />
+          <meta property="og:title" content="NextLevelFunding" />
+          {/* Add other meta tags as needed for og:description, og:image, etc. */}
+          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
+          <link rel="manifest" href="/site.webmanifest" />
         
-        <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
-        <meta
-          name="description"
-          content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
-        />
-        <meta property="og:title" content="NextLevelFunding" />
-        {/* Add other meta tags as needed for og:description, og:image, etc. */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      
-
-      {/* Your page content goes here */}
-
-            </IndexPage>
+      </IndexPage>
       <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full  pt-[5rem] 2xl:h-[40vh] h-full`}>
         <div className="grid items-center justify-center py-[5rem]">
           <p className="space-grotesk font-bold text-[3rem] text-center">

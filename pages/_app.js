@@ -1,7 +1,7 @@
     
 
 		
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from '../context/ThemeContext';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';  
 import "@/styles/globals.css";
 import Layout from "./components/Layout";

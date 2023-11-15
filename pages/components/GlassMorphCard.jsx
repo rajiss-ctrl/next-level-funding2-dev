@@ -1,5 +1,5 @@
 import React from "react";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import Image from "next/image"; // Import the Image component
 
 const GlassMorphCard = (props) => {
@@ -11,12 +11,12 @@ const GlassMorphCard = (props) => {
         // Ensure the correct format for the src attribute
         <Image src={props.img} alt="Illustration Time" width={128} height={128} className="w-32 h-auto" />
       )}
-      <p className={`lexend font-bold py-4  ${props.className}`}>
+      <div className={`lexend font-bold py-4  ${props.className}`}>
         {props.title}
-      </p>
-      <p>{props.stars}</p>
-      <p className="lexend text-sm font-thin">{props.text}</p>
-      <p className="lexend text-sm font-bold pt-6">{props.name}</p>
+      </div>
+      <div>{props.stars}</div>
+      <div className="lexend text-sm font-thin">{props.text}</div>
+      <div className="lexend text-sm font-bold pt-6">{props.name}</div>
     </div>
   );
 };

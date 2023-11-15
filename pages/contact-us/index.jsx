@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 
@@ -11,24 +11,20 @@ const ContactUs = () => {
 
   return (
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full flex justify-center items-center flex-col pt-[5rem]  h-full`}>
-        <IndexPage>
+       <IndexPage>
+          <title>Contact Us -- NextLevelFunding</title>
+          <meta
+            name="description"
+            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+          />
+          <meta property="og:title" content="NextLevelFunding" />
+          {/* Add other meta tags as needed for og:description, og:image, etc. */}
+          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
+          <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
+          <link rel="manifest" href="/site.webmanifest" />
         
-        <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
-        <meta
-          name="description"
-          content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
-        />
-        <meta property="og:title" content="NextLevelFunding" />
-        {/* Add other meta tags as needed for og:description, og:image, etc. */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      
-
-      {/* Your page content goes here */}
-
-            </IndexPage>
+      </IndexPage>
       <div className="grid items-center justify-center py-[5rem]">
         <p className=" lexend uppercase text-slate-400  text-sm px-3 mt-[6rem] text-center">
           we would love to hear from you

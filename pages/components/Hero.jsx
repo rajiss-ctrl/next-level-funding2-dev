@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 import TradingViewWidget from "./TradingViewWidget";
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../../context/ThemeContext';
 
 const Hero = () => {
   const { theme } = useThemeContext();
@@ -39,7 +39,7 @@ const Hero = () => {
               </Link>
               <Link href="/#evaluation-package">
                 <Button
-                  className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} backdrop-filter bg-[#991275] border-none lg:flex-1`}
+                  className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} backdrop-filter bg-[#991275] border-none lg:flex-1`}
                   text="get started"
                   showArrow={true}
                 />

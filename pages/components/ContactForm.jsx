@@ -4,7 +4,7 @@ import { useForm, Controller} from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useForm as useFormspree } from '@formspree/react';
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const ContactForm = () => {
   const { theme, toggleTheme } = useThemeContext();

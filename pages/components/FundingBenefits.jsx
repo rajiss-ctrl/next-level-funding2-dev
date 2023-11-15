@@ -2,7 +2,7 @@ import React from "react";
 import GlassMorphCard from "./GlassMorphCard";
 import Button from "./Button";
 import Link from "next/link";
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const FundingBenefits = () => {
   const { theme} = useThemeContext();

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Image from "next/image"; // Import the Image component
-import { useThemeContext } from "../context/ThemeContext";
+import Image from "next/image"; 
+import { useThemeContext } from "../../context/ThemeContext";
 
 const Footer = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme} = useThemeContext();
   return (
     <div className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} bg-[transparent]`}>
       <div className="flex justify-center">
@@ -22,12 +22,12 @@ const Footer = () => {
       <footer className="flex md:flex-row space-y-2 md:space-y-0 py-10 text-base-content">
         <div className="flex items-start">
           <div className="hidden lg:flex items-center justify-center gap-6">
-            <Image src="/assets/logo.png" alt="" width={64} height={64} />
+            <Image src="/assets/logo.png" alt="" width={125} height={125} />
             <a href="https://www.instagram.com/nextlevelfundingfx/">
-              <Image src="/assets/ig.png" alt="" width={80} height={80} />
+              <Image src="/assets/ig.png" alt="" width={60} height={60} />
             </a>
             <a href="mailto:Nextlevelfundingfx@gmail.com">
-              <Image src="/assets/email.png" alt="" width={80} height={80} />
+              <Image src="/assets/email.png" alt="" width={60} height={60} />
             </a>
           </div>
         </div>

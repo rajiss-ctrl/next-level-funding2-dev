@@ -1,10 +1,10 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback  } from "react";
 import Link from "next/link";
 import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import { Container } from "@mui/material";
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../../context/ThemeContext';
 import Image from "next/image";
 
 
@@ -17,24 +17,30 @@ const NavBar = () => {
   const toggleNavbar = () => {
     setNavbar(!navbar);
   };
+  
   const logoClickHandler = !navbar ? null : toggleNavbar;
 
-  const handleNavigation = () => {
+  const handleNavigation = useCallback(() => {
     if (navbar) {
       setNavbar(false);
     }
-  };
-
-  useEffect(() => {
-    window.addEventListener("popstate", handleNavigation);
-
-    return () => {
-      window.removeEventListener("popstate", handleNavigation);
-    };
   }, [navbar]);
 
+  const handleNavigationRef = useRef(handleNavigation);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    handleNavigationRef.current = handleNavigation;
+  }, [handleNavigation]);
+
+  useEffect(() => {
+    window.addEventListener("popstate", handleNavigationRef.current);
+
+    return () => {
+      window.removeEventListener("popstate", handleNavigationRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
       const scrollY = window.scrollY;
 
       if (scrollY > 100) {
@@ -42,19 +48,25 @@ const NavBar = () => {
       } else {
         setIsScrolled(false);
       }
-    });
-  }, [handleNavigation]);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // No dependencies are needed for handleScroll
 
   return (
     <nav>
     <div
-  className={`${theme === "light" ? 'text-white home-bg' : 'text-black font-bold'}  justify-between px-4 mx-auto lg:px-[12rem] 2xl:px-[12rem] xl:px-[9rem] lg:items-center lg:flex fixed right-0 left-0 z-50 ${
-    isScrolled && theme === 'light' ? "bg-black" : ""
-  }${
-    isScrolled && theme === 'dark' ? "bg-white" : ""
-  }`}
->
-<button 
+        className={`justify-between px-4 mx-auto lg:px-[12rem] 2xl:px-[12rem] xl:px-[9rem] lg:items-center lg:flex fixed right-0 left-0 z-50 ${
+          isScrolled && theme === 'light' ? "bg-black" : ""
+        }${
+          isScrolled && theme === 'dark' ? "bg-white" : ""
+        }`}
+      >
+        <button 
           className=" absolute z-30 top-[30px] lg:top-[40px] border-none outline-none right-[20%] lg:right-20"
           onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
           {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
@@ -65,11 +77,18 @@ const NavBar = () => {
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link href="/" >
-              <Image width={150} height={150} src="/assets/logo.png" alt="" onClick={logoClickHandler}/>
+            <Image
+              src="/assets/logo.png"
+              alt=""
+              width={150}
+              height={150}
+              // layout="responsive"
+              onClick={logoClickHandler}
+            />
             </Link>
             <div className="lg:hidden">
               <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white"
+                className={`p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white`}
                 onClick={toggleNavbar}
               >
                 {navbar ? (
@@ -147,7 +166,7 @@ const NavBar = () => {
         </div>
         <div className="hidden space-x-2 lg:inline-block">
           <Button
-            className="bg-[#295cf7] border-none lexend hover:bg-blue-800"
+            className={`${theme === 'light' ? "text-white" : "text-white"} bg-[#295cf7] border-none lexend hover:bg-blue-800`}
             text="get funded"
             showArrow={true}
           />

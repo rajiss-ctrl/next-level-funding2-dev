@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image"; // Import the Image component
-import { useThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const MobileGetInTouch = () => {
   const { theme } = useThemeContext();
