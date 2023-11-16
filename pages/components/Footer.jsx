@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image"; 
 import { useThemeContext } from "../../context/ThemeContext";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   const { theme} = useThemeContext();
@@ -22,12 +24,14 @@ const Footer = () => {
       <footer className="flex md:flex-row space-y-2 md:space-y-0 py-10 text-base-content">
         <div className="flex items-start">
           <div className="hidden lg:flex items-center justify-center gap-6">
-            <Image src="/assets/logo.png" alt="" width={125} height={125} />
-            <a href="https://www.instagram.com/nextlevelfundingfx/">
-              <Image src="/assets/ig.png" alt="" width={60} height={60} />
+            <Image src="/assets/logo.png" alt="" width={130} height={120} />
+            <a href="https://www.instagram.com/nextlevelfundingfx/" className="bg-[#344153] rounded-[50%] p-3">
+                <InstagramIcon className='text-20 text-white'/>
+              {/* <Image src="/assets/ig.png" alt="" width={60} height={60} /> */}
             </a>
-            <a href="mailto:Nextlevelfundingfx@gmail.com">
-              <Image src="/assets/email.png" alt="" width={60} height={60} />
+            <a href="mailto:Nextlevelfundingfx@gmail.com" className="bg-[#344153] rounded-[50%] p-3">
+              <MailOutlineIcon className='text-20 text-white'/>
+              {/* <Image src="/assets/email.png" alt="" width={60} height={60} /> */}
             </a>
           </div>
         </div>
@@ -91,10 +95,12 @@ const Footer = () => {
 
       <div className="flex gap-5 pt-[3rem] pb-6 justify-center lg:hidden">
         <a href="https://www.instagram.com/nextlevelfundingfx/" target="_blank" rel="noopener noreferrer">
-          <Image src="/assets/ig.png" alt="" width={35} height={35} />
+          {/* <Image src="/assets/ig.png" alt="" width={35} height={35} /> */}
+          <InstagramIcon className='text-2'/> 
         </a>
         <a href="mailto:Nextlevelfundingfx@gmail.com">
-          <Image src="/assets/email.png" alt="" width={35} height={35} />
+          {/* <Image src="/assets/email.png" alt="" width={35} height={35} /> */}
+          <MailOutlineIcon className='text-2'/>
         </a>
       </div>
     </div>
