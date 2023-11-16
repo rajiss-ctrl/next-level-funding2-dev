@@ -31,7 +31,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
             cd /home/akinthe/next-level-funding2-dev
-            git pull
             yarn install
             yarn run build
             pm2 stop all
