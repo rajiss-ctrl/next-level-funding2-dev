@@ -10,7 +10,7 @@ const Footer = () => {
     <div className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} bg-[transparent]`}>
       <div className="flex justify-center">
         <div className="lg:hidden">
-          <Image src="/assets/logo.png" alt="" width={64} height={64} />
+          <Image src="/assets/logo.png" alt="" width={100} height={100} />
           <div className="flex gap-5 mt-6 lg:block">
             <div className="border-none border bg-slate-700 rounded-full p-3">
               <Image src="/assets/bulb.svg" alt="" width={20} height={20} />
@@ -94,13 +94,13 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-5 pt-[3rem] pb-6 justify-center lg:hidden">
-        <a href="https://www.instagram.com/nextlevelfundingfx/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/nextlevelfundingfx/" target="_blank" rel="noopener noreferrer" className="bg-[#344153] rounded-[50%] p-3">
           {/* <Image src="/assets/ig.png" alt="" width={35} height={35} /> */}
-          <InstagramIcon className='text-2'/> 
+          <InstagramIcon className='text-2 text-white'/> 
         </a>
-        <a href="mailto:Nextlevelfundingfx@gmail.com">
+        <a href="mailto:Nextlevelfundingfx@gmail.com" className="bg-[#344153] rounded-[50%] p-3">
           {/* <Image src="/assets/email.png" alt="" width={35} height={35} /> */}
-          <MailOutlineIcon className='text-2'/>
+          <MailOutlineIcon className='text-2 text-white'/>
         </a>
       </div>
     </div>

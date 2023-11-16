@@ -3,6 +3,8 @@ import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image"; // Import the Image component
 import { useThemeContext } from "../../context/ThemeContext";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const MobileGetInTouch = () => {
   const { theme } = useThemeContext();
@@ -27,26 +29,15 @@ const MobileGetInTouch = () => {
           Get in touch with us
         </p>
         <div className="flex gap-5 mt-6 px-3">
-          <Link href="">
-            {/* Replace <img> with <Image> */}
-            <Image
-              src="/assets/ig.png"
-              width={60}
-              height={60}
-              className="bg-slate-700 p-2 rounded-full"
-              alt=""
-            />
-          </Link>
-          <Link href="">
-            {/* Replace <img> with <Image> */}
-            <Image
-              src="/assets/email.png"
-              width={60}
-              height={60}
-              className="bg-slate-700 p-2 rounded-full"
-              alt=""
-            />
-          </Link>
+           <a href="https://www.instagram.com/nextlevelfundingfx/" className="bg-[#344153] rounded-[50%] p-3">
+                <InstagramIcon className='text-20 text-white'/>
+              {/* <Image src="/assets/ig.png" alt="" width={60} height={60} /> */}
+            </a>
+            <a href="mailto:Nextlevelfundingfx@gmail.com" className="bg-[#344153] rounded-[50%] p-3">
+              <MailOutlineIcon className='text-20 text-white'/>
+              {/* <Image src="/assets/email.png" alt="" width={60} height={60} /> */}
+            </a>
+
         </div>
         <div className="mt-6">
           <p className="lexend px-4">
