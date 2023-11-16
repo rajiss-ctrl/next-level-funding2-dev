@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import Image from "next/image";
+
 
 const Coverflow = () => {
   return (
