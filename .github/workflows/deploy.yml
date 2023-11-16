@@ -31,6 +31,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
             cd ~
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             export PATH="$PATH:/home/akinthe/.nvm/versions/node/v18.18.2/bin/yarn:/home/akinthe/.nvm/versions/node/v18.18.2/bin/yarn"
             export PATH="$PATH:/home/akinthe/.nvm/versions/node/v18.18.2/bin/pm2:/home/akinthe/.nvm/versions/node/v18.18.2/bin/pm2"
             cd /home/akinthe/next-level-funding2-dev
