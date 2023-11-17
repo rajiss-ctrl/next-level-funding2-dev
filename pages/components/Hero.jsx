@@ -19,7 +19,7 @@ const Hero = () => {
             <p className={`${theme === "light" ? 'text-blue-500' : 'text-[#991275]'} uppercase font-bold lexend text-lg text-center lg:text-left md:px-10 lg:px-0 my-2`}>
               Next level funding
             </p>
-            <p className={`${theme === "light" ? 'text-white' : 'text-black'} space-grotesk font-bold text-[1.8rem] text-center lg:text-[3.5rem] lg:text-left md:leading-[65px] leading-[39px]`}>
+            <p className={`${theme === "light" ? 'text-white' : 'text-black'} space-grotesk font-bold text-[1.8rem] text-center lg:text-[3.5rem] xl:text-[2.9rem] lg:text-left md:leading-[65px] leading-[39px]`}>
               Collaborative Funding, Mutual Risk,{" "}
               <span className="text-blue-500">Your Expertise.</span>
             </p>
@@ -59,7 +59,7 @@ const Hero = () => {
         </Grid>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-      <div className="w-full absolute bottom-[0] xl:bottom-[-3rem] lg:bottom-[-2rem] left-[0] flex flex-row overflow-hidden">
+      <div className="w-full absolute bottom-[0] xl:bottom-[-1.2rem] lg:bottom-[-0.8rem] left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
     </div>
