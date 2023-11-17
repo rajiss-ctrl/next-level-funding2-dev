@@ -59,7 +59,7 @@ const Hero = () => {
         </Grid>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-      <div className="w-full absolute bottom-[0] xl:bottom-[-4rem] lg:bottom-[-4rem] left-[0] flex flex-row overflow-hidden">
+      <div className="w-full absolute bottom-[0] xl:bottom-[-3rem] lg:bottom-[-3rem] left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
     </div>
