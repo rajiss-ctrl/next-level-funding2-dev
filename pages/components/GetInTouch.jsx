@@ -31,7 +31,7 @@ const GetInTouch = () => {
               </Link>
             </div>
             <p className={`${theme === 'light' ? "text-white" : "text-black font-bold"} lg:w-1/2 mt-5 lexend font-thin`}>
-            Do you have a question that wasn't addressed in our FAQs page? Feel free to reach out, and we'll be delighted to provide you with answers.</p>
+            Do you have a question that wasn&apos;t addressed in our FAQs page? Feel free to reach out, and we&apos;ll be delighted to provide you with answers.</p>
             <div className="mt-[1rem]">
               <Button
                 className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-slate-950 font-bold"} backdrop-filter bg-[transparent] xl:hover:bg-blue-300 backdrop-blur-lg bg-opacity-30 border w-1/5`}

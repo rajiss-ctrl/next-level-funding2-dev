@@ -19,7 +19,8 @@ const AboutUs = () => {
             content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
           />
           <meta property="og:title" content="NextLevelFunding" />
-           <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+          {/* Add other meta tags as needed for og:description, og:image, etc. */}
+          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
           <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
           <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
           <link rel="manifest" href="/site.webmanifest" />
@@ -36,7 +37,8 @@ const AboutUs = () => {
           <p className="lg::w-5/12 w-3/4 lexend text-center lg:px-[17rem] m-auto font-extralight">
             We are a company that seeks profitable traders to trade our funds.
             Prove to us you are profitable by completing our evaluation phase
-            and recieving immediate funding of up to $500k</p>
+            and recieving immediate funding of up to $500k
+          </p>
         </div>
         <div className={`${theme === "light" ? 'text-white home-bg' : 'text-black font-bold'}  mt-32`}>
           <div className="flex flex-col justify-center items-center px-[1.3rem] xl:px-[9rem] 2xl:px-[12rem]">
@@ -59,7 +61,8 @@ const AboutUs = () => {
                     Our Mission
                   </p>
                   <p className="lexend w-full text-[1rem] font-thin text-center  lg:text-left m-auto lg:m-0 ">
-                  Our goal at NextLevelFunding is to support traders in realizing their dreams, especially those without sufficient funds to achieve substantial returns on their accounts each month. We're looking for profitable traders capable of managing our capital, aiming to build enduring relationships with them.</p>
+                  Our goal at NextLevelFunding is to support traders in realizing their dreams, especially those without sufficient funds to achieve substantial returns on their accounts each month. We&apos;re looking for profitable traders capable of managing our capital, aiming to build enduring relationships with them.
+                  </p>
                 </div>
               </div>
             </section>
