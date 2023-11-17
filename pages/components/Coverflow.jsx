@@ -36,14 +36,14 @@ const Coverflow = () => {
           <CarouselCard
             img="/assets/crown-blue.png"
             title="Trading Evaluation at its best"
-            text="During the first month, enjoy an 80% profit split on all accounts. In the second month, elevate your returns with a 90% share of all profits earned!"
+            text="During the first month, enjoy an 80% profit split on all accounts. In the second month, elevate your returns with a 90% share of all profits earned!"
           />
         </SwiperSlide>
         <SwiperSlide>
           <CarouselCard
             img="/assets/crown-pink.svg"
             title="High Profit Splits"
-            text="We shoulder all the risks on live accounts, allowing you to trade comfortably without concerns about losses.
+            text="We shoulder all the risks on live accounts, allowing you to trade comfortably without concerns about losses.
               "
           />
         </SwiperSlide>
@@ -51,7 +51,7 @@ const Coverflow = () => {
           <CarouselCard
             img="/assets/Asset 3.png"
             title="No Risk"
-            text="Our evaluation account empowers traders to showcase their skills, qualifying them to trade with our live funds."
+            text=" Our evaluation account empowers traders to showcase their skills, qualifying them to trade with our live funds."
           />
         </SwiperSlide>
       </Swiper>
