@@ -78,7 +78,7 @@ const NavBar = () => {
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link href="/" >
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo.svg"
               alt=""
               width={150}
               height={150}
