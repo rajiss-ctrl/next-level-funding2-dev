@@ -31,11 +31,11 @@ const MobileGetInTouch = () => {
         <div className="flex gap-5 mt-6 px-3">
            <a href="https://www.instagram.com/nextlevelfundingfx/" className="bg-[#344153] rounded-[50%] p-3">
                 <InstagramIcon className='text-20 text-white'/>
-              {/* <Image src="/assets/ig.png" alt="" width={60} height={60} /> */}
+  
             </a>
             <a href="mailto:Nextlevelfundingfx@gmail.com" className="bg-[#344153] rounded-[50%] p-3">
               <MailOutlineIcon className='text-20 text-white'/>
-              {/* <Image src="/assets/email.png" alt="" width={60} height={60} /> */}
+            
             </a>
 
         </div>
