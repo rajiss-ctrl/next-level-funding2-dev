@@ -41,7 +41,7 @@ const MobileGetInTouch = () => {
         </div>
         <div className="mt-6">
           <p className="lexend px-4">
-          Do you have a question that wasn't addressed in our FAQs page? Feel free to reach out, and we'll be delighted to provide you with answers.
+          Do you have a question that wasn't addressed in our FAQs page? Feel free to reach out, and we'll be delighted to provide you with answers.
           </p>
         </div>
         <div className="mt-[2rem] px-3">
