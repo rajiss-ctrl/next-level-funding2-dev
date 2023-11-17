@@ -31,7 +31,7 @@ const Hero = () => {
 
             {/* <div className="lg:flex gap-4 mt-7 grid justify-center lg:justify-start"> */}
       
-              <Link href="/#evaluation-package">
+              <Link href="/#evaluation-package" className="lg:flex gap-4 mt-7 grid justify-center lg:justify-start">
                 <Button
                   className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} backdrop-filter bg-[#991275] border-none  text-center pt-3`}
                   text="get started"
@@ -59,7 +59,7 @@ const Hero = () => {
         </Grid>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-      <div className="w-full absolute bottom-[0] xl:bottom-[-3rem] lg:bottom-[-3rem] left-[0] flex flex-row overflow-hidden">
+      <div className="w-full absolute bottom-[0] xl:bottom-[-3rem] lg:bottom-[-2rem] left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
     </div>
