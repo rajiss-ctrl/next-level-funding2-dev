@@ -13,10 +13,14 @@ const AboutUs = () => {
   return (
     <>
     <IndexPage>
-          <title>About us -- NextLevelFunding</title>
+          <title>About Next Level Funding - Your Trusted Financial Partner</title>
+          <meta name="keywords" content="Next Level Funding, financial partner, about us, business funding, innovative solutions, trusted financial support"/>
+
           <meta
             name="description"
-            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+            content="Learn about Next Level Funding's commitment to financial excellence. Discover our team's expertise, mission, and dedication to your financial success.
+            "
+            
           />
           <meta property="og:title" content="NextLevelFunding" />
           {/* Add other meta tags as needed for og:description, og:image, etc. */}

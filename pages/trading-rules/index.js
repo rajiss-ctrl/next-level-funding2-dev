@@ -6,33 +6,32 @@ import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 
 const TradingRules = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full  pt-[5rem] h-full`}>
-      <IndexPage>
-          <title>Trading Rules -- NextLevelFunding</title>
+        <IndexPage>
+          <title>Next Level Funding - Transparent Trading Rules for Financial Confidence</title>
+          <meta name="keywords" content="Next Level Funding, trading rules, financial transparency, integrity, fair trading, financial transactions"/>
           <meta
             name="description"
-            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+            content="Navigate financial markets confidently with Next Level Funding. Explore our transparent trading rules, ensuring fairness and trust in your financial transactions."
           />
           <meta property="og:title" content="NextLevelFunding" />
-          {/* Add other meta tags as needed for og:description, og:image, etc. */}
-          <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
+           <link rel="favicon" sizes="180x180" href="/assets/favicon.ico" />
           <link rel="favicon" type="image/ico" sizes="32x32" href="/assets/favicon.ico" />
           <link rel="favicon" type="image/ico" sizes="16x16" href="/assets/favicon.ico" />
           <link rel="manifest" href="/site.webmanifest" />
-        
-      </IndexPage>
-      <div className=" grid items-center justify-center py-[5rem]">
-        <p className=" lexend uppercase text-slate-400 text-xs lg:text-sm px-3 mt-[6rem] text-center">
-          next level funding
-        </p>
-        <p className="space-grotesk font-bold text-[2rem] lg:text-[3rem] text-center">
-          Trading Rules
-        </p>
-        <p className="space-grotesk overflow-hidden px-[2rem] lg:px-[20rem] font-normal text-center">
-        We are traders who created Next Level Funding for other traders, with an evaluation process, a trading condition, objectives and trading rules that are all aimed to give our traders the best experience. Your success is also ours. It’s not complicated, just trade with discipline and consistency.
-        </p>
+        </IndexPage>
+        <div className=" grid items-center justify-center py-[5rem]">
+            <p className=" lexend uppercase text-slate-400 text-xs lg:text-sm px-3 mt-[6rem] text-center">
+              next level funding
+            </p>
+            <p className="space-grotesk font-bold text-[2rem] lg:text-[3rem] text-center">
+              Trading Rules
+            </p>
+            <p className="space-grotesk overflow-hidden px-[2rem] lg:px-[20rem] font-normal text-center">
+            We are traders who created Next Level Funding for other traders, with an evaluation process, a trading condition, objectives and trading rules that are all aimed to give our traders the best experience. Your success is also ours. It’s not complicated, just trade with discipline and consistency.
+            </p>
       </div>
       <div className={`${theme === 'light' ? "home-bg text-white" : "bg-white text-black"}  w-full flex items-center justify-center flex-col`}>
         <div className="flex items-center justify-center flex-col xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">

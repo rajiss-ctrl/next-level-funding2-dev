@@ -20,6 +20,7 @@ export default function Home() {
     <main>
       <IndexPage>
           <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
+          <meta name="keywords" content="business funding, financial solutions, funding for businesses, Next Level Funding, financial growth, tailored funding"/>
           <meta
             name="description"
             content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."

@@ -12,10 +12,14 @@ const ContactUs = () => {
   return (
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full flex justify-center items-center flex-col pt-[5rem]  h-full`}>
        <IndexPage>
-          <title>Contact Us -- NextLevelFunding</title>
+          <title>Contact Next Level Funding - Reach Out for Personalized Financial Solutions
+          </title>
+          <meta name="keywords" content="Contact Next Level Funding, financial solutions, discuss finance, business financial future, personalized funding, contact us"/>
+
           <meta
             name="description"
-            content="With our program, you can get funded up to £1,000,000 with up to a 90% profit split. Unlock Your Trading Potential with Our Leading Proprietary Trading Firm."
+            content="Contact Next Level Funding for personalized financial assistance. Our expert team is ready to guide you towards your financial goals. Reach out today.
+            "
           />
           <meta property="og:title" content="NextLevelFunding" />
           {/* Add other meta tags as needed for og:description, og:image, etc. */}
