@@ -104,7 +104,7 @@ const AboutUs = () => {
                   <div className="pr-5 space-grotesk leading-[1.3] mb-[1rem]  font-bold text-[2rem] lg:text-[3rem] ">
                     Join our team of <br /> experienced traders
                   </div>
-                  <Link href="/home/#evaluation-package" className=" mt-[2rem]">
+                  <Link href="home/#evaluation-package" className=" mt-[2rem]">
                     <Button
                       className={`${theme === "light" ? "text-white" : "text-white"} backdrop-filter text-[.5rem] lg:text-sm h-9 lg:h-auto bg-[#991275] border-none`}
                       text="get started"

@@ -155,7 +155,7 @@ const NavBar = () => {
                   Help Center
                 </Link>
                 <Button
-                  className="bg-[#295cf7] border-none lexend hover:bg-blue-800"
+                  className="bg-[#295cf7] text-white border-none lexend hover:bg-blue-800"
                   text="get funded"
                   onClick={toggleNavbar}
                   showArrow={true}
