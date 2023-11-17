@@ -12,7 +12,7 @@ const TradePotential = () => {
           Unlock your trading potential with our leading propritary trading firm
         </p>
         <p className={` ${theme === 'light' ? "text-white" : "text-black"} font-bold space-grotesk 2xl:text-6xl text-3xl text-center mt-3`}>
-          Your success, <span className="text-blue-500">Our success</span>
+          Your success is <span className="text-blue-500">Our success</span>
         </p>
         <div className="grid lg:grid-cols-3 my-10 gap-4 lg:px-0 w-full">
           <GlassMorph

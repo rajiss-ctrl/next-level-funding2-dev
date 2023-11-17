@@ -20,32 +20,25 @@ const Hero = () => {
               Next level funding
             </p>
             <p className={`${theme === "light" ? 'text-white' : 'text-black'} space-grotesk font-bold text-[1.8rem] text-center lg:text-[3.5rem] lg:text-left md:leading-[65px] leading-[39px]`}>
-              Our Capital, Our Risk,{" "}
-              <span className="text-blue-500">Your Knowledge.</span>
+              Collaborative Funding, Mutual Risk,{" "}
+              <span className="text-blue-500">Your Expertise.</span>
             </p>
             <div className="md:w-[30rem] m-auto lg:ml-0">
-              <p className={`${theme === "light" ? 'text-white' : 'text-black'} text-sm xl:text-lg tracking-wide md:text-left text-center font-light lexend 2xl:w-[35rem] mt-1`}>
-                With our program, you can get funded up to £1,000,000 with up to
-                a 90% profit split. Unlock Your Trading Potential with Our
-                Leading Proprietary Trading Firm.
+              <p className={`${theme === "light" ? 'text-white' : 'text-black'} text-sm xl:text-lg tracking-wide md:text-left text-center font-light lexend 2xl:w-[35rem] mt-1 mb-4`}>
+              Unlock your trading potential with our program, securing funding of up to £1,000,000 with a generous 90% profit split. Experience the advantages of partnering with our leading proprietary trading firm.
               </p>
             </div>
 
-            <div className="lg:flex gap-4 mt-7 grid justify-center lg:justify-start">
-              <Link href="/about-us">
-                <Button
-                  className={`${theme === "light" ? 'text-white ' : 'text-black font-bold'} backdrop-filter bg-[transparent] hover:bg-blue-300 hover:text-blue-900 backdrop-blur-lg bg-opacity-30 border border-slate-500 w-full`}
-                  text="learn more"
-                />
-              </Link>
+            {/* <div className="lg:flex gap-4 mt-7 grid justify-center lg:justify-start"> */}
+      
               <Link href="/#evaluation-package">
                 <Button
-                  className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} backdrop-filter bg-[#991275] border-none lg:flex-1`}
+                  className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} backdrop-filter bg-[#991275] border-none  text-center pt-3`}
                   text="get started"
                   showArrow={true}
                 />
               </Link>
-            </div>
+            {/* </div> */}
           </Grid>
 
           <Grid item xs={12} md={12} lg={6}>
@@ -66,7 +59,7 @@ const Hero = () => {
         </Grid>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-      <div className="w-full absolute bottom-[0] left-[0] flex flex-row overflow-hidden">
+      <div className="w-full absolute bottom-[0] xl:bottom-[-4rem] lg:bottom-[-4rem] left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
     </div>

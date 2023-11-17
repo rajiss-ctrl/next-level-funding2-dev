@@ -61,11 +61,7 @@ const AboutUs = () => {
                     Our Mission
                   </p>
                   <p className="lexend w-full text-[1rem] font-thin text-center  lg:text-left m-auto lg:m-0 ">
-                    Our goal at nextlevelfunding is to help fund the dreams of
-                    traders who do not have sufficient funds to make large
-                    returns on there account per month. We seek profitable
-                    traders who can trade our capital and hope to have a long
-                    lasting relationship with them.
+                  Our goal at NextLevelFunding is to support traders in realizing their dreams, especially those without sufficient funds to achieve substantial returns on their accounts each month. We're looking for profitable traders capable of managing our capital, aiming to build enduring relationships with them.
                   </p>
                 </div>
               </div>

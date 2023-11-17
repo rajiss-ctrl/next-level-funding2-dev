@@ -19,19 +19,19 @@ const FundingBenefits = () => {
         <GlassMorphCard
           img="/assets/Time-illustration.png"
           title="No Time Limits"
-          text={`We do not have a certain amount of time limit for you to pass your one step evaluation. You have unlimited time to complete the phase and can trade without the stress of having to reach a target in a set amount of time.`}
+          text={`We do not impose a specific time limit for you to pass your single-step evaluation. Enjoy the flexibility of unlimited time to complete this phase, allowing you to trade without the stress of meeting a target within a set timeframe.`}
           className="text-3xl"
         />
         <GlassMorphCard
           img="/assets/Computer-illustration.png"
           title="Lowest targets"
-          text={`With our one step evaluation being only a 12% profit target we have one of the most competitive targets across all funding companies.`}
+          text={`With our one-step evaluation featuring only a 12% profit target, we boast one of the most competitive benchmarks among all funding companies.`}
           className="text-3xl"
         />{" "}
         <GlassMorphCard
           img="/assets/iphone-illustration.png"
           title="Money back"
-          text={`Get your money you paid for your evaluation account back once you reach your first profit split on your live account providing you did not pass with a HFT algorithm.`}
+          text={`Reclaim the funds invested in your evaluation account upon reaching your initial profit split on your live account, unless you passed with a High-Frequency Trading (HFT) algorithm.`}
           className="text-3xl"
         />
       </div>
