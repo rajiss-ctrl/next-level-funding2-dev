@@ -2,12 +2,12 @@ import React from "react";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import ContactForm from "../components/ContactForm";
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 
 const ContactUs = () => {
-  const { theme} = useThemeContext();
+  const { theme} = useTheme();
 
   return (
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full flex justify-center items-center flex-col pt-[5rem]  h-full`}>
@@ -88,11 +88,4 @@ const ContactUs = () => {
 
 export default ContactUs;
 
-{/* <div className="flex items-center justify-center">
-  <div className="grid 2xl:grid-cols-2  grid-cols-none gap-10 ">
-    <div className="grid grid-rows-3 gap-7"></div>
-    <div className="grid grid-rows-3 gap-7">
-      <ContactForm />
-    </div>
-  </div>
-</div>; */}
+

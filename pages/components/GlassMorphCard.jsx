@@ -1,9 +1,9 @@
 import React from "react";
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 import Image from "next/image"; // Import the Image component
 
 const GlassMorphCard = (props) => {
-  const { theme } = useThemeContext();
+  const { theme } = useTheme();
 
   return (
     <div className={`${theme === 'light' ? "text-white bg-white border border-slate-700" : "text-black bg-white border border-white"} min-h-[330px]  lg:w-full 2xl:w-full  mb-10 backdrop backdrop-blur-lg bg-opacity-5 shadow-lg rounded-xl py-8 2xl:px-5 px-3`}>

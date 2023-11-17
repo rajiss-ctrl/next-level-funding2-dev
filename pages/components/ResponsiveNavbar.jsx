@@ -4,12 +4,12 @@ import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import { Container } from "@mui/material";
-import { useThemeContext } from '../../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
 
 
 const NavBar = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme, toggleTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);

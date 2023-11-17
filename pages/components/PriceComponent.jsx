@@ -3,10 +3,10 @@ import PriceCard from "./PriceCard";
 import { PriceLists, bluePriceList } from "@/lib/data";
 import Button from "./Button";
 import Link from "next/link";
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const PriceComponent = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme, toggleTheme } = useTheme();
   return (
     <div id="evaluation-package">
       <section className="grid flex-col justify-center items-center pt-[7rem]">

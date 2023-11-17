@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
@@ -5,10 +6,10 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "next/link";
 import TradingViewWidget from "./TradingViewWidget";
-import { useThemeContext } from '../../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 
 const Hero = () => {
-  const { theme } = useThemeContext();
+  const { theme } = useTheme();
 
   return (
     <div className={`${theme === "light" ? 'dark  body-bg' : 'light bg-white'} relative lg:h-[670px] w-full px-4 lg:px-[12rem] pt-8`}>

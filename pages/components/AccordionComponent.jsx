@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const AccordionComponent = (props) => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme, toggleTheme } = useTheme();
 
   const [expanded, setExpanded] = useState(false);
 

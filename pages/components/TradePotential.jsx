@@ -1,9 +1,9 @@
 import React from "react";
 import GlassMorph from "./GlassMorph";
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const TradePotential = () => {
-  const { theme } = useThemeContext();
+  const { theme } = useTheme();
 
   return (
     <div className="px-[2rem]">

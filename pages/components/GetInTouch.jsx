@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image"; // Import the Image component
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const GetInTouch = () => {
-  const { theme } = useThemeContext();
+  const { theme } = useTheme();
 
   return (
     <div>

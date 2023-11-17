@@ -1,12 +1,12 @@
 import React from "react";
 import AccordionComponent from "../components/AccordionComponent";
 import Footer from "../components/Footer";
-import { useThemeContext } from '../../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 
 const TradingRules = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme, toggleTheme } = useTheme();
   return (
     <main className={`${theme === 'light' ? "body-bg text-white" : "bg-white text-black"} w-full  pt-[5rem] h-full`}>
       <IndexPage>

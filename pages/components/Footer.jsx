@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image"; 
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
-  const { theme} = useThemeContext();
+  const { theme} = useTheme();
   return (
     <div className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} bg-[transparent]`}>
       <div className="flex justify-center">

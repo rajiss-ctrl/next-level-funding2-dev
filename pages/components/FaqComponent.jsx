@@ -1,10 +1,10 @@
 import React from "react";
 import AccordionComponent from "./AccordionComponent";
 import { accordionContents } from "@/lib/data";
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const FaqComponent = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="w-full">
       <section className="pt-[4rem] w-full" id="faq">

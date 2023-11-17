@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image"; // Import the Image component
-import { useThemeContext } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const MobileGetInTouch = () => {
-  const { theme } = useThemeContext();
+  const { theme } = useTheme();
 
   return (
     <div className={`${theme === 'light' ? "bg-white body-bg" : "bg-white text-black font-bold"} glassmorph mb-[10rem] mt-[15rem]`}>

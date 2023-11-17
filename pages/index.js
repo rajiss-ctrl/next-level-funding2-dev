@@ -1,4 +1,4 @@
-
+'use client'
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import GetInTouch from "./components/GetInTouch";
@@ -8,14 +8,14 @@ import FundingBenefits from "./components/FundingBenefits";
 import TradePotential from "./components/TradePotential";
 import Coverflow from "./components/Coverflow";
 import MobileGetInTouch from "./components/MobileGetInTouch";
-import { useThemeContext } from '../context/ThemeContext';
+import { useTheme } from '../context/ThemeContext';
 import IndexPage from "./components/IndexPage";
 import Script from 'next/script';
 import Head from 'next/head';
 export default function Home() {
   
 
-  const { theme } = useThemeContext();
+  const { theme } = useTheme();
   return (
     <main>
       <IndexPage>

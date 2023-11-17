@@ -1,33 +1,25 @@
-// context/ThemeContext.js
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useContext } from 'react';
 
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  // Use a function to get the initial theme to support server-side rendering
-  const getInitialTheme = () => {
-    if (typeof window !== 'undefined') {
-      // On the client side, use localStorage
-      const storedTheme = localStorage.getItem('theme');
-      return storedTheme || 'light';
-    } else {
-      // On the server side, use a default theme (e.g., 'light')
-      return 'light';
-    }
-  };
-
-  const [theme, setTheme] = useState(getInitialTheme);
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    // Set initial theme on the client side
-    const storedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(storedTheme);
+    // Load theme from local storage on mount
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
+    // Remove old theme from local storage
+    localStorage.removeItem('theme');
+    // Save new theme to local storage
     localStorage.setItem('theme', newTheme);
+    setTheme(newTheme);
   };
 
   return (
@@ -37,4 +29,10 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-export const useThemeContext = () => useContext(ThemeContext);
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};
