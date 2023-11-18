@@ -60,14 +60,14 @@ const NavBar = () => {
   return (
     <nav>
     <div
-        className={`justify-between px-4 mx-auto lg:px-[12rem] 2xl:px-[12rem] xl:px-[9rem] lg:items-center lg:flex fixed right-0 left-0 z-50 ${
+        className={`justify-between px-4 mx-auto md:px-[4rem]  xl:px-[6rem] 2xl:px-[12rem]  lg:items-center lg:flex fixed right-0 left-0 z-50 ${
           isScrolled && theme === 'light' ? "bg-black" : ""
         }${
           isScrolled && theme === 'dark' ? "bg-white" : ""
         }`}
       >
         <button 
-          className=" absolute z-30 top-[30px] lg:top-[40px] border-none outline-none right-[20%] lg:right-20"
+          className=" absolute z-30 top-[30px] lg:top-[40px] border-none outline-none right-[20%] lg:right-8"
           onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
           {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
           <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
