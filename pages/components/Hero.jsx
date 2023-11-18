@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-      <div className="w-full absolute bottom-[0] xl:bottom-[-1.2rem] lg:bottom-[-0.8rem] left-[0] flex flex-row overflow-hidden">
+      <div className="w-full absolute bottom-[0] xl:bottom-[-1.2rem] lg:bottom-[0.3rem] left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
     </div>
