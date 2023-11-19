@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import ArrowCircleUpTwoToneIcon from "@mui/icons-material/ArrowCircleUpTwoTone";
+import { useTheme } from "@/context/ThemeContext";
 
 const ScrollToTop = () => {
+  const { theme} = useTheme();
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const ScrollToTop = () => {
         <span className="iconPosition">
           {showTopBtn && (
             <ArrowCircleUpTwoToneIcon
-              sx={{ color: "white", fontSize: 30 }}
+              sx={{ color: `${theme === "light" ? 'white' : 'black'}`, fontSize: 30 }}
               onClick={goToTop}
             />
           )}

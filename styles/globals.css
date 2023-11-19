@@ -146,12 +146,18 @@ textarea {
   padding: 20px 20px 30px 20px;
   border: 1px solid red;
 }
+
 @media only screen and (max-width: 539px) {
   .disclaimer {
     width: 100%;
   }
-
 }
+/* @media only screen and (max-width: 1024px) {
+  .getInTouchMobile {
+    padding-top: 13rem;
+  }
+
+} */
 
 /* CAROUSEL */
 .cards {

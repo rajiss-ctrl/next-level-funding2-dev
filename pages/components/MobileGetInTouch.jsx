@@ -10,7 +10,7 @@ const MobileGetInTouch = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme === 'light' ? "bg-white body-bg" : "bg-white text-black font-bold"} glassmorph mb-[10rem] mt-[15rem]`}>
+    <div className={`${theme === 'light' ? "bg-white body-bg" : "bg-white text-black font-bold"} glassmorph mb-[10rem] mt-[18rem] md:mt-[32rem]`}>
       <div className="">
         {/* Replace <img> with <Image> */}
         <Image
@@ -40,7 +40,7 @@ const MobileGetInTouch = () => {
 
         </div>
         <div className="mt-6">
-          <p className="lexend px-4">
+          <p className="lexend px-4 md:pr-32">
           Do you have a question that wasn&apos;t addressed in our FAQs page? Feel free to reach out, and we&apos;ll be delighted to provide you with answers.
           </p>
         </div>

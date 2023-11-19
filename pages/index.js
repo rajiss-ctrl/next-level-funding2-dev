@@ -40,10 +40,10 @@ export default function Home() {
         <FundingBenefits />
         <PriceComponent />
         <FaqComponent />
-        <div className="hidden xl:block">
+        <div className="hidden lg:block">
           <GetInTouch />
         </div>
-        <div className="block xl:hidden">
+        <div className="block lg:hidden">
           <MobileGetInTouch />
         </div>
         <Footer />

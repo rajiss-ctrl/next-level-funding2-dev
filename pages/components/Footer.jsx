@@ -7,32 +7,16 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 const Footer = () => {
   const { theme} = useTheme();
   return (
-    <div className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} bg-[transparent]`}>
+    <div className={`${theme === "light" ? 'text-white' : 'text-black font-bold'} lg:px-[3rem] xl:px-0 bg-[transparent]`}>
       <div className="flex justify-center">
         <div className="lg:hidden">
-          <Image src="/assets/logo.png" alt="" width={100} height={100} />
-          <div className="flex gap-5 mt-6 lg:block">
-            <div className="border-none border bg-slate-700 rounded-full p-3">
-              <Image src="/assets/bulb.svg" alt="" width={20} height={20} />
-            </div>
-            <div className="border-none border bg-slate-700 rounded-full p-3">
-              <Image src="/assets/mail.svg" alt="" width={20} height={20} />
-            </div>
-          </div>
+          <Image src="/assets/logo.svg" alt="" width={100} height={100} />
         </div>
       </div>
       <footer className="flex md:flex-row space-y-2 md:space-y-0 py-10 text-base-content">
         <div className="flex items-start">
           <div className="hidden lg:flex items-center justify-center gap-6">
-            <Image src="/assets/logo.png" alt="" width={130} height={120} />
-            <a href="https://www.instagram.com/nextlevelfundingfx/" className="bg-[#344153] rounded-[50%] p-3">
-                <InstagramIcon className='text-20 text-white'/>
-              {/* <Image src="/assets/ig.png" alt="" width={60} height={60} /> */}
-            </a>
-            <a href="mailto:Nextlevelfundingfx@gmail.com" className="bg-[#344153] rounded-[50%] p-3">
-              <MailOutlineIcon className='text-20 text-white'/>
-              {/* <Image src="/assets/email.png" alt="" width={60} height={60} /> */}
-            </a>
+            <Image src="/assets/logo.svg" alt="nextlevelfunding" width={140} height={140} />
           </div>
         </div>
         <div className="flex items-end w-full justify-center lg:justify-end gap-1">
@@ -95,11 +79,9 @@ const Footer = () => {
 
       <div className="flex gap-5 pt-[3rem] pb-6 justify-center lg:hidden">
         <a href="https://www.instagram.com/nextlevelfundingfx/" target="_blank" rel="noopener noreferrer" className="bg-[#344153] rounded-[50%] p-3">
-          {/* <Image src="/assets/ig.png" alt="" width={35} height={35} /> */}
           <InstagramIcon className='text-2 text-white'/> 
         </a>
         <a href="mailto:Nextlevelfundingfx@gmail.com" className="bg-[#344153] rounded-[50%] p-3">
-          {/* <Image src="/assets/email.png" alt="" width={35} height={35} /> */}
           <MailOutlineIcon className='text-2 text-white'/>
         </a>
       </div>
