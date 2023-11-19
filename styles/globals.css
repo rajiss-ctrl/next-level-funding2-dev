@@ -152,12 +152,20 @@ textarea {
     width: 100%;
   }
 }
-/* @media only screen and (max-width: 1024px) {
-  .getInTouchMobile {
-    padding-top: 13rem;
+@media only screen and (max-width: 375px) {
+  .MobileGetInTouch-h2 {
+    font-size:2.2rem;
   }
+}
+@media only screen and (max-width: 280px) {
+  .MobileGetInTouch-h2 {
+    font-size:1.4rem;
+  }
+  .MobileGetInTouch-h1{
+    font-size:0.5rem;
 
-} */
+  }
+}
 
 /* CAROUSEL */
 .cards {
