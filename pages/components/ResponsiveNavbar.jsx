@@ -66,26 +66,33 @@ const NavBar = () => {
           isScrolled && theme === 'dark' ? "bg-white" : ""
         }`}
       >
-        <button 
+        {/* <button 
           className=" absolute z-30 top-[30px] lg:top-[40px] border-none outline-none right-[20%] lg:right-8"
           onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
           {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
           <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
-      </button>
+      </button> */}
 
     <div >
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
-            <Link href="/" >
-            <Image
-              src="/assets/logo.svg"
-              alt=""
-              width={150}
-              height={150}
-              // layout="responsive"
-              onClick={logoClickHandler}
-            />
+          <Link href="/">
+              <Image
+                src="/assets/logo.svg"
+                alt="NextLevelFunding logo"
+                loading="eager"
+                width={150}
+                height={150}
+                layout="responsive" // Uncomment this line
+                onClick={logoClickHandler}
+              />
             </Link>
+              <button 
+          className=" md:absolute z-30 md:top-[30px] lg:top-[40px] border-none outline-none md:right-[20%] lg:right-8"
+          onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+          {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
+          <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
+      </button>
             <div className="lg:hidden">
               <button
                 className={`p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white`}

@@ -29,7 +29,7 @@ const TradingRules = () => {
             <p className="space-grotesk font-bold text-[2rem] lg:text-[3rem] text-center">
               Trading Rules
             </p>
-            <p className="space-grotesk overflow-hidden px-[2rem] lg:px-[20rem] font-normal text-center">
+            <p className="space-grotesk overflow-hidden px-[1.6rem] md:px-[10rem] lg:px-[15rem] xl:px-[20rem] font-normal text-center">
             We are traders who created Next Level Funding for other traders, with an evaluation process, a trading condition, objectives and trading rules that are all aimed to give our traders the best experience. Your success is also ours. It’s not complicated, just trade with discipline and consistency.
             </p>
       </div>
