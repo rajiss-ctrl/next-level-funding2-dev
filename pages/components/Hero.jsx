@@ -44,7 +44,7 @@ const Hero = () => {
             <div className={`${theme === "light" ? 'bg-white border border-slate-800' : 'bg-black border border-gray'} backdrop-filter bg-[transparent] backdrop-blur-lg bg-opacity-5 w-30 h-30 rounded-full absolute p-[5rem] left-[40%] bottom-[30%] hidden lg:block`}></div>
 
             <div className="relative z-30">
-              <Image src="/assets/laptop.gif" alt="trade-computer" width={480} height={320} className="lg:w-[30rem] w-[20rem] h-auto" />
+              <Image src="/assets/laptop.gif" alt="trade-computer" width={480} height={320}  loading="eager" className="lg:w-[30rem] w-[20rem] h-auto" />
             </div>
 
             <div className={`${theme === "light" ? 'bg-white border border-slate-800' : 'bg-black border border-gray'} backdrop-filter bg-[transparent] backdrop-blur-lg bg-opacity-5 w-30 h-30 rounded-full absolute p-[5rem] left-[60%] bottom-[10%] hidden lg:block`}></div>

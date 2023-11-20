@@ -26,7 +26,7 @@ const AccordionComponent = (props) => {
           paddingBottom: 2,
           backgroundColor: "transparent",
         }}
-        className={`${theme === 'light' ? "bg-white border-slate-600 text-white" : "bg-white border-none text-black"} w-full lg:w-[80%] border  rounded-xl  bg-opacity-5`}
+        className={`${theme === 'light' ? "bg-white border-slate-600 text-white" : "bg-white border-none text-black"} w-full md:w-[80%] border  rounded-xl  bg-opacity-5`}
         onClick={toggleAccordion}
       >
         <AccordionSummary

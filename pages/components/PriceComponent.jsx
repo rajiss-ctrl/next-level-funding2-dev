@@ -32,7 +32,7 @@ const PriceComponent = () => {
             </div>
           ))}
         </div>
-        <div className="lg:flex justify-center gap-8">
+        <div className="md:flex justify-center gap-8">
           {bluePriceList.map((list, index) => (
             <div key={index} className="mt-10">
               <PriceCard

@@ -14,7 +14,7 @@ const TradePotential = () => {
         <p className={` ${theme === 'light' ? "text-white" : "text-black"} font-bold space-grotesk 2xl:text-6xl text-3xl text-center mt-3`}>
           Your success is <span className="text-blue-500">Our success</span>
         </p>
-        <div className="grid lg:grid-cols-3 my-10 gap-4 lg:px-0 w-full">
+        <div className="grid md:grid-cols-3 my-10 gap-4 md:px-0 w-full">
           <GlassMorph
             prefix="$"
             start={100}

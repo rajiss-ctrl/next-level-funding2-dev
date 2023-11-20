@@ -15,7 +15,7 @@ const FundingBenefits = () => {
       <p className={`${theme === "light" ? "text-white" : "text-black"} font-bold space-grotesk 2xl:text-6xl text-3xl mt-3 text-center 2xl:text-left`}>
         Next Level Funding Benefits
       </p>
-      <div className="grid lg:grid-cols-3 my-10 gap-10 lg:px-0">
+      <div className="grid md:grid-cols-3 my-10 gap-10 md:px-0">
         <GlassMorphCard
           img="/assets/Time-illustration.png"
           title="No Time Limits"

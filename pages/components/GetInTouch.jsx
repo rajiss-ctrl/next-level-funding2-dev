@@ -15,14 +15,14 @@ const GetInTouch = () => {
         <div className="relative top-0">
           {/* Provide the width and height for the Image component */}
           <Image src="/assets/rec.svg" alt="" width={1920} height={1080} />
-          <div className="absolute lg:top-[10%] z-10 left-[4%]">
+          <div className="absolute md:top-[2%] lg:top-[10%] z-10 left-[4%]">
             <p className="lexend uppercase text-slate-400 text-sm px-3">
               we would love to hear from you
             </p>
-            <p className={` ${theme === 'light' ? "text-white" : "text-black"} space-grotesk font-bold text-[1.9rem] xl:text-[2.7rem]`}>
+            <p className={` ${theme === 'light' ? "text-white" : "text-black"} space-grotesk font-bold md:text-[1.5rem] lg:text-[1.9rem] xl:text-[2.7rem]`}>
               Get in touch with us
             </p>
-            <div className="flex gap-5 mt-6">
+            <div className="flex gap-5 md:mt-2 lg:mt-6">
               <Link href="https://www.instagram.com/nextlevelfundingfx/" className="bg-[#344153] rounded-[50%] p-4">
                 <InstagramIcon className='text-20 text-white'/>
               </Link>
@@ -30,7 +30,7 @@ const GetInTouch = () => {
                <MailOutlineIcon className='text-20 text-white'/>
               </Link>
             </div>
-            <p className={`${theme === 'light' ? "text-white" : "text-black font-bold"} lg:w-1/2 mt-5 lexend font-thin`}>
+            <p className={`${theme === 'light' ? "text-white" : "text-black font-bold"} md:w-1/2 md:mt-2 lg:mt-5 lexend font-thin`}>
             Do you have a question that wasn&apos;t addressed in our FAQs page? Feel free to reach out, and we&apos;ll be delighted to provide you with answers.</p>
             <div className="mt-[1rem]">
               <Button

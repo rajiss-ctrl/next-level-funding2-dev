@@ -83,16 +83,16 @@ const NavBar = () => {
                 loading="eager"
                 width={150}
                 height={150}
-                layout="responsive" // Uncomment this line
+                layout="responsive"
                 onClick={logoClickHandler}
               />
             </Link>
               <button 
-          className=" md:absolute z-30 md:top-[30px] lg:top-[40px] border-none outline-none md:right-[20%] lg:right-8"
-          onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-          {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
-          <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
-      </button>
+                className=" md:absolute z-30 md:top-[30px] lg:top-[40px] border-none outline-none md:right-[20%] lg:right-8"
+                onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
+                <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
+              </button>
             <div className="lg:hidden">
               <button
                 className={`p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white`}
@@ -135,7 +135,7 @@ const NavBar = () => {
           <div
             className={`flex-1 hidden justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0`}
           >
-            <div className={`${theme === 'light' ? "bg-black dark border-slate-500 text-white" : "bg-white  light text-black"} text-center flex space-x-7 backdrop-filter  backdrop-blur-lg bg-opacity-30 border rounded-full py-2 px-10  bg-blend-overlay lexend`}>
+            <div className={`${theme === 'light' ? "bg-black dark border-slate-500 text-white " : "bg-white  light text-black"} text-center  flex space-x-7 backdrop-filter  backdrop-blur-lg bg-opacity-30 border rounded-full py-2 px-10  bg-blend-overlay lexend`}>
               <Link href="/about-us">About Us</Link>
               <Link href="/trading-rules">Trading Rules</Link>
               <Link href="/#faq">FAQ</Link>
@@ -143,22 +143,22 @@ const NavBar = () => {
             </div>
           </div>
           {navbar && (
-            <div className="relative">
+            <div className="relative lg:hidden">
               <div
                 className="h-screen w-full absolute left-0 top-0"
                 onClick={toggleNavbar}
               ></div>
-              <div className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"} navbar-slide-out z-30 flex flex-col justify-center items-center px-10 py-5 gap-6  relative lexend `}>
-                <Link href="/about-us" onClick={toggleNavbar}>
+              <div className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"} navbar-slide-out z-30 flex flex-col justify-center items-center px-10 py-5 gap-6  relative lexend  `}>
+                <Link href="/about-us" onClick={toggleNavbar} className="text-[1rem]">
                   About Us
                 </Link>
-                <Link href="/trading-rules" onClick={toggleNavbar}>
+                <Link href="/trading-rules" onClick={toggleNavbar} className="text-[1rem]">
                   Trading Rules
                 </Link>
-                <Link href="/#faq" onClick={toggleNavbar}>
+                <Link href="/#faq" onClick={toggleNavbar} className="text-[1rem]">
                   FAQ
                 </Link>
-                <Link href="/contact-us" onClick={toggleNavbar}>
+                <Link href="/contact-us" onClick={toggleNavbar} className="text-[1rem]">
                   Help Center
                 </Link>
                 <Button
