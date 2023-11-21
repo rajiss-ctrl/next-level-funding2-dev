@@ -40,14 +40,16 @@
 
 
 .body-bg {
-  background-image: url("/assets/main-bg.png");
+  /* background-image: url("/assets/main-bg.png"); */
+  background: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% 5%;
 } 
 
 .home-bg {
-  background-image: url("/assets/Homepage.png");
+  /* background-image: url("/assets/Homepage.png"); */
+  background: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% 5%;
@@ -57,7 +59,7 @@
   background-color: black;
 }
 .section-container-un {
-  background-image: url("/public/assets/Ellipse.png");
+  /* background-image: url("/public/assets/Ellipse.png"); */
 }
 /* FONTs */
 .lexend {

@@ -18,7 +18,7 @@ const Hero = () => {
               Next level funding
             </p>
             <p className={`${theme === "light" ? 'text-white' : 'text-black'} space-grotesk font-bold text-[1.8rem] text-center lg:text-[2.8rem] xl:text-[3rem] md:text-left lg:leading-[56px] xl:leading-[65px] leading-[39px]`}>
-              Collaborative Funding, Mutual Risk,{" "}
+              Collaborative Funding, Our Risk,{" "}
               <span className="text-blue-500">Your Expertise.</span>
             </p>
             <div className="md:w-[30rem] m-auto lg:ml-0">
