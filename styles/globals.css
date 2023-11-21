@@ -40,14 +40,16 @@
 
 
 .body-bg {
-  background-image: url("/assets/main-bg.png");
+  /* background-image: url("/assets/main-bg.png"); */
+  background: #000000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% 5%;
 } 
 
 .home-bg {
-  background-image: url("/assets/Homepage.png");
+  /* background-image: url("/assets/Homepage.png"); */
+  background: #000000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% 5%;
