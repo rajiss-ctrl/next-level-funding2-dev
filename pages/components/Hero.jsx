@@ -2,12 +2,13 @@ import React from "react";
 import Button from "./Button";
 import Image from "next/image";
 import Box from "@mui/material/Box";
-import Link from "next/link";
+import { useRouter } from 'next/navigation'
 import TradingViewWidget from "./TradingViewWidget";
 import { useTheme } from '../../context/ThemeContext';
 
 const Hero = () => {
   const { theme } = useTheme();
+  const router = useRouter()
 
   return (
     <div className={`relative ${theme === "light" ? 'dark  body-bg' : 'light bg-white'} lg:h-[670px] w-full px-4  lg:px-10 pt-8`}>
@@ -27,13 +28,14 @@ const Hero = () => {
               </p>
             </div>
 
-            <Link href="/#evaluation-package" className="lg:flex mt-6 grid justify-center md:justify-start">
+            {/* <Link href="/#evaluation-package" className=" mt-6"> */}
               <Button
-                className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} lg:p-3 backdrop-filter bg-[#991275] border-none  text-center `}
+              onClick={() => router.push('/#evaluation-package')}
+                className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} mt-6 lg:p-3 backdrop-filter bg-[#991275] border-none  text-center `}
                 text="get started"
                 showArrow={true}
               />
-            </Link>
+            {/* </Link> */}
           </div>
 
           <div className={`col-span-12 md:col-span-6 lg:col-span-6 flex lg:justify-end xl:justify-end justify-center  relative`}>

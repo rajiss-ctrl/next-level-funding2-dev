@@ -10,7 +10,8 @@ const PriceCard = (props) => {
   return (
     <div
       className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-white"} price-card-morph text-center overflow-hidden w-full lg:h-[530px] py-4 px-3 ${props.className} ${
-        props.value === "€600" || props.value === "€575" ? "bg-blue-500 text-white" : " bg-white bg-opacity-5"
+        props.highlight === true ? "bg-blue-500 text-white" : "bg-white bg-opacity-5"
+  
       }`}
     >
     <div className="flex items-center justify-center col">
@@ -73,7 +74,7 @@ const PriceCard = (props) => {
         />
       </div>
       <p className={`${theme === 'light' ? "text-white" : "text-black"}  
-      ${props.value === "€600" || props.value === "€575" ? " text-white" : " text-black"} 
+      ${props.highlight === true && theme === 'dark' ? " text-white" : " text-black"} 
       w-[84%] text-center m-auto mt-5`}>
         Please check{" "}
         <span

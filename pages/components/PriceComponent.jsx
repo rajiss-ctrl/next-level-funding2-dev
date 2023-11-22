@@ -28,6 +28,7 @@ const PriceComponent = () => {
                 listThree={pricelist.listThree}
                 listFour={pricelist.listFour}
                 link={pricelist.link}
+                highlight={false}
               />
             </div>
           ))}
@@ -44,6 +45,7 @@ const PriceComponent = () => {
                 listThree={list.listThree}
                 listFour={list.listFour}
                 link={list.link}
+                highlight={true}
               />
             </div>
           ))}
