@@ -28,14 +28,14 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* <Link href="/#evaluation-package" className=" mt-6"> */}
+            <div className="flex justify-center items-center md:justify-start mt-6">
               <Button
               onClick={() => router.push('/#evaluation-package')}
-                className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} mt-6 lg:p-3 backdrop-filter bg-[#991275] border-none  text-center `}
+                className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} lg:p-3 backdrop-filter bg-[#991275] border-none  text-center `}
                 text="get started"
                 showArrow={true}
               />
-            {/* </Link> */}
+            </div>
           </div>
 
           <div className={`col-span-12 md:col-span-6 lg:col-span-6 flex lg:justify-end xl:justify-end justify-center  relative`}>
