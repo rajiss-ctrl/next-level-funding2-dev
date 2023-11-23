@@ -66,12 +66,7 @@ const NavBar = () => {
           isScrolled && theme === 'dark' ? "bg-white" : ""
         }`}
       >
-        {/* <button 
-          className=" absolute z-30 top-[30px] lg:top-[40px] border-none outline-none right-[20%] lg:right-8"
-          onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-          {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
-          <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
-      </button> */}
+   
 
     <div >
       
@@ -88,11 +83,20 @@ const NavBar = () => {
               />
             </Link>
               <button 
-                className=" md:absolute z-30 md:top-[30px] lg:top-[40px] border-none outline-none md:right-[20%] lg:right-8"
-                onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-                {theme === 'light' ? <LightModeIcon  className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"}`}/> : 
-                <NightlightIcon className={`${theme === 'dark' ? "bg-white text-black" : "bg-black text-white"}`}/>}
-              </button>
+                  className="absolute z-30 top-[30px]  shadow-lg lg:top-[40px] rounded-[4px] border border-gray-400 outline-none right-[20%] lg:right-8"
+                  onClick={() => toggleTheme(theme === 'light' ? 'bg-transparent' : 'bg-[#F5F5F]')}
+                  >
+                  {theme === 'light' ? (
+                    <LightModeIcon style={{ backgroundColor: theme === 'light' && '#000000', 
+                    padding: theme === 'light' && '4px',
+                    width: theme === 'light' && '30px',height: theme === 'light' && '30px',
+                    color: theme === 'light' ? 'white' : 'black' }} />
+                  ) : (
+                    <NightlightIcon style={{ backgroundColor: theme === 'dark' && '#F5F5F5',
+                    width: theme === 'dark' && '30px',height: theme === 'dark' && '30px',
+                    padding: theme === 'dark' && '5px', color: theme === 'dark' ? 'black' : 'white' }} />
+                  )}
+                  </button>
             <div className="lg:hidden">
               <button
                 className={`p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border bg-white`}

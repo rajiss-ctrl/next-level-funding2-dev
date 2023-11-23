@@ -3,12 +3,15 @@ import PriceCard from "./PriceCard";
 import { PriceLists, bluePriceList } from "@/lib/data";
 import Button from "./Button";
 import Link from "next/link";
+import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { useTheme } from "../../context/ThemeContext";
+import { useRouter } from "next/navigation";
 
 const PriceComponent = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
+  const router = useRouter()
   return (
-    <div id="evaluation-package">
+    <div id="evaluation-package" className="relative">
       <section className="grid flex-col justify-center items-center pt-[7rem]">
         <p className={`lexend uppercase text-slate-400 text-center text-sm px-3`}>
           Tailored Solutions to Amplify Your Trading Success
@@ -50,15 +53,22 @@ const PriceComponent = () => {
             </div>
           ))}
         </div>
+        <div className=" px-10 md:px-6 pt-10 ">
+        
+        <p className={`text-center text-sm  text-slate-400`}><WarningAmberIcon/> <span className=""> Disclaimer: </span> 
+        <span className="animated-text ">Our dashboard is getting a makeover and will be back for login on January 1st. In the meantime, trade and withdraw as usual via email. Apologies for any inconvenience!</span></p>
+      </div>
         <div className="2xl:flex block justify-center my-8">
-          <Link href="/trading-rules">
+          
             <Button
+             onClick={() => router.push('/trading-rules')}
             className={`${theme === 'light' ? "border border-slate-500" : "text-black border border-[1pxl solid black] font-bpld"} backdrop-filter  bg-[transparent] backdrop-blur-lg bg-opacity-30  mx-auto`}
               text="read trading rules"
             />
-          </Link>
+          
         </div>
       </section>
+
     </div>
   );
 };
