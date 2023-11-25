@@ -55,7 +55,7 @@ const PriceComponent = () => {
         </div>
         <div className=" px-10 md:px-6 pt-10 ">
         
-        <p className={`text-center text-sm  text-slate-400`}><WarningAmberIcon/> <span className=""> Disclaimer: </span> 
+        <p className={`text-center text-sm  ${theme === 'light' ? "text-white" : "text-slate-400"} `}><WarningAmberIcon/> <span className=""> Disclaimer: </span> 
         <span className="animated-text ">Our dashboard is getting a makeover and will be back for login on January 1st. In the meantime, trade and withdraw as usual via email. Apologies for any inconvenience!</span></p>
       </div>
         <div className="2xl:flex block justify-center my-8">
