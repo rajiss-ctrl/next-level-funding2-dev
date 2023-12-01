@@ -159,7 +159,7 @@ const AboutUs = () => {
                 </div>
               
               </section>
-                <div className="text-white"><ZohoChat/></div>
+              
             
           </div>
           <section className="pt-[8rem] lg:pt-0 xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">

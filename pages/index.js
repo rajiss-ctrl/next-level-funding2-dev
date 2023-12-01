@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import GetInTouch from "./components/GetInTouch";
 import PriceComponent from "./components/PriceComponent";
 import FaqComponent from "./components/FaqComponent";
-import ExitIntentPop from "./components/ExitIntentPop";
+// import ExitIntentPop from "./components/ExitIntentPop";
 import FundingBenefits from "./components/FundingBenefits";
 import TradePotential from "./components/TradePotential";
 import Coverflow from "./components/Coverflow";
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
         <Footer />
       </div>
-      <ExitIntentPop/>
+      {/* <ExitIntentPop/> */}
     </main>
   );
 }
