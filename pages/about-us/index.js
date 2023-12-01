@@ -8,6 +8,7 @@ import { useTheme } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import ZohoChat from "../components/ZohoChat";
 
 const AboutUs = () => {
   const { theme } = useTheme();
@@ -158,7 +159,7 @@ const AboutUs = () => {
                 </div>
               
               </section>
-
+                <div className="text-white"><ZohoChat/></div>
             
           </div>
           <section className="pt-[8rem] lg:pt-0 xl:px-[9rem] 2xl:px-[12rem] px-[2rem]">

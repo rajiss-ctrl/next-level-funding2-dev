@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import GetInTouch from "./components/GetInTouch";
 import PriceComponent from "./components/PriceComponent";
 import FaqComponent from "./components/FaqComponent";
+import ExitIntentPop from "./components/ExitIntentPop";
 import FundingBenefits from "./components/FundingBenefits";
 import TradePotential from "./components/TradePotential";
 import Coverflow from "./components/Coverflow";
@@ -12,6 +13,8 @@ import { useTheme } from '../context/ThemeContext';
 import IndexPage from "./components/IndexPage";
 import Script from 'next/script';
 import Head from 'next/head';
+import ZohoChat from "./components/ZohoChat";
+
 export default function Home() {
   
 
@@ -45,9 +48,11 @@ export default function Home() {
         </div>
         <div className="block md:hidden">
           <MobileGetInTouch />
+      <ZohoChat/>
         </div>
         <Footer />
       </div>
+      <ExitIntentPop/>
     </main>
   );
 }

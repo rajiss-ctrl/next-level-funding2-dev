@@ -6,7 +6,7 @@ import { useTheme } from "../../context/ThemeContext";
 import IndexPage from "../components/IndexPage";
 
 const RefundPolicy = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div>
