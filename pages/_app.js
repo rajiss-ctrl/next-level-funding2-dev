@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import "./styles.css";
 import ScrollToTop from "./components/ScrollToTop";
 import { ThemeProvider } from "@/context/ThemeContext";
+import FacebookPixel from "@/utils/FacebookPixel";
 
 
 export default function App({ Component, pageProps }) {
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }) {
     <ThemeProvider>
     <Layout>
       <Component {...pageProps} />
+      <FacebookPixel/>
       <ScrollToTop />
     </Layout>
     </ThemeProvider>

@@ -14,6 +14,7 @@ import IndexPage from "./components/IndexPage";
 import Script from 'next/script';
 import Head from 'next/head';
 import ZohoChat from "./components/ZohoChat";
+import FacebookPixel from "@/utils/FacebookPixel";
 
 export default function Home() {
   
@@ -37,6 +38,7 @@ export default function Home() {
         
       </IndexPage>
       <Hero/>
+      <FacebookPixel/>
       <div className={`${theme === "light" ? 'home-bg text-white' : 'bg-white text-black'}   xl:px-[9rem] 2xl:px-[12rem] px-[2rem]`}>
         <TradePotential />
         <Coverflow />
