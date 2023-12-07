@@ -5,11 +5,11 @@ import { useRouter } from "next/router";
 import { useTheme } from "../../context/ThemeContext";
 
 const PriceCard = (props) => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme} = useTheme();
   const router = useRouter();
   return (
     <div
-      className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-white"} price-card-morph text-center overflow-hidden w-full lg:h-[530px] py-4 px-3 ${props.className} ${
+      className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-white"} price-card-morph text-center overflow-hidden w-full lg:h-[530px] xl:h-[640px] py-4 px-3 xl:px-4 xl:py-4 ${props.className} ${
         props.highlight === true ? "bg-blue-500 text-white" : "bg-white bg-opacity-5"
   
       }`}
@@ -66,7 +66,7 @@ const PriceCard = (props) => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 xl:mt-7">
         <Button
           className="backdrop-filter text-white bg-[#991275] border-none mt-3"
           text="pay now"

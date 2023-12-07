@@ -15,6 +15,7 @@
     "@hookform/resolvers": "^3.3.2",
     "@mui/icons-material": "^5.14.15",
     "@mui/material": "^5.14.15",
+    "exit-intent": "^1.1.0",
     "express": "^4.18.2",
     "next": "^14.0.2",
     "next-themes": "^0.2.1",

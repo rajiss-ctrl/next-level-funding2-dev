@@ -12,14 +12,14 @@ const Hero = () => {
 
   return (
     <div className={`relative ${theme === "light" ? 'dark  body-bg' : 'light bg-white'} lg:h-[670px] w-full px-4  lg:px-10 pt-8`}>
-      <Box sx={{ paddingTop: 15, flexGrow: 1 }}>
+         <Box sx={{ paddingTop: 15, flexGrow: 1 }}>
         <div className="grid grid-cols-12 gap-5 md:px-[3rem] xl:px-[6rem]">
           <div className={`col-span-12 md:col-span-6 lg:col-span-6`}>
             <p className={`${theme === "light" ? 'text-blue-500' : 'text-[#991275]'} uppercase font-bold lexend text-lg md:text-sm lg:text-lg text-center md:text-left  lg:px-0 my-2`}>
               Next level funding
             </p>
             <p className={`${theme === "light" ? 'text-white' : 'text-black'} space-grotesk font-bold text-[1.8rem] text-center lg:text-[2.8rem] xl:text-[3rem] md:text-left lg:leading-[56px] xl:leading-[65px] leading-[39px]`}>
-              Collaborative Funding, Our Risk,{" "}
+              Our Funding, Our Risk,{" "}
               <span className="text-blue-500">Your Expertise.</span>
             </p>
             <div className="md:w-[30rem] m-auto lg:ml-0">
@@ -31,7 +31,7 @@ const Hero = () => {
             <div className="flex justify-center items-center md:justify-start mt-6">
               <Button
               onClick={() => router.push('/#evaluation-package')}
-                className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} lg:p-3 backdrop-filter bg-[#991275] border-none  text-center `}
+                className={`${theme === "light" ? 'text-white' : 'text-white font-bold'} lg:p-3 xl:p-2 backdrop-filter bg-[#991275] border-none  text-center `}
                 text="get started"
                 showArrow={true}
               />
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-      <div className="w-full absolute bottom-[0] xl:bottom-[-1.2rem] lg:bottom-[0.3rem] left-[0] flex flex-row overflow-hidden">
+    <div className="w-full absolute bottom-[0] lg:bottom-[0.3rem] xl:bottom-[-1.6rem]  left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
     </div>

@@ -1,6 +1,7 @@
 'use client'
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import ExitIntentPop from "./components/ExitIntentPop";
 import GetInTouch from "./components/GetInTouch";
 import PriceComponent from "./components/PriceComponent";
 import FaqComponent from "./components/FaqComponent";
@@ -45,16 +46,17 @@ export default function Home() {
         <FundingBenefits />
         <PriceComponent />
         <FaqComponent />
+        {/* <ExitIntentPop/> */}
         <div className="hidden md:block">
           <GetInTouch />
         </div>
         <div className="block md:hidden">
           <MobileGetInTouch />
-      <ZohoChat/>
+          <ZohoChat/>
         </div>
         <Footer />
       </div>
-      {/* <ExitIntentPop/> */}
+      
     </main>
   );
 }

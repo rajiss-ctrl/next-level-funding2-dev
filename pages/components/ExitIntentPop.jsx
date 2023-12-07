@@ -1,51 +1,67 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import UserResponsePage from './UserResponsePage';
 import { useTheme } from '@/context/ThemeContext';
+import ExitIntent from 'exit-intent';
 
-const PopupComponent = () => {
-  const {theme} = useTheme()
+const ExitIntentPop = () => {
+  const { theme } = useTheme();
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleMouseLeave = (e) => {
-    if (e.clientY < 0) {
+  useEffect(() => {
+    // Initialize exit intent
+    const removeExitIntent = ExitIntent({
+      threshold: 50,
+      maxDisplays: 2,
+      eventThrottle: 100,
+      onExitIntent: () => {
+        // Your logic to show the exit intent popup
+        // Set state, display a modal, etc.
+        setShowPopup(true);
+      }
+    });
+
+    // Add beforeunload event listener
+    const handleBeforeUnload = (event) => {
+      // Your logic to show the exit intent popup
+      // Set state, display a modal, etc.
       setShowPopup(true);
-    }
-  };
- 
-  const handleClick = (e) => {
-    if (popupRef.current && !popupRef.current.contains(e.target)) {
+
+      // Custom message to be displayed in some browsers
+      const message = 'Are you sure you want to leave? Your unsaved changes may be lost.';
+      event.returnValue = message;
+
+      return message;
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Destroy exit intent and remove beforeunload event listener when component is unmounted
+    return () => {
+      removeExitIntent();
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  const handleCloseClick = () => {
+    const userConfirmed = window.confirm('Are you sure you want to close the window?');
+  
+    if (userConfirmed) {
       setShowPopup(false);
+      window.close();
     }
   };
   
 
-  const handleCloseClick = () => {
-    setShowPopup(false);
-  };
-
-  useEffect(() => {
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('click', handleClick);
-
-    return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('click', handleClick);
-    };
-  }, []);
-
   const popupStyle = {
     position: 'fixed',
-    top: '50%',
+    top: '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    // backgroundColor: '#fff',
-    border: '1px solid #ccc',
-    width: '60%',
-    // width: '1200px',
-    height: '400px',
-    // padding: '20px',
-    zIndex:'700',
+    width: '35%',
+    height: '300px',
+    zIndex: '700',
     display: showPopup ? 'block' : 'none',
+    // Add your existing styles here
   };
 
   const overlayStyle = {
@@ -54,12 +70,14 @@ const PopupComponent = () => {
     left: '0',
     width: '100%',
     height: '100%',
-    backgroundColor:`${theme === 'light' ? 'rgba(0, 0, 0, 0.8)' : "white"}` ,
-    
+    backgroundColor: `${theme === 'light' ? 'rgba(0, 0, 0, 0.8)' : 'white'}`,
     display: showPopup ? 'block' : 'none',
+    // Add your existing styles here
   };
+
   const ContentoverlayStyle = {
-    zIndex: '999'
+    zIndex: '999',
+    // Add your existing styles here
   };
 
   const closeButtonStyle = {
@@ -68,25 +86,24 @@ const PopupComponent = () => {
     right: '10px',
     fontSize: '24px',
     cursor: 'pointer',
-    color:`${theme === 'light' ? 'white' : "black"}`
+    color: `${theme === 'light' ? 'white' : 'black'}`,
+    // Add your existing styles here
   };
 
-  const popupRef = React.createRef();
-
   return (
-    <>
+    <div>
       <div style={overlayStyle}></div>
-      <div style={popupStyle} ref={popupRef} >
-        <span style={closeButtonStyle} onClick={handleCloseClick}>
+      <div style={popupStyle}>
+      <span style={closeButtonStyle} onClick={handleCloseClick}>
           &times;
-        </span>
-        <div style={ContentoverlayStyle}  className="m-0 ">
-            <UserResponsePage/>
+      </span>
+
+        <div style={ContentoverlayStyle} className="">
+          <UserResponsePage />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default PopupComponent;
-
+export default ExitIntentPop;
