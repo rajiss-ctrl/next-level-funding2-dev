@@ -1,23 +1,31 @@
-import { useEffect, useState, useRef, useCallback  } from "react";
+'use client'
+import { useEffect, useState, useRef, useCallback, useContext  } from "react";
 import Link from "next/link";
 import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
-import { Container } from "@mui/material";
 import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
+import Cart from "../components/Cart";
+import { CartContext } from "@/context/CartContext";
+
 
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
+  const { getTotalItems } = useContext(CartContext);
+
   const [navbar, setNavbar] = useState(false);
+  const [cartToggle, setCartToggle] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false);
-  const navRef = useRef(null);
+  
 
   const toggleNavbar = () => {
     setNavbar(!navbar);
   };
-  
+  const toggleCart = ()=>{
+    setCartToggle((prev)=>!prev)
+  }
   const logoClickHandler = !navbar ? null : toggleNavbar;
 
   const handleNavigation = useCallback(() => {
@@ -58,17 +66,19 @@ const NavBar = () => {
   }, []); // No dependencies are needed for handleScroll
 
   return (
-    <nav>
-    <div
-        className={`justify-between px-4 mx-auto md:px-[4rem]  xl:px-[6rem] 2xl:px-[12rem]  lg:items-center lg:flex fixed right-0 left-0 z-50 ${
+    
+ <div>
+    <nav
+        className={`justify-between px-4 mx-auto md:px-[4rem] overflow-hidden xl:px-[6rem] 2xl:px-[12rem]  lg:items-center lg:flex fixed right-0 left-0 z-50 ${
           isScrolled && theme === 'light' ? "bg-black" : ""
         }${
           isScrolled && theme === 'dark' ? "bg-white" : ""
         }`}
       >
-   
-
+      
+    
     <div >
+      {/* <Cart cartToggle={cartToggle}/> */}
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/">
@@ -182,8 +192,12 @@ const NavBar = () => {
             showArrow={true}
           />
         </div>
-      </div>
+      {/* <button onClick={toggleCart} className=" z-50 flex flex-col justify-center items-center fixed top-[5rem] right-2 md:right-5 w-[40px] h-[40px] rounded-[50%] text-white outline-none  bg-[red]">
+        {getTotalItems()}
+      </button> */}
+      
     </nav>
+    </div>
   );
 };
 

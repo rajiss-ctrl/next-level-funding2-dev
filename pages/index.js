@@ -16,13 +16,17 @@ import Script from 'next/script';
 import Head from 'next/head';
 import ZohoChat from "./components/ZohoChat";
 import FacebookPixel from "@/utils/FacebookPixel";
+import Cart from "./components/Cart";
 
 export default function Home() {
   
-
+const handleAddToCart = (e)=>{
+  console.log(e)
+  
+}
   const { theme } = useTheme();
   return (
-    <main>
+    <main className='relative'>
       <IndexPage>
           <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
           <meta name="keywords" content="business funding, financial solutions, funding for businesses, Next Level Funding, financial growth, tailored funding"/>
@@ -38,21 +42,22 @@ export default function Home() {
           <link rel="manifest" href="/site.webmanifest" />
         
       </IndexPage>
-      <Hero/>
       <FacebookPixel/>
+      <Hero/>
       <div className={`${theme === "light" ? 'home-bg text-white' : 'bg-white text-black'}   xl:px-[9rem] 2xl:px-[12rem] px-[2rem]`}>
+      
         <TradePotential />
         <Coverflow />
         <FundingBenefits />
-        <PriceComponent />
+        <PriceComponent handleAddToCart={handleAddToCart} />
         <FaqComponent />
         {/* <ExitIntentPop/> */}
+          <ZohoChat/>
         <div className="hidden md:block">
           <GetInTouch />
         </div>
         <div className="block md:hidden">
           <MobileGetInTouch />
-          <ZohoChat/>
         </div>
         <Footer />
       </div>

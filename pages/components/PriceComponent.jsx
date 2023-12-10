@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import PriceCard from "./PriceCard";
 import { PriceLists, bluePriceList } from "@/lib/data";
 import Button from "./Button";
@@ -6,8 +7,12 @@ import Link from "next/link";
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { useTheme } from "../../context/ThemeContext";
 import { useRouter } from "next/navigation";
+import CartComponent from "./Cart";
 
 const PriceComponent = () => {
+
+
+
   const { theme } = useTheme();
   const router = useRouter()
   return (
@@ -21,34 +26,40 @@ const PriceComponent = () => {
         </p>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-8">
           {PriceLists.map((pricelist, index) => (
-            <div key={index} className=" ">
-              <PriceCard
-                packageNum={pricelist.pack}
-                value={pricelist.value}
-                valPrep={pricelist.valPrep}
-                listOne={pricelist.listOne}
-                listTwo={pricelist.listTwo}
-                listThree={pricelist.listThree}
-                listFour={pricelist.listFour}
-                link={pricelist.link}
-                highlight={false}
+            <div  key={pricelist.id} className=" ">
+            {/* <Link href={`/cart/${pricelist.id}`}>
+              {pricelist.pack}
+            </Link> */}
+             <PriceCard
+            //  priceList={priceList}
+            pricelist={pricelist} 
+                // packageNum={pricelist.pack}
+                // value={pricelist.value}
+                // valPrep={pricelist.valPrep}
+                // listOne={pricelist.listOne}
+                // listTwo={pricelist.listTwo}
+                // listThree={pricelist.listThree}
+                // listFour={pricelist.listFour}
+                // link={pricelist.link}
+              
               />
             </div>
           ))}
         </div>
         <div className="md:flex justify-center gap-8">
           {bluePriceList.map((list, index) => (
-            <div key={index} className="mt-10">
+            <div key={list.id} className="mt-10">
               <PriceCard
-                packageNum={list.pack}
-                value={list.value}
-                valPrep={list.valPrep}
-                listOne={list.listOne}
-                listTwo={list.listTwo}
-                listThree={list.listThree}
-                listFour={list.listFour}
-                link={list.link}
-                highlight={true}
+              list={list}
+                // packageNum={list.pack}
+                // value={list.value}
+                // valPrep={list.valPrep}
+                // listOne={list.listOne}
+                // listTwo={list.listTwo}
+                // listThree={list.listThree}
+                // listFour={list.listFour}
+                // link={list.link}
+                
               />
             </div>
           ))}

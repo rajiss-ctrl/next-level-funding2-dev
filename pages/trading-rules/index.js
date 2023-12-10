@@ -89,7 +89,7 @@ const TradingRules = () => {
               />
               <AccordionComponent
                 header="4. Trading restrictions"
-                text={`You are not allowed to use Expert advisors of any kind on your live account. Any Trading activities such as gap trading, high frequency trading, grid trading or grid software , martingale trading, latency arbitrage, long short arbitrage, reverse arbitrage, opposite account trading , abusing volatility of news by placing limits guaranteed to be filled are not permitted and will result in termination of your live account. You are not permitted to allow account management of a third party persons or company to manage your account for you , you need to be the person who trades your live account.`}
+                text={`You are not allowed to use Expert advisors of any kind on your live account. Any Trading activities such as gap trading, high frequency trading, grid trading or grid software , opening positions at a higher / lower price than your entry when it’s in drawdown (2 or more ), martingale trading, latency arbitrage, long short arbitrage, reverse arbitrage, opposite account trading , abusing volatility of news by placing limits guaranteed to be filled are not permitted and will result in termination of your live account. You are not permitted to allow account management of a third party persons or company to manage your account for you , you need to be the person who trades your live account.`}
               />
             </div>
           </section>

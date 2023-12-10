@@ -94,6 +94,9 @@
 .price-card-morph {
   @apply backdrop-blur-sm  border shadow-lg rounded-2xl  bg-blend-overlay;
 }
+.price-card-morph-cart {
+  @apply backdrop-blur-sm  border shadow-sm rounded-lg  bg-blend-overlay;
+}
 .glassmorph {
   @apply backdrop-blur-sm w-full  bg-opacity-5  shadow-lg rounded-xl py-5 2xl:px-5 cursor-pointer;
 }

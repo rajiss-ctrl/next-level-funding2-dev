@@ -1,3 +1,4 @@
+import Cart from "./Cart";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 
 
