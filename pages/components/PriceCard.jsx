@@ -73,16 +73,16 @@ const PriceCard = ({pricelist,list}) => {
       </div>
 
       <div className="flex justify-center mt-10 xl:mt-7">
-        <Button
-          className="backdrop-filter text-white bg-[#991275] border-none mt-3"
-          text="pay now"
-        onClick={handleAddToCart}
-        />
         {/* <Button
           className="backdrop-filter text-white bg-[#991275] border-none mt-3"
           text="pay now"
-          onClick={() => router.push(props.link)}
+        onClick={handleAddToCart}
         /> */}
+        <Button
+          className="backdrop-filter text-white bg-[#991275] border-none mt-3"
+          text="pay now"
+          onClick={() => router.push(pricelist?.link || list?.link)}
+        />
       </div>
       <p className={`${theme === 'light' ? "text-white" : "text-black"}  
       ${pricelist?.highlight || list?.highlight === true && theme === 'dark' ? " text-white" : " text-black"} 

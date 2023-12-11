@@ -1,13 +1,14 @@
 'use client'
 import { useEffect, useState, useRef, useCallback, useContext  } from "react";
 import Link from "next/link";
-import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
-import Cart from "../components/Cart";
+
 import { CartContext } from "@/context/CartContext";
+import Button from "./Button";
 
 
 
@@ -78,7 +79,7 @@ const NavBar = () => {
       
     
     <div >
-      {/* <Cart cartToggle={cartToggle}/> */}
+      
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/">
@@ -192,9 +193,7 @@ const NavBar = () => {
             showArrow={true}
           />
         </div>
-      {/* <button onClick={toggleCart} className=" z-50 flex flex-col justify-center items-center fixed top-[5rem] right-2 md:right-5 w-[40px] h-[40px] rounded-[50%] text-white outline-none  bg-[red]">
-        {getTotalItems()}
-      </button> */}
+  
       
     </nav>
     </div>
