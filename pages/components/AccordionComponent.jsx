@@ -45,10 +45,20 @@ const AccordionComponent = (props) => {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} className="lexend text-sm font-extralight">
-            {props.text}
-          </Typography>
-        </AccordionDetails>
+  <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} className="lexend text-sm font-extralight">
+    {props.text}
+ </Typography>
+  <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} className="lexend text-sm font-extralight">
+    {props.subtext1}
+ </Typography>
+  <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} className="lexend text-sm font-extralight">
+    {props.subtext2}
+ </Typography>
+  <Typography sx={{ color: `${theme === 'light' ? "white" : "black"} ` }} className="lexend text-sm font-extralight">
+    {props.subtext3}
+ </Typography>
+</AccordionDetails>
+
       </Accordion>
     </div>
   );

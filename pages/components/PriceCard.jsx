@@ -81,7 +81,7 @@ const PriceCard = ({pricelist,list}) => {
         <Button
           className="backdrop-filter text-white bg-[#991275] border-none mt-3"
           text="pay now"
-          onClick={() => router.push(pricelist?.link || list?.link)}
+          onClick={() => router.push(pricelist.link || list.link)}
         />
       </div>
       <p className={`${theme === 'light' ? "text-white" : "text-black"}  

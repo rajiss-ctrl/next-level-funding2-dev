@@ -1,32 +1,33 @@
 'use client'
 import { useEffect, useState, useRef, useCallback, useContext  } from "react";
 import Link from "next/link";
+import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
-
+import Cart from "../components/Cart";
 import { CartContext } from "@/context/CartContext";
-import Button from "./Button";
+import NavLinks from "./NavLinks";
+import MobileNavLinks from "./MobileNavLinks";
+import { UserAuth } from "@/context/AuthContext";
 
 
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
   const { getTotalItems } = useContext(CartContext);
-
   const [navbar, setNavbar] = useState(false);
   const [cartToggle, setCartToggle] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false);
+
   
 
   const toggleNavbar = () => {
     setNavbar(!navbar);
   };
-  const toggleCart = ()=>{
-    setCartToggle((prev)=>!prev)
-  }
+  
   const logoClickHandler = !navbar ? null : toggleNavbar;
 
   const handleNavigation = useCallback(() => {
@@ -76,10 +77,9 @@ const NavBar = () => {
           isScrolled && theme === 'dark' ? "bg-white" : ""
         }`}
       >
-      
-    
+     
+
     <div >
-      
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/">
@@ -147,42 +147,16 @@ const NavBar = () => {
           </div>
         </div>
         <div>
-          <div
-            className={`flex-1 hidden justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0`}
-          >
-            <div className={`${theme === 'light' ? "bg-black dark border-slate-500 text-white " : "bg-white  light text-black"} text-center  flex space-x-7 backdrop-filter  backdrop-blur-lg bg-opacity-30 border rounded-full py-2 px-10  bg-blend-overlay lexend`}>
-              <Link href="/about-us">About Us</Link>
-              <Link href="/trading-rules">Trading Rules</Link>
-              <Link href="/#faq">FAQ</Link>
-              <Link href="/contact-us">Help Center</Link>
-            </div>
-          </div>
-          {navbar && (
+          <NavLinks/>
+       {navbar && (
             <div className="relative lg:hidden">
               <div
                 className="h-screen w-full absolute left-0 top-0"
                 onClick={toggleNavbar}
-              ></div>
-              <div className={`${theme === 'light' ? "bg-black text-white" : "bg-white text-black"} navbar-slide-out z-30 flex flex-col justify-center items-center px-10 py-5 gap-6  relative lexend  `}>
-                <Link href="/about-us" onClick={toggleNavbar} className="text-[1rem] pb-4">
-                  About Us
-                </Link>
-                <Link href="/trading-rules" onClick={toggleNavbar} className="text-[1rem] pb-4">
-                  Trading Rules
-                </Link>
-                <Link href="/#faq" onClick={toggleNavbar} className="text-[1rem] pb-4">
-                  FAQ
-                </Link>
-                <Link href="/contact-us" onClick={toggleNavbar} className="text-[1rem] pb-4">
-                  Help Center
-                </Link>
-                <Button
-                  className="bg-[#295cf7] text-white   border-none lexend hover:bg-blue-800"
-                  text="get funded"
-                  onClick={toggleNavbar}
-                  showArrow={true}
-                />
-              </div>
+              >
+
+        </div>
+            <MobileNavLinks toggleNavbar={toggleNavbar}/>
             </div>
           )}
         </div>
@@ -193,8 +167,7 @@ const NavBar = () => {
             showArrow={true}
           />
         </div>
-  
-      
+    
     </nav>
     </div>
   );

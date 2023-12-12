@@ -1,11 +1,8 @@
-'use client'
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import ExitIntentPop from "./components/ExitIntentPop";
 import GetInTouch from "./components/GetInTouch";
 import PriceComponent from "./components/PriceComponent";
 import FaqComponent from "./components/FaqComponent";
-// import ExitIntentPop from "./components/ExitIntentPop";
 import FundingBenefits from "./components/FundingBenefits";
 import TradePotential from "./components/TradePotential";
 import Coverflow from "./components/Coverflow";
@@ -20,10 +17,6 @@ import Cart from "./components/Cart";
 
 export default function Home() {
   
-const handleAddToCart = (e)=>{
-  console.log(e)
-  
-}
   const { theme } = useTheme();
   return (
     <main className='relative'>
@@ -49,9 +42,8 @@ const handleAddToCart = (e)=>{
         <TradePotential />
         <Coverflow />
         <FundingBenefits />
-        <PriceComponent handleAddToCart={handleAddToCart} />
+        <PriceComponent  />
         <FaqComponent />
-        {/* <ExitIntentPop/> */}
           <ZohoChat/>
         <div className="hidden md:block">
           <GetInTouch />

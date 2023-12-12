@@ -17,7 +17,12 @@ const FaqComponent = () => {
         <div className="px-0">
           {accordionContents.map((content, index) => (
             <div key={index}>
-              <AccordionComponent header={content.title} text={content.text} />
+              <AccordionComponent 
+                header={content.title} 
+                subtext1={content.subText1} 
+                subtext2={content.subText2} 
+                subtext3={content.subText3} 
+                text={content.text} />
             </div>
           ))}
         </div>
