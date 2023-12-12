@@ -11,23 +11,25 @@ import Cart from "../components/Cart";
 import { CartContext } from "@/context/CartContext";
 import NavLinks from "./NavLinks";
 import MobileNavLinks from "./MobileNavLinks";
-import { UserAuth } from "@/context/AuthContext";
 
 
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
+  const {cart} =useContext(CartContext);
   const { getTotalItems } = useContext(CartContext);
+
   const [navbar, setNavbar] = useState(false);
   const [cartToggle, setCartToggle] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false);
-
   
 
   const toggleNavbar = () => {
     setNavbar(!navbar);
   };
-  
+  const toggleCart = ()=>{
+    setCartToggle((prev)=>!prev)
+  }
   const logoClickHandler = !navbar ? null : toggleNavbar;
 
   const handleNavigation = useCallback(() => {
@@ -77,7 +79,7 @@ const NavBar = () => {
           isScrolled && theme === 'dark' ? "bg-white" : ""
         }`}
       >
-     
+      
 
     <div >
       
@@ -167,7 +169,7 @@ const NavBar = () => {
             showArrow={true}
           />
         </div>
-    
+     
     </nav>
     </div>
   );
