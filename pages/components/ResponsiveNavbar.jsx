@@ -85,7 +85,7 @@ const NavBar = () => {
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/">
-              <Image
+              {/* <Image
                 src="/assets/logo.svg"
                 alt="NextLevelFunding logo"
                 loading="eager"
@@ -93,10 +93,17 @@ const NavBar = () => {
                 height={150}
                 layout="responsive"
                 onClick={logoClickHandler}
-              />
+              /> */}
+          <img
+              src="/assets/xmax-logo.svg"
+              alt="NextLevelFunding logo"
+              width={170}
+              height={170}
+              onClick={logoClickHandler}
+            />
             </Link>
               <button 
-                  className="absolute z-30 top-[30px]  shadow-lg lg:top-[40px] rounded-[4px] border border-gray-400 outline-none right-[20%] lg:right-8"
+                  className="absolute z-30 top-[30px]  shadow-lg lg:top-[40px] rounded-[4px] border border-gray-400 outline-none right-[24%] lg:right-8"
                   onClick={() => toggleTheme(theme === 'light' ? 'bg-transparent' : 'bg-[#F5F5F]')}
                   >
                   {theme === 'light' ? (
