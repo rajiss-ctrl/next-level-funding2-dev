@@ -38,14 +38,14 @@ const PriceCard = ({pricelist,list}) => {
       <div className="grid text-start justify-center">
         <div className="">
           <span className="tooltip tooltip-up" data-tip={pricelist?.listOne || list?.listOne}>
-            <p className="bullet-point uppercase mt-2 text-sm cursor-pointer">
+            <p className={`${pricelist?.highlight === false && theme === 'dark' ? 'bullet-point-black' : 'bullet-point'}  uppercase mt-2 text-sm cursor-pointer`}>
               {pricelist?.listOne || list?.listOne}
             </p>
           </span>
         </div>
         <div>
           <span className="tooltip  tooltip-up" data-tip={pricelist?.listTwo || list?.listTwo}>
-            <p className="bullet-point  uppercase mt-2 text-sm">
+            <p className={`${pricelist?.highlight === false && theme === 'dark' ? 'bullet-point-black' : 'bullet-point'}   uppercase mt-2 text-sm`}>
               {pricelist?.listTwo || list?.listTwo}
             </p>
           </span>
@@ -55,7 +55,7 @@ const PriceCard = ({pricelist,list}) => {
             className="tooltip tooltip-up  justify-center"
             data-tip={pricelist?.listThree || list?.listThree}
           >
-            <p className={` bullet-point uppercase mt-2 text-sm`}>
+            <p className={`${pricelist?.highlight === false && theme === 'dark' ? 'bullet-point-black' : 'bullet-point'}  uppercase mt-2 text-sm`}>
             {pricelist?.listThree || list?.listThree}
             </p>
           </span>
@@ -65,7 +65,7 @@ const PriceCard = ({pricelist,list}) => {
             className="tooltip tooltip-up  justify-center"
             data-tip={pricelist?.listFour || list?.listFour}
           >
-            <p className="bullet-point uppercase mt-2 text-sm">
+            <p className={`${pricelist?.highlight === false && theme === 'dark' ? 'bullet-point-black' : 'bullet-point'} uppercase mt-2 text-sm`}>
             {pricelist?.listFour || list?.listFour}
             </p>
           </span>

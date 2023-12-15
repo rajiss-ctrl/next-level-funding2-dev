@@ -112,6 +112,18 @@
   background-position: center;
   display: inline-block;
 }
+.bullet-point-black::before {
+  content: "";
+  position: relative;
+  right: 10px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background-image: url("/assets/arrow-right-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
 
 .glass-morph-table {
   background: rgba(255, 255, 255, 0.1);
