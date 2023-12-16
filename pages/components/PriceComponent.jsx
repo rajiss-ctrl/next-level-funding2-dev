@@ -7,7 +7,6 @@ import Link from "next/link";
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { useTheme } from "../../context/ThemeContext";
 import { useRouter } from "next/navigation";
-import CartComponent from "./Cart";
 
 const PriceComponent = () => {
 
@@ -24,7 +23,7 @@ const PriceComponent = () => {
         <p className={`${theme === 'light' ? "text-white" : "text-black"} font-bold space-grotesk 2xl:text-6xl text-3xl text-center mt-3 px-3`}>
           Our Evaluation Packages
         </p>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-8">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-5">
           {PriceLists.map((pricelist, index) => (
             <div  key={pricelist.id} className=" ">
             {/* <Link href={`/cart/${pricelist.id}`}>

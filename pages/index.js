@@ -1,3 +1,4 @@
+'use client'
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import GetInTouch from "./components/GetInTouch";
@@ -9,17 +10,17 @@ import Coverflow from "./components/Coverflow";
 import MobileGetInTouch from "./components/MobileGetInTouch";
 import { useTheme } from '../context/ThemeContext';
 import IndexPage from "./components/IndexPage";
-import Script from 'next/script';
-import Head from 'next/head';
 import ZohoChat from "./components/ZohoChat";
-import FacebookPixel from "@/utils/FacebookPixel";
-import Cart from "./components/Cart";
+import FacebookPixel from "@/utils/FacebookPixel"
+import { CartContext } from "@/context/CartContext";
+
+
 
 export default function Home() {
-  
+
   const { theme } = useTheme();
   return (
-    <main className='relative'>
+    <main className='relative '>
       <IndexPage>
           <title>NextLevelFunding - Get funded up to £1,000,000 with up to a 90% profit split.</title>
           <meta name="keywords" content="business funding, financial solutions, funding for businesses, Next Level Funding, financial growth, tailored funding"/>
@@ -53,7 +54,6 @@ export default function Home() {
         </div>
         <Footer />
       </div>
-      
     </main>
   );
 }

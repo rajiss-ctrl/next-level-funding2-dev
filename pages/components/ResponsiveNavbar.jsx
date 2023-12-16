@@ -4,32 +4,45 @@ import Link from "next/link";
 import Button from "./Button";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
-import Cart from "../components/Cart";
-import { CartContext } from "@/context/CartContext";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CartPopUp from "../components/CartPopUp";
 import NavLinks from "./NavLinks";
 import MobileNavLinks from "./MobileNavLinks";
+import { CartContext } from "@/context/CartContext";
 
 
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
-  const {cart} =useContext(CartContext);
-  const { getTotalItems } = useContext(CartContext);
+  const { 
+    cart, 
+    getTotalAmount,
+    removeFromCart,
+    getTotalItems,
+    clearCart,
+    getTotalQuantityForAllItems,
+    increaseQuantity,
+    decreaseQuantity,
+  } = useContext(CartContext);
+  // const [mount, setMount] = useState(false)
+  // const [cartShow, setCartShow] = useState(false)
+  // useEffect(()=>{
+  //   setMount(true)
+  // },[mount])
+  // const toggleCart = ()=>{
+  //   setCartShow((prev)=>!prev)
+  // }
 
   const [navbar, setNavbar] = useState(false);
-  const [cartToggle, setCartToggle] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false);
   
 
   const toggleNavbar = () => {
     setNavbar(!navbar);
   };
-  const toggleCart = ()=>{
-    setCartToggle((prev)=>!prev)
-  }
+
   const logoClickHandler = !navbar ? null : toggleNavbar;
 
   const handleNavigation = useCallback(() => {
@@ -176,7 +189,13 @@ const NavBar = () => {
             showArrow={true}
           />
         </div>
-     
+        {/* {mount === true && <CartPopUp cartShow={cartShow}/>}
+        {mount === true &&
+      <button onClick={toggleCart} className="text-white font-bold fixed top-[5rem] right-0 md:right-5 z-[999]"  >
+        <div className="bg-[red] h-[30px] w-[30px] rounded-[50%] absolute top-0 right-0 flex items-center justify-center text-white">{getTotalItems()}</div>
+          <ShoppingCartIcon className={`${theme === 'light' ? 'text-white' : 'text-black'} text-[50px] `}/>
+      </button>
+      } */}
     </nav>
     </div>
   );

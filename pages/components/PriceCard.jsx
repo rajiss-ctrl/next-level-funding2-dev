@@ -16,7 +16,7 @@ const PriceCard = ({pricelist,list}) => {
   };
   return (
     <div
-      className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-white"} price-card-morph text-center overflow-hidden w-full lg:h-[530px] xl:h-[640px] py-4 px-3 xl:px-4 xl:py-4  ${
+      className={`${theme === 'light' ? "text-white border-slate-500" : "text-black border-white"} price-card-morph text-center overflow-hidden w-full lg:h-[580px] xl:h-[600px] py-4 px-3 lg:px-[0.6rem] xl:px-2  xl:py-4  ${
         pricelist?.highlight || list?.highlight === true ? "bg-blue-500 text-white" : "bg-white bg-opacity-5"  
       }`}
     >
@@ -31,8 +31,15 @@ const PriceCard = ({pricelist,list}) => {
         {pricelist?.pack || list?.pack}
       </p>
     </div>
-      <p className="space-grotext text-center text-2xl font-bold uppercase">{pricelist?.pack || list?.pack !== "INSTANT FUNDING" ? "Evaluation" : "" }</p>
-      <p className="lexend text-xm font-light mt-5">{pricelist?.valPrep || list?.valPrep}</p>
+    <p className={`space-grotext text-center text-2xl font-bold uppercase ${pricelist?.pack === "INSTANT FUNDING" ? 'hidden' : ''}`}>
+  {pricelist?.pack === "INSTANT FUNDING" || list?.pack === "INSTANT FUNDING"
+    ? null
+    : (pricelist?.valPrep === "A $10,000 Live Account" || pricelist?.valPrep === "A $25,000 Live Account")
+      ? "Live Account"
+      : "Evaluation"
+  }
+</p>
+
       <p className="text-5xl font-bold space-grotesk mt-5">{pricelist?.value || list?.value}</p>
 
       <div className="grid text-start justify-center">

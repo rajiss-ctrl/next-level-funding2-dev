@@ -1,17 +1,30 @@
-import React from "react";
+'use client'
+import React, { useState, useContext } from "react";
 import Button from "./Button";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import { useRouter } from 'next/navigation'
 import TradingViewWidget from "./TradingViewWidget";
 import { useTheme } from '../../context/ThemeContext';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { CartContext } from "@/context/CartContext";
 
 const Hero = () => {
   const { theme } = useTheme();
   const router = useRouter()
+  const [cartToggle, setCartToggle] = useState(true)
+  const {cart,getTotalItems} =useContext(CartContext);
+  
 
+
+
+
+  const toggleCart = ()=>{
+    setCartToggle((prev)=>!prev)
+  }
   return (
     <div className={`relative ${theme === "light" ? 'dark  body-bg' : 'light bg-white'} lg:h-[670px] w-full px-4  lg:px-10 pt-8`}>
+     
          <Box sx={{ paddingTop: 15, flexGrow: 1 }}>
         <div className="grid grid-cols-12 gap-5 md:px-[3rem] xl:px-[6rem]">
           <div className={`col-span-12 md:col-span-6 lg:col-span-6`}>
@@ -54,9 +67,10 @@ const Hero = () => {
         </div>
         <Box sx={{ paddingTop: 10, paddingBottom: 10 }}></Box>
       </Box>
-    <div className="w-full absolute bottom-[0] lg:bottom-[0.3rem] xl:bottom-[-1.6rem]  left-[0] flex flex-row overflow-hidden">
+      <div className="w-full absolute bottom-[0] lg:bottom-[0.3rem] xl:bottom-[-1.6rem]  left-[0] flex flex-row overflow-hidden">
         <TradingViewWidget />
       </div>
+    
     </div>
   );
 };

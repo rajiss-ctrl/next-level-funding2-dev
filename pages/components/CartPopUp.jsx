@@ -8,7 +8,8 @@ import { useTheme } from '@/context/ThemeContext';
 import Button from './Button';
 
 
-const Cart = ({cartToggle,handleSignInWithGoogle}) => {
+
+const Cart = ({handleSignInWithGoogle, cartShow}) => {
   const { theme} = useTheme();
   const { 
     cart, 
@@ -45,7 +46,7 @@ const Cart = ({cartToggle,handleSignInWithGoogle}) => {
 
   return (
   <>
-    <div className={` lexend ${cartToggle ? 'hidden' : 'block'} rounded-lg  fixed top-[5rem] right-0 md:right-5 p-3  md:p-5  ${theme === 'light' ? "text-white bg-black border-slate-500" : "text-black bg-white border-white"} ` }>
+    <div className={` lexend ${cartShow ? 'hidden' : 'block'} rounded-lg  fixed top-[5rem] right-0 md:right-5 p-3  md:p-5  ${theme === 'light' ? "text-white bg-black border-slate-500" : "text-black bg-white border-white"} ` }>
       
       <div className={`w-[210px]  md:w-[260px] flex flex-wrap justify-center gap-2 ${theme === 'light' ? "text-white  bg-black" : "text-black border-white bg-white"} `}>
       {cart?.length === 0 ? (
@@ -60,9 +61,9 @@ const Cart = ({cartToggle,handleSignInWithGoogle}) => {
             
             <div className={`${item?.highlight  === true && "text-white" } text-blue-500 text-center font-bold`}>{item?.value}</div>
             <div className='flex items-center justify-center flex-row gap-1 font-bold'>
-              <span className='cursor-pointer  font-bold' onClick={()=>handleDecrease(item?.id)}><DoNotDisturbOnIcon className='text-[15px]'/></span>
-              <span className='cursor-pointer  font-bold' onClick={()=>handleIncrease(item?.id)}><AddShoppingCartIcon className='text-[15px]'/></span>
-              <span className='cursor-pointer font-bold' onClick={()=>handleClearSingleItem(item?.id)}><RemoveShoppingCartIcon className='text-[15px]'/></span>
+              <div className='cursor-pointer  font-bold' onClick={()=>handleDecrease(item?.id)}><DoNotDisturbOnIcon className='text-[15px]'/></div>
+              <div className='cursor-pointer  font-bold' onClick={()=>handleIncrease(item?.id)}><AddShoppingCartIcon className='text-[15px]'/></div>
+              <div className='cursor-pointer font-bold' onClick={()=>handleClearSingleItem(item?.id)}><RemoveShoppingCartIcon className='text-[15px]'/></div>
             </div>
             {/* Add other cart item details as needed */}
           </div>
@@ -76,17 +77,17 @@ const Cart = ({cartToggle,handleSignInWithGoogle}) => {
       </div>
       <div className=''>
         <div className='mt-3 text-[0.550rem] leading-[0.7rem]'>
-        {cart?.length === 0 ? (<span></span>)
+        {cart?.length === 0 ? (<></>)
          :
-         ( <span>{cart?.length === 1 ? "Package Selected:" : "Packages Selected:"}</span>)}
+         ( <div>{cart?.length === 1 ? "Package Selected:" : "Packages Selected:"}</div>)}
           
           </div>
         <ul >
         {totalQuantityForAllItems &&
             Object.entries(totalQuantityForAllItems).map(([itemId, { quantity, name }]) => (
               <li className='flex justify-between text-[0.550rem] leading-[0.7rem]' key={itemId}> 
-              <span>{`${name} `} :</span>
-              <span>{` ${quantity} `}</span>
+              <div>{`${name} `} :</div>
+              <div>{` ${quantity} `}</div>
               </li>
             ))}
 
