@@ -40,8 +40,9 @@ const PriceCard = ({pricelist,list}) => {
   }
 </p>
 
-      <p className="text-5xl font-bold space-grotesk mt-5">{pricelist?.value || list?.value}</p>
 
+      <p className="text-5xl font-bold space-grotesk mt-5">{pricelist?.value || list?.value}</p>
+      <p className="lexend mt-2 font-bold">{pricelist?.valPrep || list?.valPrep}</p>
       <div className="grid text-start justify-center">
         <div className="">
           <span className="tooltip tooltip-up" data-tip={pricelist?.listOne || list?.listOne}>
