@@ -12,7 +12,7 @@ import { useTheme } from '../context/ThemeContext';
 import IndexPage from "./components/IndexPage";
 import ZohoChat from "./components/ZohoChat";
 import FacebookPixel from "@/utils/FacebookPixel"
-import { CartContext } from "@/context/CartContext";
+
 
 
 

@@ -6,8 +6,8 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import { useTheme } from '../../context/ThemeContext';
 import Image from "next/image";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import CartPopUp from "../components/CartPopUp";
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+// import CartPopUp from "../components/CartPopUp";
 import NavLinks from "./NavLinks";
 import MobileNavLinks from "./MobileNavLinks";
 import { CartContext } from "@/context/CartContext";
@@ -16,16 +16,16 @@ import { CartContext } from "@/context/CartContext";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
-  const { 
-    cart, 
-    getTotalAmount,
-    removeFromCart,
-    getTotalItems,
-    clearCart,
-    getTotalQuantityForAllItems,
-    increaseQuantity,
-    decreaseQuantity,
-  } = useContext(CartContext);
+  // const { 
+  //   cart, 
+  //   getTotalAmount,
+  //   removeFromCart,
+  //   getTotalItems,
+  //   clearCart,
+  //   getTotalQuantityForAllItems,
+  //   increaseQuantity,
+  //   decreaseQuantity,
+  // } = useContext(CartContext);
   // const [mount, setMount] = useState(false)
   // const [cartShow, setCartShow] = useState(false)
   // useEffect(()=>{
