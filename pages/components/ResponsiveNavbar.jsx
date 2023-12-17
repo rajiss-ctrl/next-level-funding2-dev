@@ -10,7 +10,7 @@ import Image from "next/image";
 // import CartPopUp from "../components/CartPopUp";
 import NavLinks from "./NavLinks";
 import MobileNavLinks from "./MobileNavLinks";
-import { CartContext } from "@/context/CartContext";
+// import { CartContext } from "@/context/CartContext";
 
 
 
