@@ -107,7 +107,7 @@ const NavBar = () => {
                 layout="responsive"
                 onClick={logoClickHandler}
               /> */}
-          <img
+          <Image
               src="/assets/xmax-logo.svg"
               alt="NextLevelFunding logo"
               width={170}
