@@ -16,25 +16,7 @@ import MobileNavLinks from "./MobileNavLinks";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
-  // const { 
-  //   cart, 
-  //   getTotalAmount,
-  //   removeFromCart,
-  //   getTotalItems,
-  //   clearCart,
-  //   getTotalQuantityForAllItems,
-  //   increaseQuantity,
-  //   decreaseQuantity,
-  // } = useContext(CartContext);
-  // const [mount, setMount] = useState(false)
-  // const [cartShow, setCartShow] = useState(false)
-  // useEffect(()=>{
-  //   setMount(true)
-  // },[mount])
-  // const toggleCart = ()=>{
-  //   setCartShow((prev)=>!prev)
-  // }
-
+  
   const [navbar, setNavbar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   
@@ -80,7 +62,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // No dependencies are needed for handleScroll
+  }, []);
 
   return (
     
@@ -98,15 +80,6 @@ const NavBar = () => {
       
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/">
-              {/* <Image
-                src="/assets/logo.svg"
-                alt="NextLevelFunding logo"
-                loading="eager"
-                width={150}
-                height={150}
-                layout="responsive"
-                onClick={logoClickHandler}
-              /> */}
           <Image
               src="/assets/xmax-logo.svg"
               alt="NextLevelFunding logo"
