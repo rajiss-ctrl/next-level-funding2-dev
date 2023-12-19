@@ -65,7 +65,6 @@ const Cart = ({handleSignInWithGoogle, cartShow}) => {
               <div className='cursor-pointer  font-bold' onClick={()=>handleIncrease(item?.id)}><AddShoppingCartIcon className='text-[15px]'/></div>
               <div className='cursor-pointer font-bold' onClick={()=>handleClearSingleItem(item?.id)}><RemoveShoppingCartIcon className='text-[15px]'/></div>
             </div>
-            {/* Add other cart item details as needed */}
           </div>
         ))
         
