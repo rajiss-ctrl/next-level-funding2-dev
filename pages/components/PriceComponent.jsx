@@ -1,9 +1,7 @@
-'use client'
-import React, { useState } from "react";
+import React from "react";
 import PriceCard from "./PriceCard";
 import { PriceLists, bluePriceList } from "@/lib/data";
 import Button from "./Button";
-import Link from "next/link";
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { useTheme } from "../../context/ThemeContext";
 import { useRouter } from "next/navigation";
@@ -30,18 +28,7 @@ const PriceComponent = () => {
               {pricelist.pack}
             </Link> */}
              <PriceCard
-            //  priceList={priceList}
-            pricelist={pricelist} 
-                // packageNum={pricelist.pack}
-                // value={pricelist.value}
-                // valPrep={pricelist.valPrep}
-                // listOne={pricelist.listOne}
-                // listTwo={pricelist.listTwo}
-                // listThree={pricelist.listThree}
-                // listFour={pricelist.listFour}
-                // link={pricelist.link}
-              
-              />
+            pricelist={pricelist} />
             </div>
           ))}
         </div>
@@ -49,17 +36,7 @@ const PriceComponent = () => {
           {bluePriceList.map((list, index) => (
             <div key={list.id} className="mt-10">
               <PriceCard
-              list={list}
-                // packageNum={list.pack}
-                // value={list.value}
-                // valPrep={list.valPrep}
-                // listOne={list.listOne}
-                // listTwo={list.listTwo}
-                // listThree={list.listThree}
-                // listFour={list.listFour}
-                // link={list.link}
-                
-              />
+              list={list}/>
             </div>
           ))}
         </div>
