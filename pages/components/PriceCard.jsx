@@ -32,11 +32,11 @@ const PriceCard = ({pricelist,list}) => {
       </p>
     </div>
     <p className={`space-grotext text-center text-2xl font-bold uppercase ${pricelist?.pack === "INSTANT FUNDING" ? 'hidden' : ''}`}>
-  {pricelist?.pack === "INSTANT FUNDING" || list?.pack === "INSTANT FUNDING"
+  { list?.pack === "INSTANT FUNDING"
     ? null
-    : (pricelist?.valPrep === "A $10,000 Live Account" || pricelist?.valPrep === "A $25,000 Live Account")
-      ? "Live Account"
-      : "Evaluation"
+    : (pricelist?.valPrep === "A $10,000 One Step Evaluation Account" || pricelist?.valPrep === "A $25,000 One Step Evaluation Account" || pricelist?.valPrep === "A $50,000 One Step Evaluation Account" || list?.valPrep === "A $100,000 One Step Evaluation Account")
+      ? "Evaluation"
+      : "Live Account"
   }
 </p>
 
